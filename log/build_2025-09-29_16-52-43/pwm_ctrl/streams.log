@@ -1,0 +1,37 @@
+[1.004s] Invoking command in '/home/atoz/ros2_ws/src/pwm_ctrl': PYTHONPATH=/home/atoz/ros2_ws/build/pwm_ctrl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pwm_ctrl build --build-base /home/atoz/ros2_ws/build/pwm_ctrl/build install --record /home/atoz/ros2_ws/build/pwm_ctrl/install.log --single-version-externally-managed install_data
+[1.370s] running egg_info
+[1.370s] creating ../../build/pwm_ctrl/pwm_ctrl.egg-info
+[1.371s] writing ../../build/pwm_ctrl/pwm_ctrl.egg-info/PKG-INFO
+[1.371s] writing dependency_links to ../../build/pwm_ctrl/pwm_ctrl.egg-info/dependency_links.txt
+[1.371s] writing entry points to ../../build/pwm_ctrl/pwm_ctrl.egg-info/entry_points.txt
+[1.371s] writing requirements to ../../build/pwm_ctrl/pwm_ctrl.egg-info/requires.txt
+[1.372s] writing top-level names to ../../build/pwm_ctrl/pwm_ctrl.egg-info/top_level.txt
+[1.372s] writing manifest file '../../build/pwm_ctrl/pwm_ctrl.egg-info/SOURCES.txt'
+[1.375s] reading manifest file '../../build/pwm_ctrl/pwm_ctrl.egg-info/SOURCES.txt'
+[1.376s] writing manifest file '../../build/pwm_ctrl/pwm_ctrl.egg-info/SOURCES.txt'
+[1.376s] running build
+[1.377s] running build_py
+[1.377s] creating /home/atoz/ros2_ws/build/pwm_ctrl/build
+[1.377s] creating /home/atoz/ros2_ws/build/pwm_ctrl/build/lib
+[1.378s] creating /home/atoz/ros2_ws/build/pwm_ctrl/build/lib/pwm_ctrl
+[1.378s] copying pwm_ctrl/servo_pwm_node.py -> /home/atoz/ros2_ws/build/pwm_ctrl/build/lib/pwm_ctrl
+[1.378s] copying pwm_ctrl/__init__.py -> /home/atoz/ros2_ws/build/pwm_ctrl/build/lib/pwm_ctrl
+[1.378s] running install
+[1.379s] running install_lib
+[1.380s] creating /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl
+[1.380s] copying /home/atoz/ros2_ws/build/pwm_ctrl/build/lib/pwm_ctrl/servo_pwm_node.py -> /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl
+[1.380s] copying /home/atoz/ros2_ws/build/pwm_ctrl/build/lib/pwm_ctrl/__init__.py -> /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl
+[1.381s] byte-compiling /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl/servo_pwm_node.py to servo_pwm_node.cpython-310.pyc
+[1.383s] byte-compiling /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl/__init__.py to __init__.cpython-310.pyc
+[1.383s] running install_data
+[1.384s] creating /home/atoz/ros2_ws/install/pwm_ctrl/share/ament_index
+[1.384s] creating /home/atoz/ros2_ws/install/pwm_ctrl/share/ament_index/resource_index
+[1.384s] creating /home/atoz/ros2_ws/install/pwm_ctrl/share/ament_index/resource_index/packages
+[1.384s] copying resource/pwm_ctrl -> /home/atoz/ros2_ws/install/pwm_ctrl/share/ament_index/resource_index/packages
+[1.385s] copying package.xml -> /home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl
+[1.385s] running install_egg_info
+[1.388s] Copying ../../build/pwm_ctrl/pwm_ctrl.egg-info to /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl-0.0.0-py3.10.egg-info
+[1.390s] running install_scripts
+[1.430s] Installing servo_pwm_node script to /home/atoz/ros2_ws/install/pwm_ctrl/lib/pwm_ctrl
+[1.430s] writing list of installed files to '/home/atoz/ros2_ws/build/pwm_ctrl/install.log'
+[1.494s] Invoked command in '/home/atoz/ros2_ws/src/pwm_ctrl' returned '0': PYTHONPATH=/home/atoz/ros2_ws/build/pwm_ctrl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pwm_ctrl build --build-base /home/atoz/ros2_ws/build/pwm_ctrl/build install --record /home/atoz/ros2_ws/build/pwm_ctrl/install.log --single-version-externally-managed install_data

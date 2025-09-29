@@ -1,0 +1,3 @@
+[console_scripts]
+servo_pwm_node = pwm_ctrl.servo_pwm_node:main
+
