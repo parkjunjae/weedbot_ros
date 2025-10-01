@@ -6,179 +6,248 @@ from rclpy.node import Node
 from rclpy.duration import Duration
 from geometry_msgs.msg import Twist
 import Jetson.GPIO as GPIO
+from enum import Enum
 
-# ===== 기본 파라미터 =====F
-# PWM 허용 핀(예시): BOARD 33(좌), 35(우) 권장
-DEFAULT_LEFT_PIN   = 33
-DEFAULT_RIGHT_PIN  = 32
-DEFAULT_F_HZ       = 50.0
-DEFAULT_TOPIC_CMD  = "/atoz/cmd_vel"         # Twist: linear.x, angular.z
-DEFAULT_NEUTRAL    = 1500               # µs
-DEFAULT_WD_MS      = 500
-DEFAULT_ARMING_S   = 2.0
+# ===== 하드웨어 매핑 =====
+DEFAULT_THROTTLE_PIN = 32   # ESC 스로틀 (CH2, 3핀 묶음)
+DEFAULT_STEER_PIN    = 33   # 스티어 서보 (CH4, 단독)
 
-# 입력 스케일 선택:
-# input_mode = "us"  → linear.x, angular.z를 µs로 직접 사용 (예: 1500, ±200)
-# input_mode = "norm"→ linear.x∈[-1,1], angular.z∈[-1,1] 로 보내고 아래 스케일로 변환
-DEFAULT_INPUT_MODE = "norm"             # "us" 또는 "norm"
-DEFAULT_THR_MIN    = 1000               # us (정규화 모드에서 -1.0이 맵핑될 값)
-DEFAULT_THR_MAX    = 2000               # us (정규화 모드에서 +1.0이 맵핑될 값)
-DEFAULT_STEER_MAX  = 300                # us (정규화 모드에서 |angular.z|=1.0 → ±300us)
+# ===== 기본 파라미터 =====
+DEFAULT_F_HZ         = 50.0
+DEFAULT_TOPIC_CMD    = "/atoz/cmd_vel"
+DEFAULT_NEUTRAL      = 1500
+DEFAULT_WD_MS        = 500
+DEFAULT_ARMING_S     = 6.0
 
-# 채널별 보정
-DEFAULT_INVERT_L   = False
-DEFAULT_INVERT_R   = True
-DEFAULT_MIN_US     = 900
-DEFAULT_MAX_US     = 2100
-DEFAULT_DBAND_US   = 20
+DEFAULT_STEER_MAX    = 300
+DEFAULT_DBAND_US     = 30
 
-class DiffDrivePwmNode(Node):
-    def __init__(self) -> None:
-        super().__init__("diff_drive_pwm_node")
+# ==== ESC 스펙 기반 맵 ====
+DEFAULT_FWD_NEAR_US  = 1400   # linear.x: 0  → 1400
+DEFAULT_FWD_FAR_US   = 900    #            +1 → 900
+DEFAULT_REV_NEAR_US  = 1700   # linear.x: 0  → 1700
+DEFAULT_REV_FAR_US   = 2100   #            -1 → 2100
 
-        # ----- 파라미터 선언 -----
-        self.declare_parameter("left_pin",    DEFAULT_LEFT_PIN)
-        self.declare_parameter("right_pin",   DEFAULT_RIGHT_PIN)
-        self.declare_parameter("freq_hz",     DEFAULT_F_HZ)
-        self.declare_parameter("cmd_topic",   DEFAULT_TOPIC_CMD)
-        self.declare_parameter("neutral_us",  DEFAULT_NEUTRAL)
-        self.declare_parameter("watchdog_ms", DEFAULT_WD_MS)
-        self.declare_parameter("arming_sec",  DEFAULT_ARMING_S)
+# 옵션
+DEFAULT_REVERSE_GATE_MS = 0
+DEFAULT_LOG_LEVEL_DEBUG = True
+DEFAULT_ARMING_STYLE    = "min"   # 전원 직후 최저로 아밍
+DEFAULT_FORCE_THR_US    = 0       # 0=off
 
-        self.declare_parameter("input_mode",  DEFAULT_INPUT_MODE)  # "us"|"norm"
-        self.declare_parameter("thr_min_us",  DEFAULT_THR_MIN)
-        self.declare_parameter("thr_max_us",  DEFAULT_THR_MAX)
-        self.declare_parameter("steer_max_us",DEFAULT_STEER_MAX)
+# 새 옵션: 스티어 PWM 비활성화(스로틀만 구동해서 지터 최소화)
+DEFAULT_ENABLE_STEER    = True
 
-        self.declare_parameter("invert_left",  DEFAULT_INVERT_L)
-        self.declare_parameter("invert_right", DEFAULT_INVERT_R)
-        self.declare_parameter("min_us",       DEFAULT_MIN_US)
-        self.declare_parameter("max_us",       DEFAULT_MAX_US)
+class RevGateState(Enum):
+    IDLE = 0
+    GATE = 1
+
+class ThrottleSteerNode(Node):
+    def __init__(self):
+        super().__init__("throttle_steer_node")
+
+        # 파라미터 선언
+        self.declare_parameter("throttle_pin", DEFAULT_THROTTLE_PIN)
+        self.declare_parameter("steer_pin",    DEFAULT_STEER_PIN)
+        self.declare_parameter("freq_hz",      DEFAULT_F_HZ)
+        self.declare_parameter("cmd_topic",    DEFAULT_TOPIC_CMD)
+        self.declare_parameter("neutral_us",   DEFAULT_NEUTRAL)
+        self.declare_parameter("watchdog_ms",  DEFAULT_WD_MS)
+        self.declare_parameter("arming_sec",   DEFAULT_ARMING_S)
+
+        self.declare_parameter("steer_max_us", DEFAULT_STEER_MAX)
         self.declare_parameter("deadband_us",  DEFAULT_DBAND_US)
 
-        # ----- 파라미터 로드 -----
-        self.left_pin   = int(self.get_parameter("left_pin").value)
-        self.right_pin  = int(self.get_parameter("right_pin").value)
-        self.f_hz       = float(self.get_parameter("freq_hz").value)
-        self.cmd_topic  = str(self.get_parameter("cmd_topic").value)
-        self.neutral    = int(self.get_parameter("neutral_us").value)
-        self.wd_ms      = int(self.get_parameter("watchdog_ms").value)
-        self.arming_sec = float(self.get_parameter("arming_sec").value)
+        self.declare_parameter("fwd_near_us",  DEFAULT_FWD_NEAR_US)
+        self.declare_parameter("fwd_far_us",   DEFAULT_FWD_FAR_US)
+        self.declare_parameter("rev_near_us",  DEFAULT_REV_NEAR_US)
+        self.declare_parameter("rev_far_us",   DEFAULT_REV_FAR_US)
 
-        self.input_mode = str(self.get_parameter("input_mode").value).lower()
-        self.thr_min    = int(self.get_parameter("thr_min_us").value)
-        self.thr_max    = int(self.get_parameter("thr_max_us").value)
-        self.steer_max  = int(self.get_parameter("steer_max_us").value)
+        self.declare_parameter("reverse_gate_ms", DEFAULT_REVERSE_GATE_MS)
+        self.declare_parameter("debug_log",       DEFAULT_LOG_LEVEL_DEBUG)
+        self.declare_parameter("arming_style",    DEFAULT_ARMING_STYLE)
+        self.declare_parameter("force_thr_us",    DEFAULT_FORCE_THR_US)
 
-        self.invert_l   = bool(self.get_parameter("invert_left").value)
-        self.invert_r   = bool(self.get_parameter("invert_right").value)
-        self.min_us     = int(self.get_parameter("min_us").value)
-        self.max_us     = int(self.get_parameter("max_us").value)
-        self.deadband   = int(self.get_parameter("deadband_us").value)
+        # 새 파라미터
+        self.declare_parameter("enable_steer",    DEFAULT_ENABLE_STEER)
 
-        # ----- GPIO 초기화 -----
+        # 파라미터 로드
+        self.thr_pin   = int(self.get_parameter("throttle_pin").value)
+        self.steer_pin = int(self.get_parameter("steer_pin").value)
+        self.f_hz      = float(self.get_parameter("freq_hz").value)
+        self.topic     = str(self.get_parameter("cmd_topic").value)
+        self.neutral   = int(self.get_parameter("neutral_us").value)
+        self.wd_ms     = int(self.get_parameter("watchdog_ms").value)
+        self.arm_s     = float(self.get_parameter("arming_sec").value)
+
+        self.steer_max = int(self.get_parameter("steer_max_us").value)
+        self.deadband  = int(self.get_parameter("deadband_us").value)
+
+        self.fwd_near  = int(self.get_parameter("fwd_near_us").value)
+        self.fwd_far   = int(self.get_parameter("fwd_far_us").value)
+        self.rev_near  = int(self.get_parameter("rev_near_us").value)
+        self.rev_far   = int(self.get_parameter("rev_far_us").value)
+
+        self.reverse_gate_ms = int(self.get_parameter("reverse_gate_ms").value)
+        self.debug_log       = bool(self.get_parameter("debug_log").value)
+        self.force_thr_us    = int(self.get_parameter("force_thr_us").value)
+
+        self.arming_style = str(self.get_parameter("arming_style").value).strip().lower()
+        if self.arming_style not in ("neutral", "min"):
+            self.get_logger().warn(f"Unknown arming_style '{self.arming_style}', fallback to 'neutral'")
+            self.arming_style = "neutral"
+
+        self.enable_steer = bool(self.get_parameter("enable_steer").value)
+
+        # 내부 상태
+        self.last_thr_us = self.neutral
+        self.rev_state   = RevGateState.IDLE
+        self.rev_gate_until = None
+
+        # GPIO 초기화
         GPIO.setwarnings(False)
         GPIO.setmode(GPIO.BOARD)
-        GPIO.setup(self.left_pin,  GPIO.OUT, initial=GPIO.LOW)
-        GPIO.setup(self.right_pin, GPIO.OUT, initial=GPIO.LOW)
+        GPIO.setup(self.thr_pin, GPIO.OUT, initial=GPIO.LOW)
+        if self.enable_steer:
+            GPIO.setup(self.steer_pin, GPIO.OUT, initial=GPIO.LOW)
 
-        self.pwm_left  = GPIO.PWM(self.left_pin,  self.f_hz)
-        self.pwm_right = GPIO.PWM(self.right_pin, self.f_hz)
+        # PWM 객체
+        self.pwm_thr = GPIO.PWM(self.thr_pin, self.f_hz)
+        self.pwm_steer = None
+        if self.enable_steer:
+            self.pwm_steer = GPIO.PWM(self.steer_pin, self.f_hz)
 
-        # 중립 듀티로 시작 (아밍)
-        nd = self._us_to_duty(self.neutral)
-        self.pwm_left.start(nd)
-        self.pwm_right.start(nd)
+        # 아밍 펄스
+        self.arming_us = self.neutral if self.arming_style == "neutral" else min(self.fwd_far, self.neutral)
+        self.pwm_thr.start(self._us_to_duty(self.arming_us))
+        if self.pwm_steer:
+            self.pwm_steer.start(self._us_to_duty(self.neutral))
 
         now = self.get_clock().now()
-        self.arming_until = now + Duration(seconds=self.arming_sec)
+        self.arming_until = now + Duration(seconds=self.arm_s)
         self.last_rcv     = now
 
-        # 하나의 토픽만 구독 (Twist)
-        self.sub = self.create_subscription(Twist, self.cmd_topic, self.on_cmd, 10)
-
-        # 워치독
+        # ROS I/O
+        self.sub   = self.create_subscription(Twist, self.topic, self.on_cmd, 10)
         self.timer = self.create_timer(self.wd_ms / 1000.0, self.watchdog)
 
         self.get_logger().info(
-            f"[diff_drive_pwm_node] L={self.left_pin}, R={self.right_pin}, "
-            f"freq={self.f_hz}Hz, neutral={self.neutral}us, input='{self.input_mode}', "
-            f"thr_min={self.thr_min}, thr_max={self.thr_max}, steer_max={self.steer_max}, "
-            f"invert(L,R)=({self.invert_l},{self.invert_r}), range=[{self.min_us},{self.max_us}]"
+            f"[throttle_steer_node] Throttle=BOARD{self.thr_pin} CH2, "
+            f"Steer={'ENABLED BOARD'+str(self.steer_pin) if self.enable_steer else 'DISABLED'}, "
+            f"freq={self.f_hz}Hz, neutral={self.neutral}us, "
+            f"FWD:{self.fwd_near}->{self.fwd_far}us, REV:{self.rev_near}->{self.rev_far}us, "
+            f"arming={self.arm_s}s({self.arming_style}:{self.arming_us}us), wd={self.wd_ms}ms, force_thr_us={self.force_thr_us}"
         )
 
     # ===== 유틸 =====
     def _us_to_duty(self, us: int) -> float:
         period_us = 1_000_000.0 / self.f_hz
-        duty = (float(us) / period_us) * 100.0
-        return max(0.0, min(100.0, duty))
+        return max(0.0, min(100.0, (us / period_us) * 100.0))
 
-    def _apply_channel_map(self, us: int, invert: bool) -> int:
-        if invert:
-            us = 2 * self.neutral - us
-        if abs(us - self.neutral) <= self.deadband:
-            us = self.neutral
-        if us < self.min_us:
-            us = self.min_us
-        elif us > self.max_us:
-            us = self.max_us
-        return us
+    def _clamp_us(self, us: int) -> int:
+        lo = min(self.fwd_far, self.neutral, self.rev_near)
+        hi = max(self.rev_far, self.neutral, self.fwd_near)
+        return max(lo, min(hi, us))
 
-    # ===== 메인 콜백 =====
-    def on_cmd(self, msg: Twist) -> None:
+    # ===== 핵심: 스로틀 매핑 =====
+    def _map_throttle_piecewise(self, t: float) -> int:
+        if abs(t) < max(1e-3, self.deadband / 1000.0):
+            return self.neutral
+        if t > 0.0:
+            us = int(self.fwd_near + (self.fwd_far - self.fwd_near) * min(t, 1.0))   # 1400→900
+        else:
+            us = int(self.rev_near + (self.rev_far - self.rev_near) * min(-t, 1.0))  # 1700→2100
+        return self._clamp_us(us)
+
+    def _map_steer(self, s: float) -> int:
+        if not self.pwm_steer:
+            return self.neutral
+        lo = self.neutral - self.steer_max
+        hi = self.neutral + self.steer_max
+        if abs(s) < 1e-6:
+            return self.neutral
+        us = self.neutral + int(max(-1.0, min(1.0, s)) * self.steer_max)
+        return max(lo, min(hi, us))
+
+    def _apply_pwm(self, thr_us: int, steer_us: int):
+        self.pwm_thr.ChangeDutyCycle(self._us_to_duty(thr_us))
+        if self.pwm_steer:
+            self.pwm_steer.ChangeDutyCycle(self._us_to_duty(steer_us))
+
+    # ===== 콜백 =====
+    def on_cmd(self, msg: Twist):
         now = self.get_clock().now()
+
+        # 아밍 중에는 스로틀만 유지
         if now < self.arming_until:
+            self._apply_pwm(self.arming_us, self.neutral)
             return
 
-        # 입력 해석
-        if self.input_mode == "us":
-            throttle_us = int(msg.linear.x)       # 절대 펄스폭
-            steer_delta = int(msg.angular.z)      # 중립 기준 ±us
-        else:  # "norm": -1.0~+1.0
-            # throttle: [-1..+1] → [thr_min..thr_max]
-            t = max(-1.0, min(1.0, msg.linear.x))
-            throttle_us = int((t + 1.0) * 0.5 * (self.thr_max - self.thr_min) + self.thr_min)
-            # steer: [-1..+1] → [-steer_max..+steer_max]
-            s = max(-1.0, min(1.0, msg.angular.z))
-            steer_delta = int(s * self.steer_max)
+        # 입력
+        t = max(-1.0, min(1.0, msg.linear.x))
+        s = max(-1.0, min(1.0, msg.angular.z))
 
-        # 믹싱 (좌:+, 우:-)
-        left_us  = throttle_us + steer_delta
-        right_us = throttle_us - steer_delta
+        # 스로틀 계산(강제 모드 우선)
+        if self.force_thr_us > 0:
+            target_thr_us = self._clamp_us(self.force_thr_us)
+        else:
+            target_thr_us = self._map_throttle_piecewise(t)
 
-        # 채널별 보정/클램프 → 출력
-        l = self._apply_channel_map(left_us,  self.invert_l)
-        r = self._apply_channel_map(right_us, self.invert_r)
+        target_steer_us = self._map_steer(s)
 
-        self.pwm_left.ChangeDutyCycle(self._us_to_duty(l))
-        self.pwm_right.ChangeDutyCycle(self._us_to_duty(r))
+        # 역진 게이트(옵션)
+        if self.reverse_gate_ms > 0 and self.force_thr_us == 0:
+            cur_fwd = self.last_thr_us < (self.neutral - self.deadband)
+            new_rev = target_thr_us > (self.neutral + self.deadband)
+            if self.rev_state == RevGateState.IDLE and cur_fwd and new_rev:
+                self.rev_state = RevGateState.GATE
+                self.rev_gate_until = now + Duration(seconds=self.reverse_gate_ms / 1000.0)
+                self._apply_pwm(self.neutral, target_steer_us)
+                self.last_rcv = now
+                self.last_thr_us = self.neutral
+                if self.debug_log:
+                    self.get_logger().info(f"[rev-gate] neutral {self.reverse_gate_ms}ms")
+                return
+            if self.rev_state == RevGateState.GATE:
+                if now < self.rev_gate_until:
+                    self._apply_pwm(self.neutral, target_steer_us)
+                    self.last_rcv = now
+                    self.last_thr_us = self.neutral
+                    return
+                self.rev_state = RevGateState.IDLE
 
+        # 적용
+        self._apply_pwm(target_thr_us, target_steer_us)
         self.last_rcv = now
+        self.last_thr_us = target_thr_us
 
-    def watchdog(self) -> None:
+        if self.debug_log:
+            self.get_logger().info(f"thr_us={target_thr_us}, steer_us={target_steer_us}, t={t:.2f}, s={s:.2f}")
+
+    def watchdog(self):
         if (self.get_clock().now() - self.last_rcv).nanoseconds > self.wd_ms * 1_000_000:
             nd = self._us_to_duty(self.neutral)
-            self.pwm_left.ChangeDutyCycle(nd)
-            self.pwm_right.ChangeDutyCycle(nd)
+            self.pwm_thr.ChangeDutyCycle(nd)
+            if self.pwm_steer:
+                self.pwm_steer.ChangeDutyCycle(nd)
+            self.rev_state = RevGateState.IDLE
 
-    def destroy_node(self) -> None:
+    def destroy_node(self):
         try:
-            self.pwm_left.stop()
-            self.pwm_right.stop()
+            self.pwm_thr.stop()
+            if self.pwm_steer:
+                self.pwm_steer.stop()
         finally:
             GPIO.cleanup()
             super().destroy_node()
 
-
-def main() -> None:
+def main():
     rclpy.init()
-    node = DiffDrivePwmNode()
+    node = ThrottleSteerNode()
     try:
         rclpy.spin(node)
     finally:
         node.destroy_node()
         rclpy.shutdown()
-
 
 if __name__ == "__main__":
     main()
