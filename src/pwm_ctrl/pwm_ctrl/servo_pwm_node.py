@@ -34,7 +34,7 @@ DEFAULT_LOG_LEVEL_DEBUG = True
 DEFAULT_ARMING_STYLE    = "neutral"   # "neutral"|"min"
 DEFAULT_FORCE_THR_US    = 0           # 0=off
 
-# 동작 모드(향후 확장 대비)
+# 동작 모드(확장 대비 — 현재는 simple_split 사용)
 DEFAULT_MODE            = "simple_split"   # "simple_split" | "nav_tank_mix"
 DEFAULT_TANK_K          = 0.5
 DEFAULT_INVERT_TURN_DIR = False
@@ -52,9 +52,9 @@ DEFAULT_CH4_TRIM_US = 0
 
 # 회전-only 때 CH2 동력 보조(스핀 부스트)
 DEFAULT_SPIN_BOOST_NORM = 0.35   # 0~1
-DEFAULT_USE_SPIN_SIGN   = False  # 보통 False(항상 전진쪽 동력)
+DEFAULT_USE_SPIN_SIGN   = False  # False면 항상 전진쪽 부스트
 
-# CH4 사용 여부 (테스트용으로 끌 수도 있게)
+# CH4 사용 여부
 DEFAULT_ENABLE_STEER = True
 
 
@@ -162,19 +162,31 @@ class ThrottleSteerNode(Node):
         GPIO.setup(self.thr_pin, GPIO.OUT, initial=GPIO.LOW)
         self.pwm_thr = GPIO.PWM(self.thr_pin, self.f_hz)
 
-        # CH4(스티어) — enable_steer일 때만 사용
+        # CH4(스티어) — 방어로직 포함
+        self.pwm_steer = None
+        self.steer_pwm_active = False
+        self.steer_configured = False
         if self.enable_steer:
-            GPIO.setup(self.steer_pin, GPIO.OUT, initial=GPIO.LOW)
-            self.pwm_steer = GPIO.PWM(self.steer_pin, self.f_hz)
-        else:
-            self.pwm_steer = None
-        self.steer_pwm_active = False  # CH4 PWM 상태
+            try:
+                GPIO.setup(self.steer_pin, GPIO.OUT, initial=GPIO.LOW)
+                self.pwm_steer = GPIO.PWM(self.steer_pin, self.f_hz)
+                self.steer_configured = True
+            except Exception as e:
+                self.get_logger().warn(
+                    f"CH4(BOARD{self.steer_pin}) setup 실패 → enable_steer=False로 전환: {e}"
+                )
+                self.enable_steer = False
+                self.pwm_steer = None
+                self.steer_configured = False
 
-        # 아밍: CH2만 시작, CH4는 OFF(무신호)
+        # 아밍: CH2 시작, CH4는 설정된 경우에만 무신호로
         self.arming_us = self.neutral if self.arming_style == "neutral" else min(self.fwd_far, self.neutral)
         self.pwm_thr.start(self._us_to_duty(self.arming_us))
-        if self.enable_steer:
-            GPIO.output(self.steer_pin, GPIO.LOW)  # CH4 무신호
+        if self.enable_steer and self.steer_configured:
+            try:
+                GPIO.output(self.steer_pin, GPIO.LOW)  # 무신호
+            except Exception as e:
+                self.get_logger().warn(f"CH4 무신호 설정 실패(무시): {e}")
 
         now = self.get_clock().now()
         self.arming_until = now + Duration(seconds=self.arm_s)
@@ -185,7 +197,8 @@ class ThrottleSteerNode(Node):
         self.timer = self.create_timer(self.wd_ms / 1000.0, self.watchdog)
 
         self.get_logger().info(
-            f"[throttle_steer_node] CH2=BOARD{self.thr_pin}, CH4=BOARD{self.steer_pin}, "
+            f"[throttle_steer_node] CH2=BOARD{self.thr_pin}, "
+            f"CH4={'BOARD'+str(self.steer_pin) if (self.enable_steer and self.steer_configured) else 'DISABLED'}, "
             f"freq={self.f_hz}Hz, neutral={self.neutral}us, mode={self.mode}, "
             f"spin_boost={self.spin_boost_norm}, enable_steer={self.enable_steer}"
         )
@@ -201,6 +214,7 @@ class ThrottleSteerNode(Node):
         return max(lo, min(hi, us))
 
     def _map_esc(self, v: float) -> int:
+        """정규화 [-1..1] -> ESC 펄스폭 (CH2)"""
         v = max(-1.0, min(1.0, v))
         if abs(v) < max(1e-3, self.deadband / 1000.0):
             return self.neutral
@@ -211,14 +225,9 @@ class ThrottleSteerNode(Node):
         return self._clamp_us(us)
 
     def _map_steer(self, s: float) -> int:
+        """정규화 [-1..1] -> 스티어 펄스폭 (CH4)"""
         s = max(-1.0, min(1.0, s))
         return self._clamp_us(self.neutral + int(s * self.steer_max))
-
-    def _apply_pwm(self, ch2_us: int, ch4_us: int, apply_ch4: bool):
-        """apply_ch4=False면 CH4는 건드리지 않음(OFF 유지)."""
-        self.pwm_thr.ChangeDutyCycle(self._us_to_duty(ch2_us))
-        if self.enable_steer and apply_ch4 and self.steer_pwm_active:
-            self.pwm_steer.ChangeDutyCycle(self._us_to_duty(ch4_us))
 
     def _maybe_invert(self, us: int, invert: bool) -> int:
         return 2 * self.neutral - us if invert else us
@@ -227,22 +236,37 @@ class ThrottleSteerNode(Node):
         return int(self.neutral + scale * (us - self.neutral) + trim_us)
 
     def _steer_pwm_start(self, us: int):
-        if not self.enable_steer:
+        if not (self.enable_steer and self.steer_configured):
             return
         duty = self._us_to_duty(us)
         if not self.steer_pwm_active:
-            self.pwm_steer.start(duty)
-            self.steer_pwm_active = True
+            try:
+                self.pwm_steer.start(duty)
+                self.steer_pwm_active = True
+            except Exception as e:
+                self.get_logger().warn(f"CH4 PWM start 실패(무시): {e}")
         else:
             self.pwm_steer.ChangeDutyCycle(duty)
 
     def _steer_pwm_stop(self):
-        if not self.enable_steer:
+        if not (self.enable_steer and self.steer_configured):
             return
         if self.steer_pwm_active:
-            self.pwm_steer.stop()
+            try:
+                self.pwm_steer.stop()
+            except Exception as e:
+                self.get_logger().warn(f"CH4 PWM stop 실패(무시): {e}")
             self.steer_pwm_active = False
-        GPIO.output(self.steer_pin, GPIO.LOW)  # 무신호
+        try:
+            GPIO.output(self.steer_pin, GPIO.LOW)  # 무신호
+        except Exception:
+            pass
+
+    def _apply_pwm(self, ch2_us: int, ch4_us: int, apply_ch4: bool):
+        """apply_ch4=False면 CH4는 건드리지 않음(OFF 유지)."""
+        self.pwm_thr.ChangeDutyCycle(self._us_to_duty(ch2_us))
+        if apply_ch4 and self.enable_steer and self.steer_configured and self.steer_pwm_active:
+            self.pwm_steer.ChangeDutyCycle(self._us_to_duty(ch4_us))
 
     # ===== 콜백 =====
     def on_cmd(self, msg: Twist):
