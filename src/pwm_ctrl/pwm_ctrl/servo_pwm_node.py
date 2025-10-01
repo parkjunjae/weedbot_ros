@@ -8,6 +8,9 @@ from geometry_msgs.msg import Twist
 import Jetson.GPIO as GPIO
 from enum import Enum
 
+
+
+
 # ===== 하드웨어 매핑 (BOARD 번호) =====
 DEFAULT_THROTTLE_PIN = 32   # CH2
 DEFAULT_STEER_PIN    = 33   # CH4
