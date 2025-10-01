@@ -24,7 +24,6 @@ DEFAULT_STEER_MAX    = 300
 DEFAULT_DBAND_US     = 30
 
 # ==== ESC 맵 (정규화 입력 [-1,1]) ====
-# 대칭 맵(권장): 중립 1500, 전진/후진 끝값 1000/2000
 DEFAULT_FWD_NEAR_US  = 1500   # t=0 → 1500
 DEFAULT_FWD_FAR_US   = 1000   # t=+1 → 1000
 DEFAULT_REV_NEAR_US  = 1500   # t=0 → 1500
@@ -35,30 +34,29 @@ DEFAULT_LOG_LEVEL_DEBUG = True
 DEFAULT_ARMING_STYLE    = "neutral"   # "neutral"|"min"
 DEFAULT_FORCE_THR_US    = 0           # 0=off
 
-# 동작 모드 (필요시 확장용. 현재는 simple_split 중심)
+# 동작 모드
 DEFAULT_MODE            = "simple_split"   # "simple_split" | "nav_tank_mix"
 DEFAULT_TANK_K          = 0.5
-DEFAULT_INVERT_TURN_DIR = False            # 회전 방향 반전 플래그
+DEFAULT_INVERT_TURN_DIR = False
 
-# 채널 반전/스왑(기본 꺼둠. 현재 하드웨어 가정상 보통 필요 없음)
+# 채널 반전/스왑
 DEFAULT_INVERT_CH2    = False
 DEFAULT_INVERT_CH4    = False
 DEFAULT_SWAP_CHANNELS = False
 
-# 좌/우 밸런스 보정(스케일/트림) — 필요시만 사용
+# 밸런스 보정
 DEFAULT_CH2_SCALE   = 1.0
 DEFAULT_CH4_SCALE   = 1.0
 DEFAULT_CH2_TRIM_US = 0
 DEFAULT_CH4_TRIM_US = 0
 
-# ======= ★ 직진/회전 문제 해결 핵심 파라미터 =======
-# 직진 시 CH4=1500(정중앙)이 브레이크/무시로 해석되는 문제를 피하기 위한 미세 바이어스/게인
-DEFAULT_STRAIGHT_CH4_BIAS_US = 20   # 전진/후진 때 CH4에 줄 ±오프셋(10~30 권장)
-DEFAULT_STRAIGHT_CH4_GAIN_US = 0    # t에 비례한 오프셋(µs). 0이면 비활성
+# (직진 때 CH4 중립 문제는 이제 PWM OFF로 해결하므로 아래 둘은 기본 0으로 유지 가능)
+DEFAULT_STRAIGHT_CH4_BIAS_US = 0
+DEFAULT_STRAIGHT_CH4_GAIN_US = 0
 
-# 회전-only 때 CH2에 얹는 베이스 스로틀(동력)
-DEFAULT_SPIN_BOOST_NORM = 0.35      # 0~1 권장 (예: 0.35)
-DEFAULT_USE_SPIN_SIGN   = False     # 회전 부호에 따라 앞/뒤로 줄지(보통 False=항상 전진쪽)
+# 회전-only 때 CH2 동력 보조
+DEFAULT_SPIN_BOOST_NORM = 0.35
+DEFAULT_USE_SPIN_SIGN   = False
 
 class RevGateState(Enum):
     IDLE = 0
@@ -102,7 +100,6 @@ class ThrottleSteerNode(Node):
         self.declare_parameter("ch2_trim_us", DEFAULT_CH2_TRIM_US)
         self.declare_parameter("ch4_trim_us", DEFAULT_CH4_TRIM_US)
 
-        # ★ 핵심 파라미터
         self.declare_parameter("straight_ch4_bias_us", DEFAULT_STRAIGHT_CH4_BIAS_US)
         self.declare_parameter("straight_ch4_gain_us", DEFAULT_STRAIGHT_CH4_GAIN_US)
         self.declare_parameter("spin_boost_norm",      DEFAULT_SPIN_BOOST_NORM)
@@ -165,11 +162,12 @@ class ThrottleSteerNode(Node):
         # PWM
         self.pwm_thr   = GPIO.PWM(self.thr_pin, self.f_hz)
         self.pwm_steer = GPIO.PWM(self.steer_pin, self.f_hz)
+        self.steer_pwm_active = False  # CH4 PWM 현재 상태
 
-        # 아밍 펄스
+        # 아밍: CH2만 시작, CH4는 OFF(무신호)
         self.arming_us = self.neutral if self.arming_style == "neutral" else min(self.fwd_far, self.neutral)
         self.pwm_thr.start(self._us_to_duty(self.arming_us))
-        self.pwm_steer.start(self._us_to_duty(self.neutral))
+        GPIO.output(self.steer_pin, GPIO.LOW)  # CH4 무신호
 
         now = self.get_clock().now()
         self.arming_until = now + Duration(seconds=self.arm_s)
@@ -182,7 +180,7 @@ class ThrottleSteerNode(Node):
         self.get_logger().info(
             f"[throttle_steer_node] CH2=BOARD{self.thr_pin}, CH4=BOARD{self.steer_pin}, "
             f"freq={self.f_hz}Hz, neutral={self.neutral}us, mode={self.mode}, "
-            f"straight_bias={self.straight_ch4_bias_us}us, spin_boost={self.spin_boost_norm}"
+            f"spin_boost={self.spin_boost_norm}"
         )
 
     # ===== 유틸 =====
@@ -196,7 +194,6 @@ class ThrottleSteerNode(Node):
         return max(lo, min(hi, us))
 
     def _map_esc(self, v: float) -> int:
-        """정규화 [-1..1] -> ESC 펄스폭 (CH2용)"""
         v = max(-1.0, min(1.0, v))
         if abs(v) < max(1e-3, self.deadband / 1000.0):
             return self.neutral
@@ -207,91 +204,105 @@ class ThrottleSteerNode(Node):
         return self._clamp_us(us)
 
     def _map_steer(self, s: float) -> int:
-        """정규화 [-1..1] -> 스티어 펄스폭 (CH4용)"""
         s = max(-1.0, min(1.0, s))
         return self._clamp_us(self.neutral + int(s * self.steer_max))
 
-    def _apply_pwm(self, ch2_us: int, ch4_us: int):
+    def _apply_pwm(self, ch2_us: int, ch4_us: int, apply_ch4: bool):
+        """apply_ch4=False면 CH4는 건드리지 않음(OFF 유지)."""
         self.pwm_thr.ChangeDutyCycle(self._us_to_duty(ch2_us))
-        self.pwm_steer.ChangeDutyCycle(self._us_to_duty(ch4_us))
+        if apply_ch4 and self.steer_pwm_active:
+            self.pwm_steer.ChangeDutyCycle(self._us_to_duty(ch4_us))
 
     def _maybe_invert(self, us: int, invert: bool) -> int:
-        # 1500us 기준 대칭 반전
         return 2 * self.neutral - us if invert else us
 
     def _apply_cal(self, us: int, scale: float, trim_us: int) -> int:
-        # 1500 기준 스케일+트림
         return int(self.neutral + scale * (us - self.neutral) + trim_us)
+
+    def _steer_pwm_start(self, us: int):
+        duty = self._us_to_duty(us)
+        if not self.steer_pwm_active:
+            self.pwm_steer.start(duty)
+            self.steer_pwm_active = True
+        else:
+            self.pwm_steer.ChangeDutyCycle(duty)
+
+    def _steer_pwm_stop(self):
+        if self.steer_pwm_active:
+            self.pwm_steer.stop()
+            self.steer_pwm_active = False
+        GPIO.output(self.steer_pin, GPIO.LOW)  # 무신호
 
     # ===== 콜백 =====
     def on_cmd(self, msg: Twist):
         now = self.get_clock().now()
 
-        # 아밍 동안
+        # 아밍 동안: CH2만 유지, CH4는 OFF
         if now < self.arming_until:
-            self._apply_pwm(self.arming_us, self.neutral)
+            self._steer_pwm_stop()
+            self._apply_pwm(self.arming_us, self.neutral, apply_ch4=False)
             return
 
         # 입력 정규화
-        t = max(-1.0, min(1.0, msg.linear.x))   # 속도(전/후진) → CH2
-        s = max(-1.0, min(1.0, msg.angular.z))  # 방향(회전)     → CH4
+        t = max(-1.0, min(1.0, msg.linear.x))
+        s = max(-1.0, min(1.0, msg.angular.z))
         if self.invert_turn:
             s = -s
 
-        # ---- simple_split: CH2=속도, CH4=방향 ----
+        # 분기
         t_dead = max(1e-3, self.deadband / 1000.0)
         rotate_only = (abs(t) < t_dead) and (abs(s) >= t_dead)
 
         if rotate_only:
-            # 회전-only: CH4가 방향, CH2는 약간의 동력(스핀 부스트)
-            ch4_us = self._map_steer(s)
+            # 회전-only: CH4 ON, CH2는 스핀부스트
+            ch4_raw = self._map_steer(s)
+            self._steer_pwm_start(ch4_raw)
             spin_mag = max(0.0, min(1.0, self.spin_boost_norm)) * abs(s)
-            if self.use_spin_sign:
-                spin_t = spin_mag if s >= 0.0 else -spin_mag
-            else:
-                spin_t = spin_mag  # 항상 전진쪽
-            ch2_us = self._map_esc(spin_t)
+            spin_t = spin_mag if (self.use_spin_sign and s >= 0.0) else (spin_mag if not self.use_spin_sign else -spin_mag)
+            ch2_raw = self._map_esc(spin_t)
+
+            # 보정/반전/스왑
+            ch2_us = self._apply_cal(ch2_raw, self.ch2_scale, self.ch2_trim_us)
+            ch4_us = self._apply_cal(ch4_raw, self.ch4_scale, self.ch4_trim_us)
+            ch2_us = self._maybe_invert(ch2_us, self.invert_ch2)
+            ch4_us = self._maybe_invert(ch4_us, self.invert_ch4)
+            if self.swap_channels:
+                ch2_us, ch4_us = ch4_us, ch2_us
+
+            if self.debug_log:
+                self.get_logger().info(f"[cmd] ROT t={t:.2f} s={s:.2f} -> ch2={ch2_us} ch4={ch4_us} (CH4 ON)")
+            self._apply_pwm(ch2_us, ch4_us, apply_ch4=True)
 
         else:
-            # 전/후진: CH2만 속도, CH4는 '완전 1500' 회피용 작은 오프셋
-            ch2_us = self._map_esc(t)
-            ch4_off = 0
-            if self.straight_ch4_bias_us != 0:
-                ch4_off += self.straight_ch4_bias_us if t > 0.0 else (-self.straight_ch4_bias_us if t < 0.0 else 0)
-            if self.straight_ch4_gain_us != 0:
-                ch4_off += int(self.straight_ch4_gain_us * t)
-            ch4_us = self._clamp_us(self.neutral + ch4_off)
+            # 직진/후진: CH4 OFF, CH2만 사용
+            self._steer_pwm_stop()
+            ch2_raw = self._map_esc(t)
 
-        # ===== 보정/반전/스왑 적용 순서 =====
-        # (1) 스케일/트림
-        ch2_us = self._apply_cal(ch2_us, self.ch2_scale, self.ch2_trim_us)
-        ch4_us = self._apply_cal(ch4_us, self.ch4_scale, self.ch4_trim_us)
-        # (2) 채널 반전
-        ch2_us = self._maybe_invert(ch2_us, self.invert_ch2)
-        ch4_us = self._maybe_invert(ch4_us, self.invert_ch4)
-        # (3) 스왑
-        if self.swap_channels:
-            ch2_us, ch4_us = ch4_us, ch2_us
+            # 보정/반전/스왑 (CH4는 의미 없음, 로깅용 중립만 생성)
+            ch2_us = self._apply_cal(ch2_raw, self.ch2_scale, self.ch2_trim_us)
+            ch2_us = self._maybe_invert(ch2_us, self.invert_ch2)
+            # swap이면 의미가 바뀌므로 직진 케이스에선 swap 금지 권장. 필요하면 아래처럼 중립 로그만:
+            ch4_us = self.neutral
 
-        # 적용
-        if self.debug_log:
-            self.get_logger().info(f"[cmd] t={t:.2f} s={s:.2f} -> ch2={ch2_us} ch4={ch4_us}")
-        self._apply_pwm(ch2_us, ch4_us)
+            if self.debug_log:
+                self.get_logger().info(f"[cmd] STR t={t:.2f} s={s:.2f} -> ch2={ch2_us} ch4=OFF")
+            self._apply_pwm(ch2_us, ch4_us, apply_ch4=False)
 
         self.last_rcv = now
         self.last_thr_us = ch2_us
 
     def watchdog(self):
+        # 입력 끊기면 CH2는 중립, CH4는 OFF로 안전정지
         if (self.get_clock().now() - self.last_rcv).nanoseconds > self.wd_ms * 1_000_000:
+            self._steer_pwm_stop()
             nd = self._us_to_duty(self.neutral)
             self.pwm_thr.ChangeDutyCycle(nd)
-            self.pwm_steer.ChangeDutyCycle(nd)
             self.rev_state = RevGateState.IDLE
 
     def destroy_node(self):
         try:
             self.pwm_thr.stop()
-            self.pwm_steer.stop()
+            self._steer_pwm_stop()
         finally:
             GPIO.cleanup()
             super().destroy_node()
