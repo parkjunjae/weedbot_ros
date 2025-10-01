@@ -169,6 +169,7 @@ class ThrottleSteerNode(Node):
         if self.enable_steer:
             try:
                 GPIO.setup(self.steer_pin, GPIO.OUT, initial=GPIO.LOW)
+                GPIO.output(self.steer_pin, GPIO.LOW) 
                 self.pwm_steer = GPIO.PWM(self.steer_pin, self.f_hz)
                 self.steer_configured = True
             except Exception as e:
