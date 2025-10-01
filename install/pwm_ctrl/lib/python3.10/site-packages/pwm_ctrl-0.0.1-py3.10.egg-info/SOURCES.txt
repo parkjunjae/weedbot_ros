@@ -8,6 +8,7 @@ setup.py
 ../../build/pwm_ctrl/pwm_ctrl.egg-info/requires.txt
 ../../build/pwm_ctrl/pwm_ctrl.egg-info/top_level.txt
 ../../build/pwm_ctrl/pwm_ctrl.egg-info/zip-safe
+launch/servo_pwm.launch.py
 pwm_ctrl/__init__.py
 pwm_ctrl/servo_pwm_node.py
 resource/pwm_ctrl

@@ -4,6 +4,7 @@
 /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl/__pycache__/servo_pwm_node.cpython-310.pyc
 /home/atoz/ros2_ws/install/pwm_ctrl/share/ament_index/resource_index/packages/pwm_ctrl
 /home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/package.xml
+/home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/launch/servo_pwm.launch.py
 /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl-0.0.1-py3.10.egg-info/dependency_links.txt
 /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl-0.0.1-py3.10.egg-info/zip-safe
 /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl-0.0.1-py3.10.egg-info/top_level.txt
