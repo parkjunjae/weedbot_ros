@@ -34,7 +34,7 @@ DEFAULT_LOG_LEVEL_DEBUG = True
 DEFAULT_ARMING_STYLE    = "neutral"   # "neutral"|"min"
 DEFAULT_FORCE_THR_US    = 0           # 0=off
 
-# 동작 모드
+# 동작 모드(향후 확장 대비)
 DEFAULT_MODE            = "simple_split"   # "simple_split" | "nav_tank_mix"
 DEFAULT_TANK_K          = 0.5
 DEFAULT_INVERT_TURN_DIR = False
@@ -50,17 +50,18 @@ DEFAULT_CH4_SCALE   = 1.0
 DEFAULT_CH2_TRIM_US = 0
 DEFAULT_CH4_TRIM_US = 0
 
-# (직진 때 CH4 중립 문제는 이제 PWM OFF로 해결하므로 아래 둘은 기본 0으로 유지 가능)
-DEFAULT_STRAIGHT_CH4_BIAS_US = 0
-DEFAULT_STRAIGHT_CH4_GAIN_US = 0
+# 회전-only 때 CH2 동력 보조(스핀 부스트)
+DEFAULT_SPIN_BOOST_NORM = 0.35   # 0~1
+DEFAULT_USE_SPIN_SIGN   = False  # 보통 False(항상 전진쪽 동력)
 
-# 회전-only 때 CH2 동력 보조
-DEFAULT_SPIN_BOOST_NORM = 0.35
-DEFAULT_USE_SPIN_SIGN   = False
+# CH4 사용 여부 (테스트용으로 끌 수도 있게)
+DEFAULT_ENABLE_STEER = True
+
 
 class RevGateState(Enum):
     IDLE = 0
     GATE = 1
+
 
 class ThrottleSteerNode(Node):
     def __init__(self):
@@ -100,10 +101,10 @@ class ThrottleSteerNode(Node):
         self.declare_parameter("ch2_trim_us", DEFAULT_CH2_TRIM_US)
         self.declare_parameter("ch4_trim_us", DEFAULT_CH4_TRIM_US)
 
-        self.declare_parameter("straight_ch4_bias_us", DEFAULT_STRAIGHT_CH4_BIAS_US)
-        self.declare_parameter("straight_ch4_gain_us", DEFAULT_STRAIGHT_CH4_GAIN_US)
-        self.declare_parameter("spin_boost_norm",      DEFAULT_SPIN_BOOST_NORM)
-        self.declare_parameter("use_spin_sign",        DEFAULT_USE_SPIN_SIGN)
+        self.declare_parameter("spin_boost_norm", DEFAULT_SPIN_BOOST_NORM)
+        self.declare_parameter("use_spin_sign",   DEFAULT_USE_SPIN_SIGN)
+
+        self.declare_parameter("enable_steer", DEFAULT_ENABLE_STEER)
 
         # ---- 파라미터 로드 ----
         self.thr_pin   = int(self.get_parameter("throttle_pin").value)
@@ -139,10 +140,10 @@ class ThrottleSteerNode(Node):
         self.ch2_trim_us = int(self.get_parameter("ch2_trim_us").value)
         self.ch4_trim_us = int(self.get_parameter("ch4_trim_us").value)
 
-        self.straight_ch4_bias_us = int(self.get_parameter("straight_ch4_bias_us").value)
-        self.straight_ch4_gain_us = int(self.get_parameter("straight_ch4_gain_us").value)
-        self.spin_boost_norm      = float(self.get_parameter("spin_boost_norm").value)
-        self.use_spin_sign        = bool(self.get_parameter("use_spin_sign").value)
+        self.spin_boost_norm = float(self.get_parameter("spin_boost_norm").value)
+        self.use_spin_sign   = bool(self.get_parameter("use_spin_sign").value)
+
+        self.enable_steer = bool(self.get_parameter("enable_steer").value)
 
         if self.arming_style not in ("neutral", "min"):
             self.get_logger().warn(f"Unknown arming_style '{self.arming_style}', fallback to 'neutral'")
@@ -156,18 +157,24 @@ class ThrottleSteerNode(Node):
         # GPIO 초기화
         GPIO.setwarnings(False)
         GPIO.setmode(GPIO.BOARD)
-        GPIO.setup(self.thr_pin, GPIO.OUT, initial=GPIO.LOW)
-        GPIO.setup(self.steer_pin, GPIO.OUT, initial=GPIO.LOW)
 
-        # PWM
-        self.pwm_thr   = GPIO.PWM(self.thr_pin, self.f_hz)
-        self.pwm_steer = GPIO.PWM(self.steer_pin, self.f_hz)
-        self.steer_pwm_active = False  # CH4 PWM 현재 상태
+        # CH2(스로틀) — 항상 사용
+        GPIO.setup(self.thr_pin, GPIO.OUT, initial=GPIO.LOW)
+        self.pwm_thr = GPIO.PWM(self.thr_pin, self.f_hz)
+
+        # CH4(스티어) — enable_steer일 때만 사용
+        if self.enable_steer:
+            GPIO.setup(self.steer_pin, GPIO.OUT, initial=GPIO.LOW)
+            self.pwm_steer = GPIO.PWM(self.steer_pin, self.f_hz)
+        else:
+            self.pwm_steer = None
+        self.steer_pwm_active = False  # CH4 PWM 상태
 
         # 아밍: CH2만 시작, CH4는 OFF(무신호)
         self.arming_us = self.neutral if self.arming_style == "neutral" else min(self.fwd_far, self.neutral)
         self.pwm_thr.start(self._us_to_duty(self.arming_us))
-        GPIO.output(self.steer_pin, GPIO.LOW)  # CH4 무신호
+        if self.enable_steer:
+            GPIO.output(self.steer_pin, GPIO.LOW)  # CH4 무신호
 
         now = self.get_clock().now()
         self.arming_until = now + Duration(seconds=self.arm_s)
@@ -180,7 +187,7 @@ class ThrottleSteerNode(Node):
         self.get_logger().info(
             f"[throttle_steer_node] CH2=BOARD{self.thr_pin}, CH4=BOARD{self.steer_pin}, "
             f"freq={self.f_hz}Hz, neutral={self.neutral}us, mode={self.mode}, "
-            f"spin_boost={self.spin_boost_norm}"
+            f"spin_boost={self.spin_boost_norm}, enable_steer={self.enable_steer}"
         )
 
     # ===== 유틸 =====
@@ -210,7 +217,7 @@ class ThrottleSteerNode(Node):
     def _apply_pwm(self, ch2_us: int, ch4_us: int, apply_ch4: bool):
         """apply_ch4=False면 CH4는 건드리지 않음(OFF 유지)."""
         self.pwm_thr.ChangeDutyCycle(self._us_to_duty(ch2_us))
-        if apply_ch4 and self.steer_pwm_active:
+        if self.enable_steer and apply_ch4 and self.steer_pwm_active:
             self.pwm_steer.ChangeDutyCycle(self._us_to_duty(ch4_us))
 
     def _maybe_invert(self, us: int, invert: bool) -> int:
@@ -220,6 +227,8 @@ class ThrottleSteerNode(Node):
         return int(self.neutral + scale * (us - self.neutral) + trim_us)
 
     def _steer_pwm_start(self, us: int):
+        if not self.enable_steer:
+            return
         duty = self._us_to_duty(us)
         if not self.steer_pwm_active:
             self.pwm_steer.start(duty)
@@ -228,6 +237,8 @@ class ThrottleSteerNode(Node):
             self.pwm_steer.ChangeDutyCycle(duty)
 
     def _steer_pwm_stop(self):
+        if not self.enable_steer:
+            return
         if self.steer_pwm_active:
             self.pwm_steer.stop()
             self.steer_pwm_active = False
@@ -249,7 +260,7 @@ class ThrottleSteerNode(Node):
         if self.invert_turn:
             s = -s
 
-        # 분기
+        # 직진/회전 분기
         t_dead = max(1e-3, self.deadband / 1000.0)
         rotate_only = (abs(t) < t_dead) and (abs(s) >= t_dead)
 
@@ -257,8 +268,12 @@ class ThrottleSteerNode(Node):
             # 회전-only: CH4 ON, CH2는 스핀부스트
             ch4_raw = self._map_steer(s)
             self._steer_pwm_start(ch4_raw)
+
             spin_mag = max(0.0, min(1.0, self.spin_boost_norm)) * abs(s)
-            spin_t = spin_mag if (self.use_spin_sign and s >= 0.0) else (spin_mag if not self.use_spin_sign else -spin_mag)
+            if self.use_spin_sign:
+                spin_t = spin_mag if s >= 0.0 else -spin_mag
+            else:
+                spin_t = spin_mag
             ch2_raw = self._map_esc(spin_t)
 
             # 보정/반전/스왑
@@ -278,11 +293,9 @@ class ThrottleSteerNode(Node):
             self._steer_pwm_stop()
             ch2_raw = self._map_esc(t)
 
-            # 보정/반전/스왑 (CH4는 의미 없음, 로깅용 중립만 생성)
             ch2_us = self._apply_cal(ch2_raw, self.ch2_scale, self.ch2_trim_us)
             ch2_us = self._maybe_invert(ch2_us, self.invert_ch2)
-            # swap이면 의미가 바뀌므로 직진 케이스에선 swap 금지 권장. 필요하면 아래처럼 중립 로그만:
-            ch4_us = self.neutral
+            ch4_us = self.neutral  # 로깅용
 
             if self.debug_log:
                 self.get_logger().info(f"[cmd] STR t={t:.2f} s={s:.2f} -> ch2={ch2_us} ch4=OFF")
@@ -292,7 +305,7 @@ class ThrottleSteerNode(Node):
         self.last_thr_us = ch2_us
 
     def watchdog(self):
-        # 입력 끊기면 CH2는 중립, CH4는 OFF로 안전정지
+        # 입력 끊기면 CH2 중립, CH4 OFF
         if (self.get_clock().now() - self.last_rcv).nanoseconds > self.wd_ms * 1_000_000:
             self._steer_pwm_stop()
             nd = self._us_to_duty(self.neutral)
@@ -307,6 +320,7 @@ class ThrottleSteerNode(Node):
             GPIO.cleanup()
             super().destroy_node()
 
+
 def main():
     rclpy.init()
     node = ThrottleSteerNode()
@@ -315,6 +329,7 @@ def main():
     finally:
         node.destroy_node()
         rclpy.shutdown()
+
 
 if __name__ == "__main__":
     main()
