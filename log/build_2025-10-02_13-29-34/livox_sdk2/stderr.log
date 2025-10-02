@@ -1,0 +1,18 @@
+[33mCMake Warning:
+  Manually-specified variables were not used by the project:
+
+    HUMBLE_ROS
+    ROS_EDITION
+
+[0m
+gmake[2]: *** [sdk_core/CMakeFiles/livox_lidar_sdk_static.dir/build.make:426: sdk_core/CMakeFiles/livox_lidar_sdk_static.dir/data_handler/data_handler.cpp.o] Interrupt
+gmake[2]: *** [sdk_core/CMakeFiles/livox_lidar_sdk_static.dir/build.make:398: sdk_core/CMakeFiles/livox_lidar_sdk_static.dir/logger_handler/logger_handler.cpp.o] Interrupt
+gmake[2]: *** [sdk_core/CMakeFiles/livox_lidar_sdk_shared.dir/build.make:426: sdk_core/CMakeFiles/livox_lidar_sdk_shared.dir/data_handler/data_handler.cpp.o] Interrupt
+gmake[2]: *** [sdk_core/CMakeFiles/livox_lidar_sdk_shared.dir/build.make:384: sdk_core/CMakeFiles/livox_lidar_sdk_shared.dir/logger_handler/logger_manager.cpp.o] Interrupt
+gmake[2]: *** [sdk_core/CMakeFiles/livox_lidar_sdk_shared.dir/build.make:398: sdk_core/CMakeFiles/livox_lidar_sdk_shared.dir/logger_handler/logger_handler.cpp.o] Interrupt
+gmake[2]: *** [sdk_core/CMakeFiles/livox_lidar_sdk_shared.dir/build.make:412: sdk_core/CMakeFiles/livox_lidar_sdk_shared.dir/logger_handler/file_manager.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:249: sdk_core/CMakeFiles/livox_lidar_sdk_shared.dir/all] Interrupt
+gmake[2]: *** [sdk_core/CMakeFiles/livox_lidar_sdk_static.dir/build.make:384: sdk_core/CMakeFiles/livox_lidar_sdk_static.dir/logger_handler/logger_manager.cpp.o] Interrupt
+gmake[2]: *** [sdk_core/CMakeFiles/livox_lidar_sdk_static.dir/build.make:412: sdk_core/CMakeFiles/livox_lidar_sdk_static.dir/logger_handler/file_manager.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:223: sdk_core/CMakeFiles/livox_lidar_sdk_static.dir/all] Interrupt
+gmake: *** [Makefile:136: all] Interrupt

@@ -1,0 +1,33 @@
+[2.466s] Invoking command in '/home/atoz/ros2_ws/src/octomap': PYTHONPATH=/home/atoz/ros2_ws/build/octomap/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/octomap/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/octomap build --build-base /home/atoz/ros2_ws/build/octomap/build install --record /home/atoz/ros2_ws/build/octomap/install.log --single-version-externally-managed install_data
+[3.554s] running egg_info
+[3.556s] creating ../../build/octomap/octomap.egg-info
+[3.557s] writing ../../build/octomap/octomap.egg-info/PKG-INFO
+[3.574s] writing dependency_links to ../../build/octomap/octomap.egg-info/dependency_links.txt
+[3.574s] writing entry points to ../../build/octomap/octomap.egg-info/entry_points.txt
+[3.574s] writing requirements to ../../build/octomap/octomap.egg-info/requires.txt
+[3.575s] writing top-level names to ../../build/octomap/octomap.egg-info/top_level.txt
+[3.575s] writing manifest file '../../build/octomap/octomap.egg-info/SOURCES.txt'
+[3.580s] reading manifest file '../../build/octomap/octomap.egg-info/SOURCES.txt'
+[3.581s] writing manifest file '../../build/octomap/octomap.egg-info/SOURCES.txt'
+[3.582s] running build
+[3.582s] running build_py
+[3.582s] creating /home/atoz/ros2_ws/build/octomap/build
+[3.582s] creating /home/atoz/ros2_ws/build/octomap/build/lib
+[3.583s] creating /home/atoz/ros2_ws/build/octomap/build/lib/octomap
+[3.583s] copying octomap/__init__.py -> /home/atoz/ros2_ws/build/octomap/build/lib/octomap
+[3.583s] running install
+[3.584s] running install_lib
+[3.586s] creating /home/atoz/ros2_ws/install/octomap/lib/python3.10/site-packages/octomap
+[3.586s] copying /home/atoz/ros2_ws/build/octomap/build/lib/octomap/__init__.py -> /home/atoz/ros2_ws/install/octomap/lib/python3.10/site-packages/octomap
+[3.588s] byte-compiling /home/atoz/ros2_ws/install/octomap/lib/python3.10/site-packages/octomap/__init__.py to __init__.cpython-310.pyc
+[3.588s] running install_data
+[3.609s] creating /home/atoz/ros2_ws/install/octomap/share/ament_index
+[3.610s] creating /home/atoz/ros2_ws/install/octomap/share/ament_index/resource_index
+[3.610s] creating /home/atoz/ros2_ws/install/octomap/share/ament_index/resource_index/packages
+[3.610s] copying resource/octomap -> /home/atoz/ros2_ws/install/octomap/share/ament_index/resource_index/packages
+[3.611s] copying package.xml -> /home/atoz/ros2_ws/install/octomap/share/octomap
+[3.612s] running install_egg_info
+[3.615s] Copying ../../build/octomap/octomap.egg-info to /home/atoz/ros2_ws/install/octomap/lib/python3.10/site-packages/octomap-0.0.0-py3.10.egg-info
+[3.618s] running install_scripts
+[3.688s] writing list of installed files to '/home/atoz/ros2_ws/build/octomap/install.log'
+[3.801s] Invoked command in '/home/atoz/ros2_ws/src/octomap' returned '0': PYTHONPATH=/home/atoz/ros2_ws/build/octomap/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/octomap/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/octomap build --build-base /home/atoz/ros2_ws/build/octomap/build install --record /home/atoz/ros2_ws/build/octomap/install.log --single-version-externally-managed install_data

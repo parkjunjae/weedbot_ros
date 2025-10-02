@@ -1,0 +1,4 @@
+Invoking command in '/home/atoz/ros2_ws/build/livox_sdk2': /usr/bin/cmake /home/atoz/ros2_ws/src/Livox-SDK2 -DROS_EDITION=ROS2 -DHUMBLE_ROS=humble -DCMAKE_INSTALL_PREFIX=/home/atoz/ros2_ws/install/livox_sdk2
+Invoked command in '/home/atoz/ros2_ws/build/livox_sdk2' returned '0': /usr/bin/cmake /home/atoz/ros2_ws/src/Livox-SDK2 -DROS_EDITION=ROS2 -DHUMBLE_ROS=humble -DCMAKE_INSTALL_PREFIX=/home/atoz/ros2_ws/install/livox_sdk2
+Invoking command in '/home/atoz/ros2_ws/build/livox_sdk2': /usr/bin/cmake --build /home/atoz/ros2_ws/build/livox_sdk2 -- -j8 -l8
+Invoked command in '/home/atoz/ros2_ws/build/livox_sdk2' returned '-2': /usr/bin/cmake --build /home/atoz/ros2_ws/build/livox_sdk2 -- -j8 -l8

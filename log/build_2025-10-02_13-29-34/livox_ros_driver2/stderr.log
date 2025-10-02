@@ -1,0 +1,13 @@
+gmake[2]: *** [CMakeFiles/livox_ros_driver2.dir/build.make:76: CMakeFiles/livox_ros_driver2.dir/src/livox_ros_driver2.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/livox_ros_driver2.dir/build.make:90: CMakeFiles/livox_ros_driver2.dir/src/lddc.cpp.o] Interrupt
+gmake[2]: *** wait: No child processes.  Stop.
+gmake[2]: *** [CMakeFiles/livox_ros_driver2.dir/build.make:104: CMakeFiles/livox_ros_driver2.dir/src/driver_node.cpp.o] Interrupt
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/livox_ros_driver2.dir/build.make:118: CMakeFiles/livox_ros_driver2.dir/src/lds.cpp.o] Interrupt
+gmake[2]: *** wait: No child processes.  Stop.
+gmake[2]: *** [CMakeFiles/livox_ros_driver2.dir/build.make:132: CMakeFiles/livox_ros_driver2.dir/src/lds_lidar.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/livox_ros_driver2.dir/build.make:160: CMakeFiles/livox_ros_driver2.dir/src/comm/ldq.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:621: CMakeFiles/livox_ros_driver2_node.dir/all] Error 2
+gmake[2]: *** [CMakeFiles/livox_ros_driver2.dir/build.make:146: CMakeFiles/livox_ros_driver2.dir/src/comm/comm.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:595: CMakeFiles/livox_ros_driver2.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

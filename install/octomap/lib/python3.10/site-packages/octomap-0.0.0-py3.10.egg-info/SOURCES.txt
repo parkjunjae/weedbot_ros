@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+../../build/octomap/octomap.egg-info/PKG-INFO
+../../build/octomap/octomap.egg-info/SOURCES.txt
+../../build/octomap/octomap.egg-info/dependency_links.txt
+../../build/octomap/octomap.egg-info/entry_points.txt
+../../build/octomap/octomap.egg-info/requires.txt
+../../build/octomap/octomap.egg-info/top_level.txt
+../../build/octomap/octomap.egg-info/zip-safe
+octomap/__init__.py
+resource/octomap
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

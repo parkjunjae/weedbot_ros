@@ -1,0 +1,31 @@
+running egg_info
+creating ../../build/octomap/octomap.egg-info
+writing ../../build/octomap/octomap.egg-info/PKG-INFO
+writing dependency_links to ../../build/octomap/octomap.egg-info/dependency_links.txt
+writing entry points to ../../build/octomap/octomap.egg-info/entry_points.txt
+writing requirements to ../../build/octomap/octomap.egg-info/requires.txt
+writing top-level names to ../../build/octomap/octomap.egg-info/top_level.txt
+writing manifest file '../../build/octomap/octomap.egg-info/SOURCES.txt'
+reading manifest file '../../build/octomap/octomap.egg-info/SOURCES.txt'
+writing manifest file '../../build/octomap/octomap.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/atoz/ros2_ws/build/octomap/build
+creating /home/atoz/ros2_ws/build/octomap/build/lib
+creating /home/atoz/ros2_ws/build/octomap/build/lib/octomap
+copying octomap/__init__.py -> /home/atoz/ros2_ws/build/octomap/build/lib/octomap
+running install
+running install_lib
+creating /home/atoz/ros2_ws/install/octomap/lib/python3.10/site-packages/octomap
+copying /home/atoz/ros2_ws/build/octomap/build/lib/octomap/__init__.py -> /home/atoz/ros2_ws/install/octomap/lib/python3.10/site-packages/octomap
+byte-compiling /home/atoz/ros2_ws/install/octomap/lib/python3.10/site-packages/octomap/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/atoz/ros2_ws/install/octomap/share/ament_index
+creating /home/atoz/ros2_ws/install/octomap/share/ament_index/resource_index
+creating /home/atoz/ros2_ws/install/octomap/share/ament_index/resource_index/packages
+copying resource/octomap -> /home/atoz/ros2_ws/install/octomap/share/ament_index/resource_index/packages
+copying package.xml -> /home/atoz/ros2_ws/install/octomap/share/octomap
+running install_egg_info
+Copying ../../build/octomap/octomap.egg-info to /home/atoz/ros2_ws/install/octomap/lib/python3.10/site-packages/octomap-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/atoz/ros2_ws/build/octomap/install.log'
