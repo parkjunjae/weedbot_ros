@@ -19,6 +19,7 @@ def generate_launch_description():
     arming_style   = LaunchConfiguration('arming_style')
     arming_sec     = LaunchConfiguration('arming_sec')
     debug_log      = LaunchConfiguration('debug_log')
+    
 
     return LaunchDescription([
         # ---- 런치 인자 (필요시 커맨드라인에서 override) ----
@@ -37,6 +38,14 @@ def generate_launch_description():
         DeclareLaunchArgument('arming_style',   default_value='neutral'),
         DeclareLaunchArgument('arming_sec',     default_value='2.0'),
         DeclareLaunchArgument('debug_log',      default_value='true'),
+        
+        DeclareLaunchArgument('cmd_topic', default_value='/atoz/cmd_vel'),
+        DeclareLaunchArgument('odom_frame', default_value='odom'),
+        DeclareLaunchArgument('base_frame', default_value='base_link'),
+        DeclareLaunchArgument('odom_pub_topic', default_value='/atoz/odom'),
+        DeclareLaunchArgument('odom_rate_hz', default_value='50.0'),
+        DeclareLaunchArgument('max_linear_mps', default_value='1.2'),
+        DeclareLaunchArgument('max_angular_rps', default_value='1.5'),
 
         Node(
             package='pwm_ctrl',
@@ -44,21 +53,30 @@ def generate_launch_description():
             name='throttle_steer_node',
             output='screen',
             parameters=[{
-                'enable_steer': enable_steer,
-                'mode': mode,
-                'fwd_near_us': fwd_near_us,
-                'fwd_far_us': fwd_far_us,
-                'rev_near_us': rev_near_us,
-                'rev_far_us': rev_far_us,
-                'invert_ch2': invert_ch2,
-                'invert_ch4': invert_ch4,
-                'swap_channels': swap_channels,
-                'invert_turn_dir': invert_turn,
-                'spin_boost_norm': spin_boost,
-                'use_spin_sign': use_spin_sign,
-                'arming_style': arming_style,
-                'arming_sec': arming_sec,
-                'debug_log': debug_log,
+                'enable_steer': LaunchConfiguration('enable_steer'),
+                'mode': LaunchConfiguration('mode'),
+                'fwd_near_us': LaunchConfiguration('fwd_near_us'),
+                'fwd_far_us': LaunchConfiguration('fwd_far_us'),
+                'rev_near_us': LaunchConfiguration('rev_near_us'),
+                'rev_far_us': LaunchConfiguration('rev_far_us'),
+                'invert_ch2': LaunchConfiguration('invert_ch2'),
+                'invert_ch4': LaunchConfiguration('invert_ch4'),
+                'swap_channels': LaunchConfiguration('swap_channels'),
+                'invert_turn_dir': LaunchConfiguration('invert_turn_dir'),
+                'spin_boost_norm': LaunchConfiguration('spin_boost_norm'),
+                'use_spin_sign': LaunchConfiguration('use_spin_sign'),
+                'arming_style': LaunchConfiguration('arming_style'),
+                'arming_sec': LaunchConfiguration('arming_sec'),
+                'debug_log': LaunchConfiguration('debug_log'),
+                
+                'cmd_topic': LaunchConfiguration('cmd_topic'),
+                'odom_frame': LaunchConfiguration('odom_frame'),
+                'base_frame': LaunchConfiguration('base_frame'),
+                'odom_pub_topic': LaunchConfiguration('odom_pub_topic'),
+                'odom_rate_hz': LaunchConfiguration('odom_rate_hz'),
+                'max_linear_mps': LaunchConfiguration('max_linear_mps'),
+                'max_angular_rps': LaunchConfiguration('max_angular_rps'),
+                
             }]
         ),
     ])

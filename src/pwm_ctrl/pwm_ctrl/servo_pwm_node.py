@@ -11,7 +11,7 @@ from nav_msgs.msg import Odometry
 from geometry_msgs.msg import TransformStamped
 from math import cos, sin
 from rclpy.clock import Clock
-from tf_transformations import quaternion_from_euler  # 패키지: python3-tf-transformations
+from transforms3d.euler import euler2quat  # 패키지: python3-tf-transformations
 import tf2_ros
 
 # ===== 하드웨어 매핑 (BOARD 번호) =====
@@ -402,7 +402,8 @@ class ThrottleSteerNode(Node):
         self.yaw += self.cmd_w * dt
     
         # 쿼터니언
-        qx, qy, qz, qw = quaternion_from_euler(0.0, 0.0, self.yaw)
+        w, x, y, z = euler2quat(0.0, 0.0, self.yaw, axes='sxyz')
+        qx, qy, qz, qw = x, y, z, w
     
         # Odometry 메시지
         od = Odometry()

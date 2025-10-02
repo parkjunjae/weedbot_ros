@@ -1,0 +1,15 @@
+/home/atoz/ros2_ws/install/octomap_mapping/share/ament_index/resource_index/package_run_dependencies/octomap_mapping
+/home/atoz/ros2_ws/install/octomap_mapping/share/ament_index/resource_index/parent_prefix_path/octomap_mapping
+/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/environment/ament_prefix_path.sh
+/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/environment/ament_prefix_path.dsv
+/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/environment/path.sh
+/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/environment/path.dsv
+/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/local_setup.bash
+/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/local_setup.sh
+/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/local_setup.zsh
+/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/local_setup.dsv
+/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.dsv
+/home/atoz/ros2_ws/install/octomap_mapping/share/ament_index/resource_index/packages/octomap_mapping
+/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/cmake/octomap_mappingConfig.cmake
+/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/cmake/octomap_mappingConfig-version.cmake
+/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.xml

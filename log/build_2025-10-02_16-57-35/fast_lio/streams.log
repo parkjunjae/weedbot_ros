@@ -1,0 +1,157 @@
+[0.027s] Invoking command in '/home/atoz/ros2_ws/build/fast_lio': CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2:/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/my_octomap:/opt/ros/humble LD_LIBRARY_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2/lib:/home/atoz/ros2_ws/install/octomap_server/lib:/home/atoz/ros2_ws/install/livox_sdk2/lib:/home/atoz/ros2_ws/install/fast_lio/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/atoz/ros2_ws/build/fast_lio -- -j8 -l8
+[0.142s] [  2%] Built target fast_lio__cpp
+[0.152s] [ 11%] Built target fast_lio__rosidl_generator_c
+[0.172s] [ 11%] Built target ament_cmake_python_copy_fast_lio
+[0.206s] [ 25%] Built target fast_lio__rosidl_typesupport_fastrtps_cpp
+[0.207s] [ 28%] Built target fast_lio__rosidl_typesupport_introspection_c
+[0.217s] [ 37%] Built target fast_lio__rosidl_typesupport_fastrtps_c
+[0.223s] [ 45%] Built target fast_lio__rosidl_typesupport_cpp
+[0.223s] [ 54%] Built target fast_lio__rosidl_typesupport_introspection_cpp
+[0.230s] [ 62%] Built target fast_lio__rosidl_typesupport_c
+[0.280s] [ 62%] Built target fast_lio
+[0.316s] [ 74%] Built target fastlio_mapping
+[0.332s] [ 77%] Built target fast_lio__py
+[0.382s] [ 82%] Built target fast_lio__rosidl_generator_py
+[0.431s] [ 94%] Built target fast_lio__rosidl_typesupport_fastrtps_c__pyext
+[0.431s] [ 94%] Built target fast_lio__rosidl_typesupport_c__pyext
+[0.443s] [100%] Built target fast_lio__rosidl_typesupport_introspection_c__pyext
+[0.717s] running egg_info
+[0.721s] writing fast_lio.egg-info/PKG-INFO
+[0.721s] writing dependency_links to fast_lio.egg-info/dependency_links.txt
+[0.723s] writing top-level names to fast_lio.egg-info/top_level.txt
+[0.729s] reading manifest file 'fast_lio.egg-info/SOURCES.txt'
+[0.729s] writing manifest file 'fast_lio.egg-info/SOURCES.txt'
+[0.803s] [100%] Built target ament_cmake_python_build_fast_lio_egg
+[0.826s] Invoked command in '/home/atoz/ros2_ws/build/fast_lio' returned '0': CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2:/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/my_octomap:/opt/ros/humble LD_LIBRARY_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2/lib:/home/atoz/ros2_ws/install/octomap_server/lib:/home/atoz/ros2_ws/install/livox_sdk2/lib:/home/atoz/ros2_ws/install/fast_lio/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/atoz/ros2_ws/build/fast_lio -- -j8 -l8
+[0.829s] Invoking command in '/home/atoz/ros2_ws/build/fast_lio': CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2:/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/my_octomap:/opt/ros/humble LD_LIBRARY_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2/lib:/home/atoz/ros2_ws/install/octomap_server/lib:/home/atoz/ros2_ws/install/livox_sdk2/lib:/home/atoz/ros2_ws/install/fast_lio/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/atoz/ros2_ws/build/fast_lio
+[0.846s] -- Install configuration: "Release"
+[0.846s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/ament_index/resource_index/rosidl_interfaces/fast_lio
+[0.846s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio
+[0.847s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg
+[0.847s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_c__visibility_control.h
+[0.847s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail
+[0.847s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__functions.h
+[0.847s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__functions.c
+[0.847s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.h
+[0.848s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.h
+[0.848s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.h
+[0.848s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/library_path.sh
+[0.848s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/library_path.dsv
+[0.848s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_generator_c.so
+[0.849s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio
+[0.849s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg
+[0.849s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.849s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail
+[0.849s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_c.h
+[0.850s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_c.so
+[0.850s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio
+[0.850s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg
+[0.850s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail
+[0.851s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.hpp
+[0.851s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__builder.hpp
+[0.851s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__traits.hpp
+[0.851s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.hpp
+[0.851s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.851s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.hpp
+[0.852s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio
+[0.852s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg
+[0.852s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.852s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail
+[0.852s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/dds_fastrtps
+[0.852s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_cpp.hpp
+[0.852s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_cpp.so
+[0.853s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio
+[0.853s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg
+[0.853s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.854s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail
+[0.854s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.c
+[0.854s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_c.h
+[0.854s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_c.so
+[0.854s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_c.so
+[0.854s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio
+[0.854s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg
+[0.854s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail
+[0.855s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.cpp
+[0.855s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_cpp.hpp
+[0.855s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_cpp.so
+[0.855s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_cpp.so
+[0.855s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/pythonpath.sh
+[0.855s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/pythonpath.dsv
+[0.855s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info
+[0.855s] -- Installing: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.856s] -- Installing: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/top_level.txt
+[0.856s] -- Installing: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/PKG-INFO
+[0.856s] -- Installing: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.856s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio
+[0.856s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_introspection_c.c
+[0.856s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg
+[0.856s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/__init__.py
+[0.856s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d.py
+[0.856s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d_s.c
+[0.857s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/__init__.py
+[0.857s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[0.857s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[0.857s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[0.857s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.857s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/libfast_lio__rosidl_generator_py.so
+[0.857s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_c.c
+[0.923s] Listing '/home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio'...
+[0.923s] Listing '/home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg'...
+[0.934s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[0.935s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[0.935s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[0.936s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_generator_py.so
+[0.936s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/msg/Pose6D.idl
+[0.936s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/msg/Pose6D.msg
+[0.937s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/fast_lio/fastlio_mapping
+[0.937s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/config
+[0.937s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/config/velodyne.yaml
+[0.937s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/config/horizon.yaml
+[0.937s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/config/ouster64.yaml
+[0.938s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/config/mid360.yaml
+[0.938s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/config/avia.yaml
+[0.938s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/launch
+[0.938s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/launch/mapping.launch.py
+[0.938s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/launch/gdb_debug_example.launch
+[0.938s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/rviz
+[0.939s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/rviz/fastlio.rviz
+[0.939s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/ament_index/resource_index/package_run_dependencies/fast_lio
+[0.939s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/ament_index/resource_index/parent_prefix_path/fast_lio
+[0.939s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.sh
+[0.939s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.dsv
+[0.939s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/path.sh
+[0.940s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/path.dsv
+[0.940s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/local_setup.bash
+[0.940s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/local_setup.sh
+[0.940s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/local_setup.zsh
+[0.940s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/local_setup.dsv
+[0.940s] -- Installing: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.dsv
+[0.940s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/ament_index/resource_index/packages/fast_lio
+[0.941s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport.cmake
+[0.941s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport-release.cmake
+[0.941s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport.cmake
+[0.941s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport-release.cmake
+[0.941s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cppExport.cmake
+[0.941s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.942s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[0.942s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport.cmake
+[0.942s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport-release.cmake
+[0.942s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport.cmake
+[0.942s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport-release.cmake
+[0.943s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport.cmake
+[0.943s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport-release.cmake
+[0.943s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport.cmake
+[0.943s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport-release.cmake
+[0.943s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport.cmake
+[0.943s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport-release.cmake
+[0.943s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake-extras.cmake
+[0.943s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.943s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_libraries-extras.cmake
+[0.944s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_targets-extras.cmake
+[0.944s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.944s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.944s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.944s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig.cmake
+[0.944s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig-version.cmake
+[0.944s] -- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.xml
+[0.948s] Invoked command in '/home/atoz/ros2_ws/build/fast_lio' returned '0': CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2:/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/my_octomap:/opt/ros/humble LD_LIBRARY_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2/lib:/home/atoz/ros2_ws/install/octomap_server/lib:/home/atoz/ros2_ws/install/livox_sdk2/lib:/home/atoz/ros2_ws/install/fast_lio/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/atoz/ros2_ws/build/fast_lio

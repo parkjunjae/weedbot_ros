@@ -1207,6 +1207,9 @@ pcl_conversions_DIR:PATH=/opt/ros/humble/share/pcl_conversions/cmake
 pcl_msgs_DIR:PATH=/opt/ros/humble/share/pcl_msgs/cmake
 
 //Path to a library.
+pkgcfg_lib_APR_apr-1:FILEPATH=/usr/lib/aarch64-linux-gnu/libapr-1.so
+
+//Path to a library.
 pkgcfg_lib_PC_EXPAT_expat:FILEPATH=/usr/lib/aarch64-linux-gnu/libexpat.so
 
 //Path to a library.
@@ -1373,27 +1376,37 @@ yaml_DIR:PATH=/opt/ros/humble/cmake
 # INTERNAL cache entries
 ########################
 
-APR_CFLAGS:INTERNAL=
+APR_CFLAGS:INTERNAL=-DLINUX;-D_REENTRANT;-D_GNU_SOURCE;-I/usr/include/apr-1.0
 APR_CFLAGS_I:INTERNAL=
-APR_CFLAGS_OTHER:INTERNAL=
-APR_FOUND:INTERNAL=
-APR_INCLUDEDIR:INTERNAL=
-APR_LIBDIR:INTERNAL=
+APR_CFLAGS_OTHER:INTERNAL=-DLINUX;-D_REENTRANT;-D_GNU_SOURCE
+APR_FOUND:INTERNAL=1
+APR_INCLUDEDIR:INTERNAL=/usr/include/apr-1.0
+APR_INCLUDE_DIRS:INTERNAL=/usr/include/apr-1.0
+APR_LDFLAGS:INTERNAL=-L/usr/lib/aarch64-linux-gnu;-lapr-1
+APR_LDFLAGS_OTHER:INTERNAL=
+APR_LIBDIR:INTERNAL=/usr/lib/aarch64-linux-gnu
+APR_LIBRARIES:INTERNAL=apr-1
+APR_LIBRARY_DIRS:INTERNAL=/usr/lib/aarch64-linux-gnu
 APR_LIBS:INTERNAL=
 APR_LIBS_L:INTERNAL=
 APR_LIBS_OTHER:INTERNAL=
 APR_LIBS_PATHS:INTERNAL=
-APR_MODULE_NAME:INTERNAL=
+APR_MODULE_NAME:INTERNAL=apr-1
 APR_PREFIX:INTERNAL=
-APR_STATIC_CFLAGS:INTERNAL=
+APR_STATIC_CFLAGS:INTERNAL=-DLINUX;-D_REENTRANT;-D_GNU_SOURCE;-I/usr/include/apr-1.0
 APR_STATIC_CFLAGS_I:INTERNAL=
-APR_STATIC_CFLAGS_OTHER:INTERNAL=
+APR_STATIC_CFLAGS_OTHER:INTERNAL=-DLINUX;-D_REENTRANT;-D_GNU_SOURCE
+APR_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/apr-1.0
+APR_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/aarch64-linux-gnu;-lapr-1;-luuid;-lcrypt;-lpthread
+APR_STATIC_LDFLAGS_OTHER:INTERNAL=
 APR_STATIC_LIBDIR:INTERNAL=
+APR_STATIC_LIBRARIES:INTERNAL=apr-1;uuid;crypt;pthread
+APR_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/aarch64-linux-gnu
 APR_STATIC_LIBS:INTERNAL=
 APR_STATIC_LIBS_L:INTERNAL=
 APR_STATIC_LIBS_OTHER:INTERNAL=
 APR_STATIC_LIBS_PATHS:INTERNAL=
-APR_VERSION:INTERNAL=
+APR_VERSION:INTERNAL=1.7.0
 APR_apr-1_INCLUDEDIR:INTERNAL=
 APR_apr-1_LIBDIR:INTERNAL=
 APR_apr-1_PREFIX:INTERNAL=
@@ -2331,6 +2344,7 @@ _Python3_EXECUTABLE:INTERNAL=/usr/bin/python3
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;64;;cpython-310-aarch64-linux-gnu;/usr/lib/python3.10;/usr/lib/python3.10;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=0f3e53742e142b1d9e50e4ca5b901dd8
+__pkg_config_arguments_APR:INTERNAL=apr-1
 __pkg_config_arguments_PC_EIGEN:INTERNAL=eigen3
 __pkg_config_arguments_PC_EXPAT:INTERNAL=QUIET;expat
 __pkg_config_arguments_PC_FLANN:INTERNAL=flann
@@ -2366,6 +2380,8 @@ double-conversion_INCLUDE_DIR-ADVANCED:INTERNAL=1
 double-conversion_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: libusb_LIBRARIES
 libusb_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_APR_apr-1
+pkgcfg_lib_APR_apr-1-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PC_EXPAT_expat
 pkgcfg_lib_PC_EXPAT_expat-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PC_EXPAT_m
@@ -2390,7 +2406,7 @@ pkgcfg_lib_PKG_FONTCONFIG_freetype-ADVANCED:INTERNAL=1
 pkgcfg_lib__OPENSSL_crypto-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib__OPENSSL_ssl
 pkgcfg_lib__OPENSSL_ssl-ADVANCED:INTERNAL=1
-prefix_result:INTERNAL=/usr/lib
+prefix_result:INTERNAL=/usr/lib/aarch64-linux-gnu
 //ADVANCED property for variable: utf8cpp_INCLUDE_DIR
 utf8cpp_INCLUDE_DIR-ADVANCED:INTERNAL=1
 

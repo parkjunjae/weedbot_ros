@@ -7,6 +7,12 @@ from rclpy.duration import Duration
 from geometry_msgs.msg import Twist
 import Jetson.GPIO as GPIO
 from enum import Enum
+from nav_msgs.msg import Odometry
+from geometry_msgs.msg import TransformStamped
+from math import cos, sin
+from rclpy.clock import Clock
+from transforms3d.euler import euler2quat  # 패키지: python3-tf-transformations
+import tf2_ros
 
 # ===== 하드웨어 매핑 (BOARD 번호) =====
 DEFAULT_THROTTLE_PIN = 32   # CH2: 양쪽 스로틀(출력 크기)
@@ -106,6 +112,14 @@ class ThrottleSteerNode(Node):
         self.declare_parameter("use_spin_sign",   DEFAULT_USE_SPIN_SIGN)
 
         self.declare_parameter("enable_steer", DEFAULT_ENABLE_STEER)
+        
+        # -------odom에서 base_link계산 파라미터 --------
+        self.declare_parameter("odom_frame", "odom")
+        self.declare_parameter("base_frame", "base_link")
+        self.declare_parameter("odom_pub_topic", "/atoz/odom")  # 슬램이 lookup하는 frame만 맞으면 토픽명은 자유
+        self.declare_parameter("odom_rate_hz", 50.0)       # 적분/퍼블리시 주기
+        self.declare_parameter("max_linear_mps", 1.0)      # t=+1.0일 때 선속도 [m/s]
+        self.declare_parameter("max_angular_rps", 1.0)     # s=+1.0일 때 각속도 [rad/s]
 
         # ---- 파라미터 로드 ----
         self.thr_pin   = int(self.get_parameter("throttle_pin").value)
@@ -145,6 +159,33 @@ class ThrottleSteerNode(Node):
         self.use_spin_sign   = bool(self.get_parameter("use_spin_sign").value)
 
         self.enable_steer = bool(self.get_parameter("enable_steer").value)
+        
+        # -------odom에서 base_link계산 로드 --------
+        self.odom_frame   = str(self.get_parameter("odom_frame").value)
+        self.base_frame   = str(self.get_parameter("base_frame").value)
+        self.odom_topic   = str(self.get_parameter("odom_pub_topic").value)
+        self.odom_rate    = float(self.get_parameter("odom_rate_hz").value)
+        self.v_max        = float(self.get_parameter("max_linear_mps").value)
+        self.w_max        = float(self.get_parameter("max_angular_rps").value)
+        
+        
+        # Odometry publisher & TF broadcaster
+        self.odom_pub = self.create_publisher(Odometry, self.odom_topic, 10)
+        self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
+
+        # 적분 상태
+        self.x = 0.0
+        self.y = 0.0
+        self.yaw = 0.0
+        self.last_time = self.get_clock().now()
+
+        # 최근 명령(정규화 → 물리 속도)
+        self.cmd_v = 0.0   # [m/s]
+        self.cmd_w = 0.0   # [rad/s]
+
+        # 오도메트리 타이머
+        self.odom_timer = self.create_timer(1.0 / self.odom_rate, self._tick_odom)
+        
 
         if self.arming_style not in ("neutral", "min"):
             self.get_logger().warn(f"Unknown arming_style '{self.arming_style}', fallback to 'neutral'")
@@ -276,6 +317,8 @@ class ThrottleSteerNode(Node):
         if now < self.arming_until:
             self._steer_pwm_stop()   # 혹시라도 켜져있다면 정리
             self._apply_pwm(self.arming_us)
+            self.cmd_v = 0.0
+            self.cmd_w = 0.0
             return
 
         # 입력 정규화
@@ -323,6 +366,10 @@ class ThrottleSteerNode(Node):
 
         self.last_rcv = now
         self.last_thr_us = ch2_us
+        
+        # ---- 속도 명령 보관 ------
+        self.cmd_v = t * self.v_max
+        self.cmd_w = s * self.w_max
 
     def watchdog(self):
         # 입력 끊기면 CH2 중립, CH4 OFF(정리)
@@ -331,6 +378,8 @@ class ThrottleSteerNode(Node):
             nd = self._us_to_duty(self.neutral)
             self.pwm_thr.ChangeDutyCycle(nd)
             self.rev_state = RevGateState.IDLE
+            self.cmd_v = 0.0
+            self.cmd_w = 0.0
 
     def destroy_node(self):
         try:
@@ -339,6 +388,66 @@ class ThrottleSteerNode(Node):
         finally:
             GPIO.cleanup()
             super().destroy_node()
+            
+    def _tick_odom(self):
+        now = self.get_clock().now()
+        dt = (now - self.last_time).nanoseconds * 1e-9
+        if dt <= 0.0 or dt > 1.0:
+            # 큰 점프는 버퍼/슬립 등으로 발생할 수 있음 → 상태만 갱신
+            self.last_time = now
+            return
+         # 적분 (평면)
+        self.x   += self.cmd_v * cos(self.yaw) * dt
+        self.y   += self.cmd_v * sin(self.yaw) * dt
+        self.yaw += self.cmd_w * dt
+    
+        # 쿼터니언
+        w, x, y, z = euler2quat(0.0, 0.0, self.yaw, axes='sxyz')
+        qx, qy, qz, qw = x, y, z, w
+    
+        # Odometry 메시지
+        od = Odometry()
+        od.header.stamp = now.to_msg()
+        od.header.frame_id = self.odom_frame
+        od.child_frame_id  = self.base_frame
+        od.pose.pose.position.x = self.x
+        od.pose.pose.position.y = self.y
+        od.pose.pose.position.z = 0.0
+        od.pose.pose.orientation.x = qx
+        od.pose.pose.orientation.y = qy
+        od.pose.pose.orientation.z = qz
+        od.pose.pose.orientation.w = qw
+        # 속도 (base_link 기준)
+        od.twist.twist.linear.x  = self.cmd_v
+        od.twist.twist.linear.y  = 0.0
+        od.twist.twist.angular.z = self.cmd_w
+        # 대략적 공분산 (필요시 파라미터화)
+        cov = [0.0]*36
+        cov[0]  = 1e-3  # x
+        cov[7]  = 1e-3  # y
+        cov[35] = 1e-2  # yaw
+        cov[14] = 1e6   # z
+        cov[21] = 1e6   # roll
+        cov[28] = 1e6   # pitch
+        od.pose.covariance = cov
+        od.twist.covariance = cov
+        self.odom_pub.publish(od)
+    
+        # TF: odom -> base_link
+        t = TransformStamped()
+        t.header.stamp = now.to_msg()
+        t.header.frame_id = self.odom_frame
+        t.child_frame_id  = self.base_frame
+        t.transform.translation.x = self.x
+        t.transform.translation.y = self.y
+        t.transform.translation.z = 0.0
+        t.transform.rotation.x = qx
+        t.transform.rotation.y = qy
+        t.transform.rotation.z = qz
+        t.transform.rotation.w = qw
+        self.tf_broadcaster.sendTransform(t)
+    
+        self.last_time = now
 
 
 def main():
