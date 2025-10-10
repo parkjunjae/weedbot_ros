@@ -993,52 +993,54 @@ private:
     void publish_map_to_odom()
     {
 
-        const rclcpp::Time t = as_node_time(get_ros_time(lidar_end_time));
+        // const rclcpp::Time t = as_node_time(get_ros_time(lidar_end_time));
 
-        rclcpp::Time used_time = this->get_clock()->now(); // 실제 사용 시각(기본: msg_time)
-        bool used_latest = false;
+        // rclcpp::Time used_time = this->get_clock()->now(); // 실제 사용 시각(기본: msg_time)
+        // bool used_latest = false;
+
+        geometry_msgs::msg::TransformStamped T_odom_base;
+        rclcpp::Time used_t;
+        try {
+            // 최신(가장 가까운) TF로 시각을 정한다
+            T_odom_base = tf_buffer_->lookupTransform("odom", "base_link", rclcpp::Time(0), tf2::durationFromSec(0.2));
+            used_t = as_node_time(T_odom_base.header.stamp);
+        } catch (const tf2::TransformException &ex) {
+            // 준비 안되면: 직전 map->odom을 살려서 재방송(있으면)
+            if (last_T_map_odom_) {
+                auto T = *last_T_map_odom_;
+                T.header.stamp = this->get_clock()->now();
+                tf_broadcaster_->sendTransform(T);
+            }
+            RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 2000,
+                                "[map->odom] odom->base_link not ready: %s", ex.what());
+            return;
+        }
 
         // (1) map->base_link (LIO 추정치)
         geometry_msgs::msg::TransformStamped T_map_base;
-        T_map_base.header.stamp = t;
+        T_map_base.header.stamp = used_t;
         T_map_base.header.frame_id = "map";
         T_map_base.child_frame_id = "base_link";
         T_map_base.transform.translation.x = state_point.pos(0);
         T_map_base.transform.translation.y = state_point.pos(1);
         T_map_base.transform.translation.z = state_point.pos(2);
-        T_map_base.transform.rotation = geoQuat;
+        T_map_base.transform.rotation      = geoQuat;
 
-        // (2) odom->base_link (동일 시각 1차 시도, 실패 시 최신값 2차 시도)
-        geometry_msgs::msg::TransformStamped T_odom_base;
-        rclcpp::Time used_t = t;
-        try
-        {
-            T_odom_base = tf_buffer_->lookupTransform(
-                "odom", "base_link", t, tf2::durationFromSec(0.2));
-        }
-        catch (const tf2::TransformException &ex1)
-        {
-            T_odom_base = tf_buffer_->lookupTransform("odom", "base_link", rclcpp::Time(0));
-            used_t = as_node_time(T_odom_base.header.stamp); // 실제 사용 시각을 동기화
-            RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 2000,
-                                 "lookup odom->base_link at t failed (%s). Using latest @ %.3f",
-                                 ex1.what(), used_t.seconds());
-        }
-        // (3) map->odom = (map->base_link) * (odom->base_link)^-1
         tf2::Transform map_base_tf, odom_base_tf;
-        tf2::fromMsg(T_map_base.transform, map_base_tf);
+        tf2::fromMsg(T_map_base.transform,  map_base_tf);
         tf2::fromMsg(T_odom_base.transform, odom_base_tf);
         const tf2::Transform map_odom_tf = map_base_tf * odom_base_tf.inverse();
 
         geometry_msgs::msg::TransformStamped T_map_odom;
-        T_map_odom.header.stamp = used_t; // ★ 클라우드와 동일 시각
+        T_map_odom.header.stamp = used_t;      // ★ 같은 시각으로 브로드캐스트
         T_map_odom.header.frame_id = "map";
-        T_map_odom.child_frame_id = "odom";
-        T_map_odom.transform = tf2::toMsg(map_odom_tf);
+        T_map_odom.child_frame_id  = "odom";
+        T_map_odom.transform       = tf2::toMsg(map_odom_tf);
 
         tf_broadcaster_->sendTransform(T_map_odom);
-        last_T_map_odom_ = T_map_odom; // 캐시
+        last_T_map_odom_ = T_map_odom;         // 캐시
     }
+    
     void timer_callback()
     {
         if (sync_packages(Measures))
