@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/pwm_ctrl/pwm_ctrl.egg-info/PKG-INFO
+writing dependency_links to ../../build/pwm_ctrl/pwm_ctrl.egg-info/dependency_links.txt
+writing entry points to ../../build/pwm_ctrl/pwm_ctrl.egg-info/entry_points.txt
+writing requirements to ../../build/pwm_ctrl/pwm_ctrl.egg-info/requires.txt
+writing top-level names to ../../build/pwm_ctrl/pwm_ctrl.egg-info/top_level.txt
+reading manifest file '../../build/pwm_ctrl/pwm_ctrl.egg-info/SOURCES.txt'
+writing manifest file '../../build/pwm_ctrl/pwm_ctrl.egg-info/SOURCES.txt'
+running build
+running build_py
+copying pwm_ctrl/servo_pwm_node.py -> /home/atoz/ros2_ws/build/pwm_ctrl/build/lib/pwm_ctrl
+running install
+running install_lib
+copying /home/atoz/ros2_ws/build/pwm_ctrl/build/lib/pwm_ctrl/servo_pwm_node.py -> /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl
+byte-compiling /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl/servo_pwm_node.py to servo_pwm_node.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl-0.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../build/pwm_ctrl/pwm_ctrl.egg-info to /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl-0.0.1-py3.10.egg-info
+running install_scripts
+Installing servo_pwm_node script to /home/atoz/ros2_ws/install/pwm_ctrl/lib/pwm_ctrl
+writing list of installed files to '/home/atoz/ros2_ws/build/pwm_ctrl/install.log'

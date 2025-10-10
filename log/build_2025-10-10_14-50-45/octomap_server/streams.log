@@ -1,0 +1,63 @@
+[0.060s] Invoking command in '/home/atoz/ros2_ws/build/octomap_server': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/atoz/ros2_ws/build/octomap_server -- -j8 -l8
+[0.684s] [  7%] Built target octomap_server_static_node
+[0.685s] [ 15%] Built target octomap_server_static
+[0.685s] [ 23%] Built target color_octomap_server_node
+[0.685s] [ 38%] Built target octomap_saver_node
+[0.685s] [ 46%] Built target octomap_server_multilayer_node
+[0.685s] [ 46%] Built target octomap_server_node
+[0.685s] [ 53%] Built target tracking_octomap_server_node
+[0.685s] [ 61%] Built target octomap_server
+[0.685s] [ 73%] Built target octomap_server_multilayer
+[0.716s] [ 84%] Built target tracking_octomap_server
+[0.809s] [ 92%] Built target color_octomap_server
+[0.862s] [100%] Built target octomap_saver
+[1.265s] Invoked command in '/home/atoz/ros2_ws/build/octomap_server' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/atoz/ros2_ws/build/octomap_server -- -j8 -l8
+[1.273s] Invoking command in '/home/atoz/ros2_ws/build/octomap_server': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/atoz/ros2_ws/build/octomap_server
+[1.287s] -- Install configuration: ""
+[1.288s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/octomap_server_static_node
+[1.289s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/octomap_server_node
+[1.291s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/octomap_server_multilayer_node
+[1.292s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/tracking_octomap_server_node
+[1.293s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/color_octomap_server_node
+[1.295s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/octomap_saver_node
+[1.296s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/include
+[1.296s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/include/octomap_server
+[1.296s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/include/octomap_server/octomap_server.hpp
+[1.297s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/include/octomap_server/octomap_server_static.hpp
+[1.297s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/include/octomap_server/octomap_server_multilayer.hpp
+[1.297s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/include/octomap_server/tracking_octomap_server.hpp
+[1.299s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/environment/library_path.sh
+[1.299s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/environment/library_path.dsv
+[1.299s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/liboctomap_server_static.so
+[1.302s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/liboctomap_server.so
+[1.304s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/liboctomap_server_multilayer.so
+[1.310s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/libtracking_octomap_server.so
+[1.318s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/libcolor_octomap_server.so
+[1.320s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/liboctomap_saver.so
+[1.321s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/launch
+[1.322s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/launch/octomap_mapping.launch.xml
+[1.323s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/launch/octomap_tracking_server.launch.xml
+[1.324s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/launch/octomap_tracking_client.launch.xml
+[1.324s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/params
+[1.325s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/params/default.yaml
+[1.326s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/ament_index/resource_index/package_run_dependencies/octomap_server
+[1.327s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/ament_index/resource_index/parent_prefix_path/octomap_server
+[1.328s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/environment/ament_prefix_path.sh
+[1.328s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/environment/ament_prefix_path.dsv
+[1.328s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/environment/path.sh
+[1.329s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/environment/path.dsv
+[1.338s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/local_setup.bash
+[1.338s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/local_setup.sh
+[1.338s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/local_setup.zsh
+[1.338s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/local_setup.dsv
+[1.342s] -- Installing: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.dsv
+[1.345s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/ament_index/resource_index/packages/octomap_server
+[1.347s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/ament_index/resource_index/rclcpp_components/octomap_server
+[1.347s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.348s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.348s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/cmake/ament_cmake_export_libraries-extras.cmake
+[1.349s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/cmake/octomap_serverConfig.cmake
+[1.350s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/cmake/octomap_serverConfig-version.cmake
+[1.350s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.xml
+[1.350s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/octomap_eraser_cli.py
+[1.366s] Invoked command in '/home/atoz/ros2_ws/build/octomap_server' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/atoz/ros2_ws/build/octomap_server

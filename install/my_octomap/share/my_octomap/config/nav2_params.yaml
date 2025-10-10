@@ -110,7 +110,7 @@ local_costmap:
       use_sim_time: false
       global_frame: odom
       robot_base_frame: base_link
-      transform_tolerance: 0.25
+      transform_tolerance: 0.5
       robot_radius: 0.20
       footprint_clearing_enabled: true
       footprint_padding: 0.02
@@ -132,7 +132,7 @@ local_costmap:
         pointcloud:
           topic: /cloud_in_odom
           max_obstacle_height: 0.35
-          min_obstacle_height: 0.05
+          min_obstacle_height: 0.08
           expected_update_rate: 0.0
           observation_persistence: 0.0
           obstacle_range: 5.0

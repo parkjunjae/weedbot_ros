@@ -1,0 +1,20 @@
+[0.076s] Invoking command in '/home/atoz/ros2_ws/build/octomap_mapping': AMENT_PREFIX_PATH=/home/atoz/ros2_ws/install/octomap_server:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/octomap_server:/opt/ros/humble LD_LIBRARY_PATH=/home/atoz/ros2_ws/install/octomap_server/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/atoz/ros2_ws/build/octomap_mapping -- -j8 -l8
+[0.141s] Invoked command in '/home/atoz/ros2_ws/build/octomap_mapping' returned '0': AMENT_PREFIX_PATH=/home/atoz/ros2_ws/install/octomap_server:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/octomap_server:/opt/ros/humble LD_LIBRARY_PATH=/home/atoz/ros2_ws/install/octomap_server/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/atoz/ros2_ws/build/octomap_mapping -- -j8 -l8
+[0.144s] Invoking command in '/home/atoz/ros2_ws/build/octomap_mapping': AMENT_PREFIX_PATH=/home/atoz/ros2_ws/install/octomap_server:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/octomap_server:/opt/ros/humble LD_LIBRARY_PATH=/home/atoz/ros2_ws/install/octomap_server/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/atoz/ros2_ws/build/octomap_mapping
+[0.158s] -- Install configuration: ""
+[0.159s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/ament_index/resource_index/package_run_dependencies/octomap_mapping
+[0.159s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/ament_index/resource_index/parent_prefix_path/octomap_mapping
+[0.159s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/environment/ament_prefix_path.sh
+[0.159s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/environment/ament_prefix_path.dsv
+[0.159s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/environment/path.sh
+[0.159s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/environment/path.dsv
+[0.160s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/local_setup.bash
+[0.160s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/local_setup.sh
+[0.160s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/local_setup.zsh
+[0.160s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/local_setup.dsv
+[0.160s] -- Installing: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.dsv
+[0.160s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/ament_index/resource_index/packages/octomap_mapping
+[0.160s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/cmake/octomap_mappingConfig.cmake
+[0.160s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/cmake/octomap_mappingConfig-version.cmake
+[0.160s] -- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.xml
+[0.164s] Invoked command in '/home/atoz/ros2_ws/build/octomap_mapping' returned '0': AMENT_PREFIX_PATH=/home/atoz/ros2_ws/install/octomap_server:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/octomap_server:/opt/ros/humble LD_LIBRARY_PATH=/home/atoz/ros2_ws/install/octomap_server/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/atoz/ros2_ws/build/octomap_mapping

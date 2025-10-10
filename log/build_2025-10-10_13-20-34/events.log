@@ -1,0 +1,2439 @@
+[0.000000] (-) TimerEvent: {}
+[0.000967] (livox_ros_driver2) JobQueued: {'identifier': 'livox_ros_driver2', 'dependencies': OrderedDict()}
+[0.001657] (livox_sdk2) JobQueued: {'identifier': 'livox_sdk2', 'dependencies': OrderedDict()}
+[0.001943] (my_octomap) JobQueued: {'identifier': 'my_octomap', 'dependencies': OrderedDict()}
+[0.002242] (octomap_server) JobQueued: {'identifier': 'octomap_server', 'dependencies': OrderedDict()}
+[0.002344] (pwm_ctrl) JobQueued: {'identifier': 'pwm_ctrl', 'dependencies': OrderedDict()}
+[0.002522] (fast_lio) JobQueued: {'identifier': 'fast_lio', 'dependencies': OrderedDict([('livox_ros_driver2', '/home/atoz/ros2_ws/install/livox_ros_driver2')])}
+[0.002613] (octomap_mapping) JobQueued: {'identifier': 'octomap_mapping', 'dependencies': OrderedDict([('octomap_server', '/home/atoz/ros2_ws/install/octomap_server')])}
+[0.002662] (livox_ros_driver2) JobStarted: {'identifier': 'livox_ros_driver2'}
+[0.014133] (octomap_server) JobStarted: {'identifier': 'octomap_server'}
+[0.020781] (livox_sdk2) JobStarted: {'identifier': 'livox_sdk2'}
+[0.027421] (my_octomap) JobStarted: {'identifier': 'my_octomap'}
+[0.038780] (pwm_ctrl) JobStarted: {'identifier': 'pwm_ctrl'}
+[0.052458] (livox_ros_driver2) JobProgress: {'identifier': 'livox_ros_driver2', 'progress': 'cmake'}
+[0.054508] (livox_ros_driver2) JobProgress: {'identifier': 'livox_ros_driver2', 'progress': 'build'}
+[0.056390] (livox_ros_driver2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/atoz/ros2_ws/build/livox_ros_driver2', '--', '-j8', '-l8'], 'cwd': '/home/atoz/ros2_ws/build/livox_ros_driver2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'atoz'), ('JETSON_MODEL_NAME', 'JETSON_ORIN_NX'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/atoz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1876'), ('SYSTEMD_EXEC_PID', '2220'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '18902'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'atoz'), ('JOURNAL_STREAM', '8:50475'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'atoz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/atoz-desktop:@/tmp/.ICE-unix/2031,unix/atoz-desktop:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', '55ef6c06ffbd44159a0ac6d00dbc7c92'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4ac9629c-0a33-4288-a8f7-3e71231457ca'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/atoz/ros2_ws/build/livox_ros_driver2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/atoz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.062667] (octomap_server) JobProgress: {'identifier': 'octomap_server', 'progress': 'cmake'}
+[0.065602] (octomap_server) JobProgress: {'identifier': 'octomap_server', 'progress': 'build'}
+[0.066775] (octomap_server) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/atoz/ros2_ws/build/octomap_server', '--', '-j8', '-l8'], 'cwd': '/home/atoz/ros2_ws/build/octomap_server', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'atoz'), ('JETSON_MODEL_NAME', 'JETSON_ORIN_NX'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/atoz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1876'), ('SYSTEMD_EXEC_PID', '2220'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '18902'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'atoz'), ('JOURNAL_STREAM', '8:50475'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'atoz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/atoz-desktop:@/tmp/.ICE-unix/2031,unix/atoz-desktop:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', '55ef6c06ffbd44159a0ac6d00dbc7c92'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4ac9629c-0a33-4288-a8f7-3e71231457ca'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/atoz/ros2_ws/build/octomap_server'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/atoz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.070659] (livox_sdk2) JobProgress: {'identifier': 'livox_sdk2', 'progress': 'cmake'}
+[0.071818] (livox_sdk2) JobProgress: {'identifier': 'livox_sdk2', 'progress': 'build'}
+[0.072291] (livox_sdk2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/atoz/ros2_ws/build/livox_sdk2', '--', '-j8', '-l8'], 'cwd': '/home/atoz/ros2_ws/build/livox_sdk2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'atoz'), ('JETSON_MODEL_NAME', 'JETSON_ORIN_NX'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/atoz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1876'), ('SYSTEMD_EXEC_PID', '2220'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '18902'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'atoz'), ('JOURNAL_STREAM', '8:50475'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'atoz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/atoz-desktop:@/tmp/.ICE-unix/2031,unix/atoz-desktop:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', '55ef6c06ffbd44159a0ac6d00dbc7c92'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4ac9629c-0a33-4288-a8f7-3e71231457ca'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/atoz/ros2_ws/build/livox_sdk2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/atoz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.098873] (-) TimerEvent: {}
+[0.199638] (-) TimerEvent: {}
+[0.300331] (-) TimerEvent: {}
+[0.401013] (-) TimerEvent: {}
+[0.501720] (-) TimerEvent: {}
+[0.602416] (-) TimerEvent: {}
+[0.703277] (-) TimerEvent: {}
+[0.804232] (-) TimerEvent: {}
+[0.837857] (livox_ros_driver2) StdoutLine: {'line': b'[  1%] Built target livox_interfaces2__cpp\n'}
+[0.844129] (livox_ros_driver2) StdoutLine: {'line': b'[  8%] Built target livox_interfaces2__rosidl_generator_c\n'}
+[0.848634] (livox_ros_driver2) StdoutLine: {'line': b'[ 12%] Built target livox_ros_driver2_node\n'}
+[0.849391] (livox_ros_driver2) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_livox_ros_driver2\n'}
+[0.850588] (livox_ros_driver2) StdoutLine: {'line': b'[ 19%] Built target livox_interfaces2__rosidl_typesupport_fastrtps_cpp\n'}
+[0.850813] (livox_ros_driver2) StdoutLine: {'line': b'[ 26%] Built target livox_interfaces2__rosidl_typesupport_cpp\n'}
+[0.851465] (livox_ros_driver2) StdoutLine: {'line': b'[ 33%] Built target livox_interfaces2__rosidl_typesupport_introspection_cpp\n'}
+[0.851629] (livox_ros_driver2) StdoutLine: {'line': b'[ 40%] Built target livox_interfaces2__rosidl_typesupport_fastrtps_c\n'}
+[0.851774] (livox_ros_driver2) StdoutLine: {'line': b'[ 47%] Built target livox_interfaces2__rosidl_typesupport_introspection_c\n'}
+[0.851910] (livox_ros_driver2) StdoutLine: {'line': b'[ 54%] Built target livox_interfaces2__rosidl_typesupport_c\n'}
+[0.852041] (livox_ros_driver2) StdoutLine: {'line': b'[ 82%] Built target livox_ros_driver2\n'}
+[0.852167] (livox_ros_driver2) StdoutLine: {'line': b'[ 82%] Built target livox_interfaces2\n'}
+[0.852333] (livox_ros_driver2) StdoutLine: {'line': b'[ 84%] Built target livox_interfaces2__py\n'}
+[0.852459] (livox_ros_driver2) StdoutLine: {'line': b'[ 89%] Built target livox_interfaces2__rosidl_generator_py\n'}
+[0.852580] (livox_ros_driver2) StdoutLine: {'line': b'[ 92%] Built target livox_ros_driver2__rosidl_typesupport_introspection_c__pyext\n'}
+[0.852702] (livox_ros_driver2) StdoutLine: {'line': b'[ 96%] Built target livox_ros_driver2__rosidl_typesupport_c__pyext\n'}
+[0.852821] (livox_ros_driver2) StdoutLine: {'line': b'[100%] Built target livox_ros_driver2__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.852940] (octomap_server) StdoutLine: {'line': b'[  7%] Built target octomap_server_static\n'}
+[0.853137] (octomap_server) StdoutLine: {'line': b'[ 15%] Built target octomap_server_multilayer_node\n'}
+[0.853263] (octomap_server) StdoutLine: {'line': b'[ 23%] Built target tracking_octomap_server_node\n'}
+[0.853387] (octomap_server) StdoutLine: {'line': b'[ 30%] Built target octomap_server_static_node\n'}
+[0.853505] (octomap_server) StdoutLine: {'line': b'[ 38%] Built target color_octomap_server_node\n'}
+[0.853621] (octomap_server) StdoutLine: {'line': b'[ 46%] Built target octomap_server_node\n'}
+[0.853734] (octomap_server) StdoutLine: {'line': b'[ 53%] Built target octomap_saver_node\n'}
+[0.853849] (octomap_server) StdoutLine: {'line': b'[ 61%] Built target octomap_server\n'}
+[0.853966] (octomap_server) StdoutLine: {'line': b'[ 73%] Built target octomap_server_multilayer\n'}
+[0.854085] (octomap_server) StdoutLine: {'line': b'[ 84%] Built target tracking_octomap_server\n'}
+[0.857006] (livox_sdk2) StdoutLine: {'line': b'[ 42%] Built target livox_lidar_sdk_static\n'}
+[0.857695] (livox_sdk2) StdoutLine: {'line': b'[ 84%] Built target livox_lidar_sdk_shared\n'}
+[0.859551] (livox_sdk2) StdoutLine: {'line': b'[ 86%] Built target logger\n'}
+[0.859784] (livox_sdk2) StdoutLine: {'line': b'[ 89%] Built target livox_lidar_quick_start\n'}
+[0.859942] (livox_sdk2) StdoutLine: {'line': b'[ 91%] Built target lidar_cmd_observer\n'}
+[0.860085] (livox_sdk2) StdoutLine: {'line': b'[ 93%] Built target debug_point_cloud\n'}
+[0.860219] (livox_sdk2) StdoutLine: {'line': b'[ 96%] Built target multi_lidars_upgrade\n'}
+[0.860348] (livox_sdk2) StdoutLine: {'line': b'[100%] Built target livox_lidar_rmc_time_sync\n'}
+[0.904455] (-) TimerEvent: {}
+[0.917634] (octomap_server) StdoutLine: {'line': b'[ 92%] Built target color_octomap_server\n'}
+[0.976129] (livox_ros_driver2) StdoutLine: {'line': b'running egg_info\n'}
+[0.978633] (livox_ros_driver2) StdoutLine: {'line': b'writing livox_ros_driver2.egg-info/PKG-INFO\n'}
+[0.979449] (livox_ros_driver2) StdoutLine: {'line': b'writing dependency_links to livox_ros_driver2.egg-info/dependency_links.txt\n'}
+[0.980062] (livox_ros_driver2) StdoutLine: {'line': b'writing top-level names to livox_ros_driver2.egg-info/top_level.txt\n'}
+[0.986507] (livox_ros_driver2) StdoutLine: {'line': b"reading manifest file 'livox_ros_driver2.egg-info/SOURCES.txt'\n"}
+[0.988025] (livox_ros_driver2) StdoutLine: {'line': b"writing manifest file 'livox_ros_driver2.egg-info/SOURCES.txt'\n"}
+[1.004555] (-) TimerEvent: {}
+[1.031429] (octomap_server) StdoutLine: {'line': b'[100%] Built target octomap_saver\n'}
+[1.086608] (livox_ros_driver2) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_livox_ros_driver2_egg\n'}
+[1.104711] (-) TimerEvent: {}
+[1.205848] (-) TimerEvent: {}
+[1.307101] (-) TimerEvent: {}
+[1.407947] (-) TimerEvent: {}
+[1.442056] (livox_sdk2) CommandEnded: {'returncode': 0}
+[1.444334] (livox_sdk2) JobProgress: {'identifier': 'livox_sdk2', 'progress': 'install'}
+[1.464146] (livox_sdk2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/atoz/ros2_ws/build/livox_sdk2'], 'cwd': '/home/atoz/ros2_ws/build/livox_sdk2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'atoz'), ('JETSON_MODEL_NAME', 'JETSON_ORIN_NX'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/atoz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1876'), ('SYSTEMD_EXEC_PID', '2220'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '18902'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'atoz'), ('JOURNAL_STREAM', '8:50475'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'atoz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/atoz-desktop:@/tmp/.ICE-unix/2031,unix/atoz-desktop:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', '55ef6c06ffbd44159a0ac6d00dbc7c92'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4ac9629c-0a33-4288-a8f7-3e71231457ca'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/atoz/ros2_ws/build/livox_sdk2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/atoz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[1.468474] (octomap_server) CommandEnded: {'returncode': 0}
+[1.470185] (octomap_server) JobProgress: {'identifier': 'octomap_server', 'progress': 'install'}
+[1.471835] (octomap_server) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/atoz/ros2_ws/build/octomap_server'], 'cwd': '/home/atoz/ros2_ws/build/octomap_server', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'atoz'), ('JETSON_MODEL_NAME', 'JETSON_ORIN_NX'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/atoz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1876'), ('SYSTEMD_EXEC_PID', '2220'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '18902'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'atoz'), ('JOURNAL_STREAM', '8:50475'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'atoz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/atoz-desktop:@/tmp/.ICE-unix/2031,unix/atoz-desktop:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', '55ef6c06ffbd44159a0ac6d00dbc7c92'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4ac9629c-0a33-4288-a8f7-3e71231457ca'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/atoz/ros2_ws/build/octomap_server'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/atoz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.476043] (livox_ros_driver2) CommandEnded: {'returncode': 0}
+[1.477740] (livox_ros_driver2) JobProgress: {'identifier': 'livox_ros_driver2', 'progress': 'install'}
+[1.479752] (livox_ros_driver2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/atoz/ros2_ws/build/livox_ros_driver2'], 'cwd': '/home/atoz/ros2_ws/build/livox_ros_driver2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'atoz'), ('JETSON_MODEL_NAME', 'JETSON_ORIN_NX'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/atoz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1876'), ('SYSTEMD_EXEC_PID', '2220'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '18902'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'atoz'), ('JOURNAL_STREAM', '8:50475'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'atoz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/atoz-desktop:@/tmp/.ICE-unix/2031,unix/atoz-desktop:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', '55ef6c06ffbd44159a0ac6d00dbc7c92'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4ac9629c-0a33-4288-a8f7-3e71231457ca'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/atoz/ros2_ws/build/livox_ros_driver2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/atoz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.483378] (livox_sdk2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.483835] (livox_sdk2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_sdk2/lib/liblivox_lidar_sdk_static.a\n'}
+[1.484051] (livox_sdk2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_sdk2/include/livox_lidar_def.h\n'}
+[1.484222] (livox_sdk2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_sdk2/include/livox_lidar_api.h\n'}
+[1.484391] (livox_sdk2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_sdk2/include/livox_lidar_cfg.h\n'}
+[1.484524] (livox_sdk2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_sdk2/lib/liblivox_lidar_sdk_shared.so\n'}
+[1.508584] (-) TimerEvent: {}
+[1.515411] (octomap_server) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.515990] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/octomap_server_static_node\n'}
+[1.519583] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/octomap_server_node\n'}
+[1.519867] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/octomap_server_multilayer_node\n'}
+[1.520141] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/tracking_octomap_server_node\n'}
+[1.520350] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/color_octomap_server_node\n'}
+[1.520562] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/octomap_saver_node\n'}
+[1.520812] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/include\n'}
+[1.521014] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/include/octomap_server\n'}
+[1.521218] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/include/octomap_server/octomap_server.hpp\n'}
+[1.521406] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/include/octomap_server/octomap_server_static.hpp\n'}
+[1.521635] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/include/octomap_server/octomap_server_multilayer.hpp\n'}
+[1.521823] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/include/octomap_server/tracking_octomap_server.hpp\n'}
+[1.522015] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/environment/library_path.sh\n'}
+[1.522204] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/environment/library_path.dsv\n'}
+[1.522329] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/liboctomap_server_static.so\n'}
+[1.522454] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/liboctomap_server.so\n'}
+[1.522573] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/liboctomap_server_multilayer.so\n'}
+[1.522689] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/libtracking_octomap_server.so\n'}
+[1.522845] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/libcolor_octomap_server.so\n'}
+[1.523014] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/liboctomap_saver.so\n'}
+[1.523151] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/launch\n'}
+[1.523272] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/launch/octomap_mapping.launch.xml\n'}
+[1.523392] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/launch/octomap_tracking_server.launch.xml\n'}
+[1.523511] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/launch/octomap_tracking_client.launch.xml\n'}
+[1.523627] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/params\n'}
+[1.523740] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/params/default.yaml\n'}
+[1.523854] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/ament_index/resource_index/package_run_dependencies/octomap_server\n'}
+[1.523999] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/ament_index/resource_index/parent_prefix_path/octomap_server\n'}
+[1.524125] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/environment/ament_prefix_path.sh\n'}
+[1.524243] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/environment/ament_prefix_path.dsv\n'}
+[1.524359] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/environment/path.sh\n'}
+[1.524473] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/environment/path.dsv\n'}
+[1.524587] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/local_setup.bash\n'}
+[1.524700] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/local_setup.sh\n'}
+[1.524815] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/local_setup.zsh\n'}
+[1.524929] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/local_setup.dsv\n'}
+[1.525079] (octomap_server) StdoutLine: {'line': b'-- Installing: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.dsv\n'}
+[1.525197] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/ament_index/resource_index/packages/octomap_server\n'}
+[1.525313] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/ament_index/resource_index/rclcpp_components/octomap_server\n'}
+[1.525428] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.525541] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.525655] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.525768] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/cmake/octomap_serverConfig.cmake\n'}
+[1.525898] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/cmake/octomap_serverConfig-version.cmake\n'}
+[1.526014] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.xml\n'}
+[1.526125] (octomap_server) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_server/lib/octomap_server/octomap_eraser_cli.py\n'}
+[1.526244] (livox_ros_driver2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.526383] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/ament_index/resource_index/rosidl_interfaces/livox_ros_driver2\n'}
+[1.526506] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[1.526623] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[1.526741] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_msg.h\n'}
+[1.526859] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.527025] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_point.h\n'}
+[1.527165] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[1.527285] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.h\n'}
+[1.527407] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__functions.c\n'}
+[1.527525] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.h\n'}
+[1.527643] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__functions.h\n'}
+[1.527758] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__functions.c\n'}
+[1.527875] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__functions.h\n'}
+[1.527996] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__struct.h\n'}
+[1.528143] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__struct.h\n'}
+[1.528270] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/library_path.sh\n'}
+[1.528389] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/library_path.dsv\n'}
+[1.528507] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_generator_c.so\n'}
+[1.528628] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[1.528772] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[1.528892] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.529045] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[1.529168] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_fastrtps_c.h\n'}
+[1.529287] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_fastrtps_c.h\n'}
+[1.529403] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_fastrtps_c.so\n'}
+[1.529523] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[1.529638] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[1.529754] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.529871] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[1.529986] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.c\n'}
+[1.530105] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_introspection_c.h\n'}
+[1.530220] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_introspection_c.h\n'}
+[1.530337] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.c\n'}
+[1.530453] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_introspection_c.so\n'}
+[1.530565] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_c.so\n'}
+[1.530684] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[1.530800] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[1.530915] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[1.531131] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__traits.hpp\n'}
+[1.531406] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.hpp\n'}
+[1.550253] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.hpp\n'}
+[1.550465] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__builder.hpp\n'}
+[1.550620] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__builder.hpp\n'}
+[1.550785] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__struct.hpp\n'}
+[1.551032] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__struct.hpp\n'}
+[1.551171] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__traits.hpp\n'}
+[1.551298] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_msg.hpp\n'}
+[1.551423] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.551545] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_point.hpp\n'}
+[1.551669] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[1.551793] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[1.551914] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.552096] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[1.552223] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/dds_fastrtps\n'}
+[1.552345] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.552468] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.552586] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.552706] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[1.552825] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[1.552945] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[1.553063] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.cpp\n'}
+[1.553184] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.553333] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.cpp\n'}
+[1.553453] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.553573] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_introspection_cpp.so\n'}
+[1.553917] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_cpp.so\n'}
+[1.554083] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/pythonpath.sh\n'}
+[1.554214] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/pythonpath.dsv\n'}
+[1.554335] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info\n'}
+[1.554456] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[1.554573] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/top_level.txt\n'}
+[1.554690] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/PKG-INFO\n'}
+[1.554834] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[1.554983] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2\n'}
+[1.555120] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_c.c\n'}
+[1.555239] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg\n'}
+[1.555352] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_msg_s.c\n'}
+[1.555688] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/__init__.py\n'}
+[1.555834] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_point_s.c\n'}
+[1.555962] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_msg.py\n'}
+[1.556085] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_point.py\n'}
+[1.556203] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.556366] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/__init__.py\n'}
+[1.556501] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/liblivox_interfaces2__rosidl_generator_py.so\n'}
+[1.556625] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.556746] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.556866] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.556987] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.557339] (octomap_server) CommandEnded: {'returncode': 0}
+[1.604698] (octomap_server) JobEnded: {'identifier': 'octomap_server', 'rc': 0}
+[1.605746] (livox_sdk2) CommandEnded: {'returncode': 0}
+[1.608825] (-) TimerEvent: {}
+[1.630251] (livox_sdk2) JobEnded: {'identifier': 'livox_sdk2', 'rc': 0}
+[1.632622] (octomap_mapping) JobStarted: {'identifier': 'octomap_mapping'}
+[1.668174] (octomap_mapping) JobProgress: {'identifier': 'octomap_mapping', 'progress': 'cmake'}
+[1.668397] (octomap_mapping) JobProgress: {'identifier': 'octomap_mapping', 'progress': 'build'}
+[1.668464] (octomap_mapping) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/atoz/ros2_ws/build/octomap_mapping', '--', '-j8', '-l8'], 'cwd': '/home/atoz/ros2_ws/build/octomap_mapping', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'atoz'), ('JETSON_MODEL_NAME', 'JETSON_ORIN_NX'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/atoz/ros2_ws/install/octomap_server/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/atoz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1876'), ('SYSTEMD_EXEC_PID', '2220'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '18902'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'atoz'), ('JOURNAL_STREAM', '8:50475'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'atoz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/atoz-desktop:@/tmp/.ICE-unix/2031,unix/atoz-desktop:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', '55ef6c06ffbd44159a0ac6d00dbc7c92'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/atoz/ros2_ws/install/octomap_server:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4ac9629c-0a33-4288-a8f7-3e71231457ca'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/atoz/ros2_ws/build/octomap_mapping'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/atoz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/atoz/ros2_ws/install/octomap_server:/opt/ros/humble')]), 'shell': False}
+[1.681309] (livox_ros_driver2) StdoutLine: {'line': b"Listing '/home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2'...\n"}
+[1.681844] (livox_ros_driver2) StdoutLine: {'line': b"Listing '/home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg'...\n"}
+[1.709017] (-) TimerEvent: {}
+[1.714013] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.714505] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.714680] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[1.714826] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/lib/liblivox_interfaces2__rosidl_generator_py.so\n'}
+[1.714989] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomPoint.idl\n'}
+[1.715134] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomMsg.idl\n'}
+[1.715262] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomPoint.msg\n'}
+[1.715385] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomMsg.msg\n'}
+[1.715550] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node\n'}
+[1.715686] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2.so\n'}
+[1.715809] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config\n'}
+[1.715926] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/display_point_cloud_ROS1.rviz\n'}
+[1.716043] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/MID360_config.json\n'}
+[1.716159] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/HAP_config.json\n'}
+[1.716273] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/display_point_cloud_ROS2.rviz\n'}
+[1.716386] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/mixed_HAP_MID360_config.json\n'}
+[1.716498] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2\n'}
+[1.716610] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_HAP_launch.py\n'}
+[1.716723] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_MID360_launch.py\n'}
+[1.716837] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_HAP_launch.py\n'}
+[1.716949] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_MID360_launch.py\n'}
+[1.717060] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_mixed.py\n'}
+[1.717171] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/ament_index/resource_index/package_run_dependencies/livox_ros_driver2\n'}
+[1.717285] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/ament_index/resource_index/parent_prefix_path/livox_ros_driver2\n'}
+[1.717437] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/ament_prefix_path.sh\n'}
+[1.717556] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/ament_prefix_path.dsv\n'}
+[1.717671] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/path.sh\n'}
+[1.717785] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/path.dsv\n'}
+[1.717897] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.bash\n'}
+[1.718011] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.sh\n'}
+[1.718124] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.zsh\n'}
+[1.718235] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.dsv\n'}
+[1.718364] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv\n'}
+[1.718475] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/ament_index/resource_index/packages/livox_ros_driver2\n'}
+[1.718585] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cExport.cmake\n'}
+[1.718696] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.718814] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.718931] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.720203] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.720354] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.720481] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cExport.cmake\n'}
+[1.720636] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.720759] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cppExport.cmake\n'}
+[1.720879] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.720996] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.721113] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.721372] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.721548] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cppExport.cmake\n'}
+[1.721677] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.721800] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_pyExport.cmake\n'}
+[1.722186] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.722332] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/ament_index/resource_index/rclcpp_components/livox_ros_driver2\n'}
+[1.722847] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake-extras.cmake\n'}
+[1.723432] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.724258] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.725034] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.725674] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.726505] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.727040] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.727670] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake\n'}
+[1.728041] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config-version.cmake\n'}
+[1.728476] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.xml\n'}
+[1.744372] (livox_ros_driver2) CommandEnded: {'returncode': 0}
+[1.774701] (livox_ros_driver2) JobEnded: {'identifier': 'livox_ros_driver2', 'rc': 0}
+[1.776396] (fast_lio) JobStarted: {'identifier': 'fast_lio'}
+[1.786868] (octomap_mapping) CommandEnded: {'returncode': 0}
+[1.787782] (octomap_mapping) JobProgress: {'identifier': 'octomap_mapping', 'progress': 'install'}
+[1.787856] (octomap_mapping) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/atoz/ros2_ws/build/octomap_mapping'], 'cwd': '/home/atoz/ros2_ws/build/octomap_mapping', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'atoz'), ('JETSON_MODEL_NAME', 'JETSON_ORIN_NX'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/atoz/ros2_ws/install/octomap_server/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/atoz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1876'), ('SYSTEMD_EXEC_PID', '2220'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '18902'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'atoz'), ('JOURNAL_STREAM', '8:50475'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'atoz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/atoz-desktop:@/tmp/.ICE-unix/2031,unix/atoz-desktop:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', '55ef6c06ffbd44159a0ac6d00dbc7c92'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/atoz/ros2_ws/install/octomap_server:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4ac9629c-0a33-4288-a8f7-3e71231457ca'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/atoz/ros2_ws/build/octomap_mapping'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/atoz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/atoz/ros2_ws/install/octomap_server:/opt/ros/humble')]), 'shell': False}
+[1.797873] (fast_lio) JobProgress: {'identifier': 'fast_lio', 'progress': 'cmake'}
+[1.801161] (fast_lio) JobProgress: {'identifier': 'fast_lio', 'progress': 'build'}
+[1.802683] (fast_lio) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/atoz/ros2_ws/build/fast_lio', '--', '-j8', '-l8'], 'cwd': '/home/atoz/ros2_ws/build/fast_lio', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'atoz'), ('JETSON_MODEL_NAME', 'JETSON_ORIN_NX'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/atoz/ros2_ws/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/atoz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1876'), ('SYSTEMD_EXEC_PID', '2220'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '18902'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'atoz'), ('JOURNAL_STREAM', '8:50475'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'atoz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/atoz-desktop:@/tmp/.ICE-unix/2031,unix/atoz-desktop:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', '55ef6c06ffbd44159a0ac6d00dbc7c92'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/atoz/ros2_ws/install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4ac9629c-0a33-4288-a8f7-3e71231457ca'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/atoz/ros2_ws/build/fast_lio'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/atoz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/atoz/ros2_ws/install/livox_ros_driver2:/opt/ros/humble')]), 'shell': False}
+[1.809044] (octomap_mapping) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.809511] (-) TimerEvent: {}
+[1.809802] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/ament_index/resource_index/package_run_dependencies/octomap_mapping\n'}
+[1.809995] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/ament_index/resource_index/parent_prefix_path/octomap_mapping\n'}
+[1.810143] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/environment/ament_prefix_path.sh\n'}
+[1.810688] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/environment/ament_prefix_path.dsv\n'}
+[1.810922] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/environment/path.sh\n'}
+[1.811134] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/environment/path.dsv\n'}
+[1.811271] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/local_setup.bash\n'}
+[1.811399] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/local_setup.sh\n'}
+[1.811524] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/local_setup.zsh\n'}
+[1.811645] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/local_setup.dsv\n'}
+[1.811761] (octomap_mapping) StdoutLine: {'line': b'-- Installing: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.dsv\n'}
+[1.812061] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/ament_index/resource_index/packages/octomap_mapping\n'}
+[1.812213] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/cmake/octomap_mappingConfig.cmake\n'}
+[1.812340] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/cmake/octomap_mappingConfig-version.cmake\n'}
+[1.812461] (octomap_mapping) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.xml\n'}
+[1.815624] (octomap_mapping) CommandEnded: {'returncode': 0}
+[1.862908] (octomap_mapping) JobEnded: {'identifier': 'octomap_mapping', 'rc': 0}
+[1.909709] (-) TimerEvent: {}
+[1.971606] (fast_lio) StdoutLine: {'line': b'[  2%] Built target fast_lio__cpp\n'}
+[2.009875] (-) TimerEvent: {}
+[2.061259] (fast_lio) StdoutLine: {'line': b'[ 11%] Built target fast_lio__rosidl_generator_c\n'}
+[2.076313] (fast_lio) StdoutLine: {'line': b'[ 11%] Built target ament_cmake_python_copy_fast_lio\n'}
+[2.092998] (fast_lio) StdoutLine: {'line': b'[ 20%] Built target fast_lio__rosidl_typesupport_fastrtps_cpp\n'}
+[2.094854] (fast_lio) StdoutLine: {'line': b'[ 28%] Built target fast_lio__rosidl_typesupport_cpp\n'}
+[2.110056] (-) TimerEvent: {}
+[2.113990] (fast_lio) StdoutLine: {'line': b'[ 37%] Built target fast_lio__rosidl_typesupport_introspection_cpp\n'}
+[2.134672] (fast_lio) StdoutLine: {'line': b'[ 45%] Built target fast_lio__rosidl_typesupport_fastrtps_c\n'}
+[2.170524] (fast_lio) StdoutLine: {'line': b'[ 54%] Built target fast_lio__rosidl_typesupport_introspection_c\n'}
+[2.180908] (fast_lio) StdoutLine: {'line': b'[ 62%] Built target fast_lio__rosidl_typesupport_c\n'}
+[2.210218] (-) TimerEvent: {}
+[2.215339] (fast_lio) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/fastlio_mapping.dir/src/laserMapping.cpp.o\x1b[0m\n'}
+[2.232032] (fast_lio) StdoutLine: {'line': b'[ 65%] Built target fast_lio\n'}
+[2.288198] (fast_lio) StdoutLine: {'line': b'[ 68%] Built target fast_lio__py\n'}
+[2.307309] (my_octomap) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/my_octomap', 'build', '--build-base', '/home/atoz/ros2_ws/build/my_octomap/build', 'install', '--record', '/home/atoz/ros2_ws/build/my_octomap/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/atoz/ros2_ws/src/my_octomap', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'atoz', 'JETSON_MODEL_NAME': 'JETSON_ORIN_NX', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/atoz', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1876', 'SYSTEMD_EXEC_PID': '2220', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '18902', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'atoz', 'JOURNAL_STREAM': '8:50475', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'atoz', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/atoz-desktop:@/tmp/.ICE-unix/2031,unix/atoz-desktop:/tmp/.ICE-unix/2031', 'INVOCATION_ID': '55ef6c06ffbd44159a0ac6d00dbc7c92', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'ko_KR.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:4ac9629c-0a33-4288-a8f7-3e71231457ca', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/atoz/ros2_ws/build/my_octomap', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/atoz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/atoz/ros2_ws/build/my_octomap/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/my_octomap/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[2.310320] (-) TimerEvent: {}
+[2.351744] (fast_lio) StdoutLine: {'line': b'[ 74%] Built target fast_lio__rosidl_generator_py\n'}
+[2.386768] (pwm_ctrl) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/pwm_ctrl', 'build', '--build-base', '/home/atoz/ros2_ws/build/pwm_ctrl/build', 'install', '--record', '/home/atoz/ros2_ws/build/pwm_ctrl/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/atoz/ros2_ws/src/pwm_ctrl', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'atoz', 'JETSON_MODEL_NAME': 'JETSON_ORIN_NX', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/atoz', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1876', 'SYSTEMD_EXEC_PID': '2220', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '18902', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'atoz', 'JOURNAL_STREAM': '8:50475', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'atoz', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/atoz-desktop:@/tmp/.ICE-unix/2031,unix/atoz-desktop:/tmp/.ICE-unix/2031', 'INVOCATION_ID': '55ef6c06ffbd44159a0ac6d00dbc7c92', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'ko_KR.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:4ac9629c-0a33-4288-a8f7-3e71231457ca', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/atoz/ros2_ws/build/pwm_ctrl', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/atoz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/atoz/ros2_ws/build/pwm_ctrl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[2.410506] (-) TimerEvent: {}
+[2.445686] (fast_lio) StdoutLine: {'line': b'[ 80%] Built target fast_lio__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.448614] (fast_lio) StdoutLine: {'line': b'[ 85%] Built target fast_lio__rosidl_typesupport_introspection_c__pyext\n'}
+[2.455721] (fast_lio) StdoutLine: {'line': b'[ 91%] Built target fast_lio__rosidl_typesupport_c__pyext\n'}
+[2.510675] (-) TimerEvent: {}
+[2.611414] (-) TimerEvent: {}
+[2.668384] (fast_lio) StdoutLine: {'line': b'running egg_info\n'}
+[2.671372] (fast_lio) StdoutLine: {'line': b'writing fast_lio.egg-info/PKG-INFO\n'}
+[2.672643] (fast_lio) StdoutLine: {'line': b'writing dependency_links to fast_lio.egg-info/dependency_links.txt\n'}
+[2.673587] (fast_lio) StdoutLine: {'line': b'writing top-level names to fast_lio.egg-info/top_level.txt\n'}
+[2.679093] (fast_lio) StdoutLine: {'line': b"reading manifest file 'fast_lio.egg-info/SOURCES.txt'\n"}
+[2.680900] (fast_lio) StdoutLine: {'line': b"writing manifest file 'fast_lio.egg-info/SOURCES.txt'\n"}
+[2.711575] (-) TimerEvent: {}
+[2.765562] (fast_lio) StdoutLine: {'line': b'[ 91%] Built target ament_cmake_python_build_fast_lio_egg\n'}
+[2.811740] (-) TimerEvent: {}
+[2.850001] (my_octomap) StdoutLine: {'line': b'running egg_info\n'}
+[2.852007] (my_octomap) StdoutLine: {'line': b'writing ../../build/my_octomap/my_octomap.egg-info/PKG-INFO\n'}
+[2.852797] (my_octomap) StdoutLine: {'line': b'writing dependency_links to ../../build/my_octomap/my_octomap.egg-info/dependency_links.txt\n'}
+[2.853288] (my_octomap) StdoutLine: {'line': b'writing entry points to ../../build/my_octomap/my_octomap.egg-info/entry_points.txt\n'}
+[2.853739] (my_octomap) StdoutLine: {'line': b'writing requirements to ../../build/my_octomap/my_octomap.egg-info/requires.txt\n'}
+[2.854053] (my_octomap) StdoutLine: {'line': b'writing top-level names to ../../build/my_octomap/my_octomap.egg-info/top_level.txt\n'}
+[2.858533] (my_octomap) StdoutLine: {'line': b"reading manifest file '../../build/my_octomap/my_octomap.egg-info/SOURCES.txt'\n"}
+[2.860386] (my_octomap) StdoutLine: {'line': b"writing manifest file '../../build/my_octomap/my_octomap.egg-info/SOURCES.txt'\n"}
+[2.860785] (my_octomap) StdoutLine: {'line': b'running build\n'}
+[2.861016] (my_octomap) StdoutLine: {'line': b'running build_py\n'}
+[2.861548] (my_octomap) StdoutLine: {'line': b'running install\n'}
+[2.862351] (my_octomap) StdoutLine: {'line': b'running install_lib\n'}
+[2.865422] (my_octomap) StdoutLine: {'line': b'running install_data\n'}
+[2.865812] (my_octomap) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.870123] (my_octomap) StdoutLine: {'line': b"removing '/home/atoz/ros2_ws/install/my_octomap/lib/python3.10/site-packages/my_octomap-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[2.870756] (my_octomap) StdoutLine: {'line': b'Copying ../../build/my_octomap/my_octomap.egg-info to /home/atoz/ros2_ws/install/my_octomap/lib/python3.10/site-packages/my_octomap-0.0.0-py3.10.egg-info\n'}
+[2.872811] (my_octomap) StdoutLine: {'line': b'running install_scripts\n'}
+[2.911902] (-) TimerEvent: {}
+[2.919757] (my_octomap) StdoutLine: {'line': b"writing list of installed files to '/home/atoz/ros2_ws/build/my_octomap/install.log'\n"}
+[2.953997] (pwm_ctrl) StdoutLine: {'line': b'running egg_info\n'}
+[2.955747] (pwm_ctrl) StdoutLine: {'line': b'writing ../../build/pwm_ctrl/pwm_ctrl.egg-info/PKG-INFO\n'}
+[2.956371] (pwm_ctrl) StdoutLine: {'line': b'writing dependency_links to ../../build/pwm_ctrl/pwm_ctrl.egg-info/dependency_links.txt\n'}
+[2.956780] (pwm_ctrl) StdoutLine: {'line': b'writing entry points to ../../build/pwm_ctrl/pwm_ctrl.egg-info/entry_points.txt\n'}
+[2.957089] (pwm_ctrl) StdoutLine: {'line': b'writing requirements to ../../build/pwm_ctrl/pwm_ctrl.egg-info/requires.txt\n'}
+[2.957393] (pwm_ctrl) StdoutLine: {'line': b'writing top-level names to ../../build/pwm_ctrl/pwm_ctrl.egg-info/top_level.txt\n'}
+[2.962454] (pwm_ctrl) StdoutLine: {'line': b"reading manifest file '../../build/pwm_ctrl/pwm_ctrl.egg-info/SOURCES.txt'\n"}
+[2.964335] (pwm_ctrl) StdoutLine: {'line': b"writing manifest file '../../build/pwm_ctrl/pwm_ctrl.egg-info/SOURCES.txt'\n"}
+[2.964767] (pwm_ctrl) StdoutLine: {'line': b'running build\n'}
+[2.964931] (pwm_ctrl) StdoutLine: {'line': b'running build_py\n'}
+[2.965464] (pwm_ctrl) StdoutLine: {'line': b'running install\n'}
+[2.966282] (pwm_ctrl) StdoutLine: {'line': b'running install_lib\n'}
+[2.969689] (pwm_ctrl) StdoutLine: {'line': b'running install_data\n'}
+[2.970392] (pwm_ctrl) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.975688] (pwm_ctrl) StdoutLine: {'line': b"removing '/home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl-0.0.1-py3.10.egg-info' (and everything under it)\n"}
+[2.976491] (pwm_ctrl) StdoutLine: {'line': b'Copying ../../build/pwm_ctrl/pwm_ctrl.egg-info to /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl-0.0.1-py3.10.egg-info\n'}
+[2.978785] (pwm_ctrl) StdoutLine: {'line': b'running install_scripts\n'}
+[3.000355] (my_octomap) CommandEnded: {'returncode': 0}
+[3.012258] (-) TimerEvent: {}
+[3.015340] (my_octomap) JobEnded: {'identifier': 'my_octomap', 'rc': 0}
+[3.028755] (pwm_ctrl) StdoutLine: {'line': b'Installing servo_pwm_node script to /home/atoz/ros2_ws/install/pwm_ctrl/lib/pwm_ctrl\n'}
+[3.029789] (pwm_ctrl) StdoutLine: {'line': b"writing list of installed files to '/home/atoz/ros2_ws/build/pwm_ctrl/install.log'\n"}
+[3.112555] (-) TimerEvent: {}
+[3.114624] (pwm_ctrl) CommandEnded: {'returncode': 0}
+[3.131518] (pwm_ctrl) JobEnded: {'identifier': 'pwm_ctrl', 'rc': 0}
+[3.212748] (-) TimerEvent: {}
+[3.313489] (-) TimerEvent: {}
+[3.414217] (-) TimerEvent: {}
+[3.514927] (-) TimerEvent: {}
+[3.615702] (-) TimerEvent: {}
+[3.716405] (-) TimerEvent: {}
+[3.817071] (-) TimerEvent: {}
+[3.917619] (-) TimerEvent: {}
+[4.018220] (-) TimerEvent: {}
+[4.118930] (-) TimerEvent: {}
+[4.219652] (-) TimerEvent: {}
+[4.320348] (-) TimerEvent: {}
+[4.421060] (-) TimerEvent: {}
+[4.521753] (-) TimerEvent: {}
+[4.622465] (-) TimerEvent: {}
+[4.723195] (-) TimerEvent: {}
+[4.823898] (-) TimerEvent: {}
+[4.924606] (-) TimerEvent: {}
+[5.025317] (-) TimerEvent: {}
+[5.126021] (-) TimerEvent: {}
+[5.226726] (-) TimerEvent: {}
+[5.327471] (-) TimerEvent: {}
+[5.428192] (-) TimerEvent: {}
+[5.528901] (-) TimerEvent: {}
+[5.629621] (-) TimerEvent: {}
+[5.730332] (-) TimerEvent: {}
+[5.831074] (-) TimerEvent: {}
+[5.931759] (-) TimerEvent: {}
+[6.032462] (-) TimerEvent: {}
+[6.133172] (-) TimerEvent: {}
+[6.233923] (-) TimerEvent: {}
+[6.334671] (-) TimerEvent: {}
+[6.435379] (-) TimerEvent: {}
+[6.536080] (-) TimerEvent: {}
+[6.636811] (-) TimerEvent: {}
+[6.737516] (-) TimerEvent: {}
+[6.838225] (-) TimerEvent: {}
+[6.939029] (-) TimerEvent: {}
+[7.040040] (-) TimerEvent: {}
+[7.140962] (-) TimerEvent: {}
+[7.241945] (-) TimerEvent: {}
+[7.342721] (-) TimerEvent: {}
+[7.443574] (-) TimerEvent: {}
+[7.544272] (-) TimerEvent: {}
+[7.645081] (-) TimerEvent: {}
+[7.745869] (-) TimerEvent: {}
+[7.846621] (-) TimerEvent: {}
+[7.947442] (-) TimerEvent: {}
+[8.048232] (-) TimerEvent: {}
+[8.148907] (-) TimerEvent: {}
+[8.249696] (-) TimerEvent: {}
+[8.350420] (-) TimerEvent: {}
+[8.451118] (-) TimerEvent: {}
+[8.551872] (-) TimerEvent: {}
+[8.652564] (-) TimerEvent: {}
+[8.753258] (-) TimerEvent: {}
+[8.853924] (-) TimerEvent: {}
+[8.954611] (-) TimerEvent: {}
+[9.055319] (-) TimerEvent: {}
+[9.156061] (-) TimerEvent: {}
+[9.256695] (-) TimerEvent: {}
+[9.357511] (-) TimerEvent: {}
+[9.458210] (-) TimerEvent: {}
+[9.558845] (-) TimerEvent: {}
+[9.659782] (-) TimerEvent: {}
+[9.760468] (-) TimerEvent: {}
+[9.861088] (-) TimerEvent: {}
+[9.961657] (-) TimerEvent: {}
+[10.062306] (-) TimerEvent: {}
+[10.163045] (-) TimerEvent: {}
+[10.263745] (-) TimerEvent: {}
+[10.364572] (-) TimerEvent: {}
+[10.465264] (-) TimerEvent: {}
+[10.565913] (-) TimerEvent: {}
+[10.666572] (-) TimerEvent: {}
+[10.767404] (-) TimerEvent: {}
+[10.868149] (-) TimerEvent: {}
+[10.968703] (-) TimerEvent: {}
+[11.069309] (-) TimerEvent: {}
+[11.170079] (-) TimerEvent: {}
+[11.270762] (-) TimerEvent: {}
+[11.371481] (-) TimerEvent: {}
+[11.472186] (-) TimerEvent: {}
+[11.572893] (-) TimerEvent: {}
+[11.673596] (-) TimerEvent: {}
+[11.774317] (-) TimerEvent: {}
+[11.874967] (-) TimerEvent: {}
+[11.975672] (-) TimerEvent: {}
+[12.076359] (-) TimerEvent: {}
+[12.177045] (-) TimerEvent: {}
+[12.277675] (-) TimerEvent: {}
+[12.378377] (-) TimerEvent: {}
+[12.479095] (-) TimerEvent: {}
+[12.579776] (-) TimerEvent: {}
+[12.680467] (-) TimerEvent: {}
+[12.781170] (-) TimerEvent: {}
+[12.881892] (-) TimerEvent: {}
+[12.982584] (-) TimerEvent: {}
+[13.083294] (-) TimerEvent: {}
+[13.184007] (-) TimerEvent: {}
+[13.284712] (-) TimerEvent: {}
+[13.385410] (-) TimerEvent: {}
+[13.486135] (-) TimerEvent: {}
+[13.586885] (-) TimerEvent: {}
+[13.687599] (-) TimerEvent: {}
+[13.788325] (-) TimerEvent: {}
+[13.889056] (-) TimerEvent: {}
+[13.989779] (-) TimerEvent: {}
+[14.090527] (-) TimerEvent: {}
+[14.191450] (-) TimerEvent: {}
+[14.292074] (-) TimerEvent: {}
+[14.392779] (-) TimerEvent: {}
+[14.493490] (-) TimerEvent: {}
+[14.594277] (-) TimerEvent: {}
+[14.694919] (-) TimerEvent: {}
+[14.795625] (-) TimerEvent: {}
+[14.896346] (-) TimerEvent: {}
+[14.997067] (-) TimerEvent: {}
+[15.097780] (-) TimerEvent: {}
+[15.198480] (-) TimerEvent: {}
+[15.299209] (-) TimerEvent: {}
+[15.399921] (-) TimerEvent: {}
+[15.500648] (-) TimerEvent: {}
+[15.601373] (-) TimerEvent: {}
+[15.702068] (-) TimerEvent: {}
+[15.802768] (-) TimerEvent: {}
+[15.903489] (-) TimerEvent: {}
+[16.004199] (-) TimerEvent: {}
+[16.104929] (-) TimerEvent: {}
+[16.205614] (-) TimerEvent: {}
+[16.306291] (-) TimerEvent: {}
+[16.407027] (-) TimerEvent: {}
+[16.507741] (-) TimerEvent: {}
+[16.608464] (-) TimerEvent: {}
+[16.709169] (-) TimerEvent: {}
+[16.809871] (-) TimerEvent: {}
+[16.910585] (-) TimerEvent: {}
+[17.011336] (-) TimerEvent: {}
+[17.112061] (-) TimerEvent: {}
+[17.212902] (-) TimerEvent: {}
+[17.313679] (-) TimerEvent: {}
+[17.414590] (-) TimerEvent: {}
+[17.515424] (-) TimerEvent: {}
+[17.616059] (-) TimerEvent: {}
+[17.716793] (-) TimerEvent: {}
+[17.817479] (-) TimerEvent: {}
+[17.918201] (-) TimerEvent: {}
+[17.938887] (fast_lio) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:22\x1b[m\x1b[K,\n'}
+[17.939484] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/smart_ptr/detail/yield_k.hpp:23\x1b[m\x1b[K,\n'}
+[17.939658] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:14\x1b[m\x1b[K,\n'}
+[17.939798] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/smart_ptr/detail/spinlock.hpp:42\x1b[m\x1b[K,\n'}
+[17.939928] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/smart_ptr/detail/spinlock_pool.hpp:25\x1b[m\x1b[K,\n'}
+[17.940052] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/smart_ptr/shared_ptr.hpp:29\x1b[m\x1b[K,\n'}
+[17.940171] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/shared_ptr.hpp:17\x1b[m\x1b[K,\n'}
+[17.940290] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/date_time/microsec_time_clock.hpp:18\x1b[m\x1b[K,\n'}
+[17.940407] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/interprocess/detail/posix_time_types_wrk.hpp:31\x1b[m\x1b[K,\n'}
+[17.940521] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/interprocess/detail/os_thread_functions.hpp:36\x1b[m\x1b[K,\n'}
+[17.940634] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/interprocess/sync/file_lock.hpp:26\x1b[m\x1b[K,\n'}
+[17.940745] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:46\x1b[m\x1b[K,\n'}
+[17.940907] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/pcl_conversions/pcl_conversions/pcl_conversions.h:73\x1b[m\x1b[K,\n'}
+[17.941019] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/atoz/ros2_ws/src/FAST_LIO_ROS2/src/IMU_Processing.hpp:18\x1b[m\x1b[K,\n'}
+[17.941128] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/atoz/ros2_ws/src/FAST_LIO_ROS2/src/laserMapping.cpp:47\x1b[m\x1b[K:\n'}
+[17.941239] (fast_lio) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/bind.hpp:36:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.\x1b[m\x1b[K\xe2\x80\x99\n'}
+[17.941373] (fast_lio) StderrLine: {'line': b'   36 | \x1b[01;36m\x1b[KBOOST_PRAGMA_MESSAGE\x1b[m\x1b[K(\n'}
+[17.941486] (fast_lio) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.018370] (-) TimerEvent: {}
+[18.119156] (-) TimerEvent: {}
+[18.220080] (-) TimerEvent: {}
+[18.320850] (-) TimerEvent: {}
+[18.421816] (-) TimerEvent: {}
+[18.522627] (-) TimerEvent: {}
+[18.623369] (-) TimerEvent: {}
+[18.723976] (-) TimerEvent: {}
+[18.824590] (-) TimerEvent: {}
+[18.925218] (-) TimerEvent: {}
+[19.025824] (-) TimerEvent: {}
+[19.126463] (-) TimerEvent: {}
+[19.227134] (-) TimerEvent: {}
+[19.327835] (-) TimerEvent: {}
+[19.428504] (-) TimerEvent: {}
+[19.529199] (-) TimerEvent: {}
+[19.630028] (-) TimerEvent: {}
+[19.730665] (-) TimerEvent: {}
+[19.831541] (-) TimerEvent: {}
+[19.932442] (-) TimerEvent: {}
+[20.033227] (-) TimerEvent: {}
+[20.133969] (-) TimerEvent: {}
+[20.234638] (-) TimerEvent: {}
+[20.335382] (-) TimerEvent: {}
+[20.436175] (-) TimerEvent: {}
+[20.536761] (-) TimerEvent: {}
+[20.637452] (-) TimerEvent: {}
+[20.738132] (-) TimerEvent: {}
+[20.838753] (-) TimerEvent: {}
+[20.939386] (-) TimerEvent: {}
+[21.039999] (-) TimerEvent: {}
+[21.140697] (-) TimerEvent: {}
+[21.241394] (-) TimerEvent: {}
+[21.342097] (-) TimerEvent: {}
+[21.442780] (-) TimerEvent: {}
+[21.543513] (-) TimerEvent: {}
+[21.644199] (-) TimerEvent: {}
+[21.744898] (-) TimerEvent: {}
+[21.845602] (-) TimerEvent: {}
+[21.946285] (-) TimerEvent: {}
+[22.046976] (-) TimerEvent: {}
+[22.147646] (-) TimerEvent: {}
+[22.248320] (-) TimerEvent: {}
+[22.348992] (-) TimerEvent: {}
+[22.449723] (-) TimerEvent: {}
+[22.550410] (-) TimerEvent: {}
+[22.651099] (-) TimerEvent: {}
+[22.751796] (-) TimerEvent: {}
+[22.852496] (-) TimerEvent: {}
+[22.953293] (-) TimerEvent: {}
+[23.054130] (-) TimerEvent: {}
+[23.154785] (-) TimerEvent: {}
+[23.255674] (-) TimerEvent: {}
+[23.356284] (-) TimerEvent: {}
+[23.456896] (-) TimerEvent: {}
+[23.557596] (-) TimerEvent: {}
+[23.658320] (-) TimerEvent: {}
+[23.759046] (-) TimerEvent: {}
+[23.859796] (-) TimerEvent: {}
+[23.960467] (-) TimerEvent: {}
+[24.061267] (-) TimerEvent: {}
+[24.161966] (-) TimerEvent: {}
+[24.262631] (-) TimerEvent: {}
+[24.363331] (-) TimerEvent: {}
+[24.464042] (-) TimerEvent: {}
+[24.564766] (-) TimerEvent: {}
+[24.665445] (-) TimerEvent: {}
+[24.766135] (-) TimerEvent: {}
+[24.866866] (-) TimerEvent: {}
+[24.967591] (-) TimerEvent: {}
+[25.068321] (-) TimerEvent: {}
+[25.169012] (-) TimerEvent: {}
+[25.269624] (-) TimerEvent: {}
+[25.370230] (-) TimerEvent: {}
+[25.470874] (-) TimerEvent: {}
+[25.571744] (-) TimerEvent: {}
+[25.672373] (-) TimerEvent: {}
+[25.773005] (-) TimerEvent: {}
+[25.873672] (-) TimerEvent: {}
+[25.974357] (-) TimerEvent: {}
+[26.075098] (-) TimerEvent: {}
+[26.175793] (-) TimerEvent: {}
+[26.276495] (-) TimerEvent: {}
+[26.377189] (-) TimerEvent: {}
+[26.477908] (-) TimerEvent: {}
+[26.578563] (-) TimerEvent: {}
+[26.679297] (-) TimerEvent: {}
+[26.779994] (-) TimerEvent: {}
+[26.880680] (-) TimerEvent: {}
+[26.981356] (-) TimerEvent: {}
+[27.082055] (-) TimerEvent: {}
+[27.182805] (-) TimerEvent: {}
+[27.283750] (-) TimerEvent: {}
+[27.384413] (-) TimerEvent: {}
+[27.485033] (-) TimerEvent: {}
+[27.585678] (-) TimerEvent: {}
+[27.686390] (-) TimerEvent: {}
+[27.787081] (-) TimerEvent: {}
+[27.887772] (-) TimerEvent: {}
+[27.988446] (-) TimerEvent: {}
+[28.089149] (-) TimerEvent: {}
+[28.189837] (-) TimerEvent: {}
+[28.290524] (-) TimerEvent: {}
+[28.391335] (-) TimerEvent: {}
+[28.491997] (-) TimerEvent: {}
+[28.592699] (-) TimerEvent: {}
+[28.693635] (-) TimerEvent: {}
+[28.794450] (-) TimerEvent: {}
+[28.895290] (-) TimerEvent: {}
+[28.995988] (-) TimerEvent: {}
+[29.096610] (-) TimerEvent: {}
+[29.197284] (-) TimerEvent: {}
+[29.297898] (-) TimerEvent: {}
+[29.398558] (-) TimerEvent: {}
+[29.499220] (-) TimerEvent: {}
+[29.599900] (-) TimerEvent: {}
+[29.700610] (-) TimerEvent: {}
+[29.801310] (-) TimerEvent: {}
+[29.902007] (-) TimerEvent: {}
+[30.002715] (-) TimerEvent: {}
+[30.103438] (-) TimerEvent: {}
+[30.204146] (-) TimerEvent: {}
+[30.304870] (-) TimerEvent: {}
+[30.405578] (-) TimerEvent: {}
+[30.506287] (-) TimerEvent: {}
+[30.607002] (-) TimerEvent: {}
+[30.707658] (-) TimerEvent: {}
+[30.808349] (-) TimerEvent: {}
+[30.909105] (-) TimerEvent: {}
+[31.009832] (-) TimerEvent: {}
+[31.110504] (-) TimerEvent: {}
+[31.211242] (-) TimerEvent: {}
+[31.311941] (-) TimerEvent: {}
+[31.412756] (-) TimerEvent: {}
+[31.513568] (-) TimerEvent: {}
+[31.614494] (-) TimerEvent: {}
+[31.715114] (-) TimerEvent: {}
+[31.815699] (-) TimerEvent: {}
+[31.916239] (-) TimerEvent: {}
+[32.016909] (-) TimerEvent: {}
+[32.117604] (-) TimerEvent: {}
+[32.218441] (-) TimerEvent: {}
+[32.319151] (-) TimerEvent: {}
+[32.419858] (-) TimerEvent: {}
+[32.520652] (-) TimerEvent: {}
+[32.621437] (-) TimerEvent: {}
+[32.722076] (-) TimerEvent: {}
+[32.822700] (-) TimerEvent: {}
+[32.923415] (-) TimerEvent: {}
+[33.024126] (-) TimerEvent: {}
+[33.124818] (-) TimerEvent: {}
+[33.225504] (-) TimerEvent: {}
+[33.326187] (-) TimerEvent: {}
+[33.426876] (-) TimerEvent: {}
+[33.527584] (-) TimerEvent: {}
+[33.576581] (fast_lio) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/atoz/ros2_ws/src/FAST_LIO_ROS2/include/IKFoM_toolkit/esekfom/../mtk/types/SOn.hpp:83\x1b[m\x1b[K,\n'}
+[33.577175] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/atoz/ros2_ws/src/FAST_LIO_ROS2/include/IKFoM_toolkit/esekfom/esekfom.hpp:49\x1b[m\x1b[K,\n'}
+[33.577375] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/atoz/ros2_ws/src/FAST_LIO_ROS2/include/use-ikfom.hpp:4\x1b[m\x1b[K,\n'}
+[33.577520] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/atoz/ros2_ws/src/FAST_LIO_ROS2/src/IMU_Processing.hpp:22\x1b[m\x1b[K,\n'}
+[33.577648] (fast_lio) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/atoz/ros2_ws/src/FAST_LIO_ROS2/src/laserMapping.cpp:47\x1b[m\x1b[K:\n'}
+[33.577770] (fast_lio) StderrLine: {'line': b'/home/atoz/ros2_ws/src/FAST_LIO_ROS2/include/IKFoM_toolkit/esekfom/../mtk/types/../src/mtkmath.hpp: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<_FIter, _FIter> MTK::cos_sinc_sqrt(const scalar&) [with scalar = double]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[33.577896] (fast_lio) StderrLine: {'line': b'\x1b[01m\x1b[K/home/atoz/ros2_ws/src/FAST_LIO_ROS2/include/IKFoM_toolkit/esekfom/../mtk/types/../src/mtkmath.hpp:252:52:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kscalar MTK::exp(MTK::vectview<scalar, dim>, MTK::vectview<const scalar, dim>, const scalar&) [with scalar = double; int n = 3]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[33.578057] (fast_lio) StderrLine: {'line': b'\x1b[01m\x1b[K/home/atoz/ros2_ws/src/FAST_LIO_ROS2/include/IKFoM_toolkit/esekfom/../mtk/types/S2.hpp:140:32:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid MTK::S2<_scalar, den, num, S2_typ>::boxplus(MTK::vectview<const _scalar, 2>, MTK::S2<_scalar, den, num, S2_typ>::scalar) [with _scalar = double; int den = 98090; int num = 10000; int S2_typ = 1; MTK::S2<_scalar, den, num, S2_typ>::scalar = double]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[33.578186] (fast_lio) StderrLine: {'line': b'\x1b[01m\x1b[K/home/atoz/ros2_ws/src/FAST_LIO_ROS2/include/use-ikfom.hpp:12:1:\x1b[m\x1b[K   required from here\n'}
+[33.578325] (fast_lio) StderrLine: {'line': b'\x1b[01m\x1b[K/home/atoz/ros2_ws/src/FAST_LIO_ROS2/include/IKFoM_toolkit/esekfom/../mtk/types/../src/mtkmath.hpp:143:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kparameter passing for argument of type \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<double, double>\x1b[m\x1b[K\xe2\x80\x99 when C++17 is enabled changed to match C++14 \x1b]8;;https://gcc.gnu.org/gcc-10/changes.html#empty_base\x07in GCC 10.1\x1b]8;;\x07\n'}
+[33.578453] (fast_lio) StderrLine: {'line': b'  143 | std::pair<scalar, scalar> \x1b[01;36m\x1b[Kcos_sinc_sqrt\x1b[m\x1b[K(const scalar &x2){\n'}
+[33.578571] (fast_lio) StderrLine: {'line': b'      |                           \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[33.627772] (-) TimerEvent: {}
+[33.728544] (-) TimerEvent: {}
+[33.829440] (-) TimerEvent: {}
+[33.930369] (-) TimerEvent: {}
+[34.031024] (-) TimerEvent: {}
+[34.131712] (-) TimerEvent: {}
+[34.232418] (-) TimerEvent: {}
+[34.333116] (-) TimerEvent: {}
+[34.433812] (-) TimerEvent: {}
+[34.534522] (-) TimerEvent: {}
+[34.635495] (-) TimerEvent: {}
+[34.736323] (-) TimerEvent: {}
+[34.837094] (-) TimerEvent: {}
+[34.937964] (-) TimerEvent: {}
+[35.038885] (-) TimerEvent: {}
+[35.140052] (-) TimerEvent: {}
+[35.240743] (-) TimerEvent: {}
+[35.341549] (-) TimerEvent: {}
+[35.442452] (-) TimerEvent: {}
+[35.543215] (-) TimerEvent: {}
+[35.643893] (-) TimerEvent: {}
+[35.744557] (-) TimerEvent: {}
+[35.845186] (-) TimerEvent: {}
+[35.945810] (-) TimerEvent: {}
+[36.046455] (-) TimerEvent: {}
+[36.147119] (-) TimerEvent: {}
+[36.247777] (-) TimerEvent: {}
+[36.348438] (-) TimerEvent: {}
+[36.449082] (-) TimerEvent: {}
+[36.549880] (-) TimerEvent: {}
+[36.650857] (-) TimerEvent: {}
+[36.751514] (-) TimerEvent: {}
+[36.852227] (-) TimerEvent: {}
+[36.953129] (-) TimerEvent: {}
+[37.053959] (-) TimerEvent: {}
+[37.155078] (-) TimerEvent: {}
+[37.256065] (-) TimerEvent: {}
+[37.357242] (-) TimerEvent: {}
+[37.458285] (-) TimerEvent: {}
+[37.559646] (-) TimerEvent: {}
+[37.660349] (-) TimerEvent: {}
+[37.761173] (-) TimerEvent: {}
+[37.862207] (-) TimerEvent: {}
+[37.963334] (-) TimerEvent: {}
+[38.064063] (-) TimerEvent: {}
+[38.164761] (-) TimerEvent: {}
+[38.265472] (-) TimerEvent: {}
+[38.366174] (-) TimerEvent: {}
+[38.466896] (-) TimerEvent: {}
+[38.567618] (-) TimerEvent: {}
+[38.668329] (-) TimerEvent: {}
+[38.769040] (-) TimerEvent: {}
+[38.869760] (-) TimerEvent: {}
+[38.970475] (-) TimerEvent: {}
+[39.071224] (-) TimerEvent: {}
+[39.171951] (-) TimerEvent: {}
+[39.272653] (-) TimerEvent: {}
+[39.373362] (-) TimerEvent: {}
+[39.474068] (-) TimerEvent: {}
+[39.574909] (-) TimerEvent: {}
+[39.675717] (-) TimerEvent: {}
+[39.776416] (-) TimerEvent: {}
+[39.877204] (-) TimerEvent: {}
+[39.978090] (-) TimerEvent: {}
+[40.078797] (-) TimerEvent: {}
+[40.179518] (-) TimerEvent: {}
+[40.280246] (-) TimerEvent: {}
+[40.381107] (-) TimerEvent: {}
+[40.481866] (-) TimerEvent: {}
+[40.582613] (-) TimerEvent: {}
+[40.683462] (-) TimerEvent: {}
+[40.784350] (-) TimerEvent: {}
+[40.885056] (-) TimerEvent: {}
+[40.985811] (-) TimerEvent: {}
+[41.086583] (-) TimerEvent: {}
+[41.187768] (-) TimerEvent: {}
+[41.288646] (-) TimerEvent: {}
+[41.389408] (-) TimerEvent: {}
+[41.490135] (-) TimerEvent: {}
+[41.590821] (-) TimerEvent: {}
+[41.691935] (-) TimerEvent: {}
+[41.792677] (-) TimerEvent: {}
+[41.893439] (-) TimerEvent: {}
+[41.994190] (-) TimerEvent: {}
+[42.095147] (-) TimerEvent: {}
+[42.196017] (-) TimerEvent: {}
+[42.296885] (-) TimerEvent: {}
+[42.397737] (-) TimerEvent: {}
+[42.498532] (-) TimerEvent: {}
+[42.599302] (-) TimerEvent: {}
+[42.700112] (-) TimerEvent: {}
+[42.800810] (-) TimerEvent: {}
+[42.901604] (-) TimerEvent: {}
+[43.002337] (-) TimerEvent: {}
+[43.103065] (-) TimerEvent: {}
+[43.203933] (-) TimerEvent: {}
+[43.304742] (-) TimerEvent: {}
+[43.405448] (-) TimerEvent: {}
+[43.506168] (-) TimerEvent: {}
+[43.606912] (-) TimerEvent: {}
+[43.707695] (-) TimerEvent: {}
+[43.808467] (-) TimerEvent: {}
+[43.909150] (-) TimerEvent: {}
+[44.009841] (-) TimerEvent: {}
+[44.110544] (-) TimerEvent: {}
+[44.211268] (-) TimerEvent: {}
+[44.311964] (-) TimerEvent: {}
+[44.412666] (-) TimerEvent: {}
+[44.513440] (-) TimerEvent: {}
+[44.614144] (-) TimerEvent: {}
+[44.714845] (-) TimerEvent: {}
+[44.815556] (-) TimerEvent: {}
+[44.916265] (-) TimerEvent: {}
+[45.016937] (-) TimerEvent: {}
+[45.117628] (-) TimerEvent: {}
+[45.218325] (-) TimerEvent: {}
+[45.319039] (-) TimerEvent: {}
+[45.419737] (-) TimerEvent: {}
+[45.520443] (-) TimerEvent: {}
+[45.621145] (-) TimerEvent: {}
+[45.721855] (-) TimerEvent: {}
+[45.822614] (-) TimerEvent: {}
+[45.923555] (-) TimerEvent: {}
+[46.024604] (-) TimerEvent: {}
+[46.125765] (-) TimerEvent: {}
+[46.226624] (-) TimerEvent: {}
+[46.327718] (-) TimerEvent: {}
+[46.428463] (-) TimerEvent: {}
+[46.529177] (-) TimerEvent: {}
+[46.629899] (-) TimerEvent: {}
+[46.730632] (-) TimerEvent: {}
+[46.831372] (-) TimerEvent: {}
+[46.932074] (-) TimerEvent: {}
+[47.032769] (-) TimerEvent: {}
+[47.133475] (-) TimerEvent: {}
+[47.234250] (-) TimerEvent: {}
+[47.335207] (-) TimerEvent: {}
+[47.435972] (-) TimerEvent: {}
+[47.536662] (-) TimerEvent: {}
+[47.637500] (-) TimerEvent: {}
+[47.738806] (-) TimerEvent: {}
+[47.839870] (-) TimerEvent: {}
+[47.940840] (-) TimerEvent: {}
+[48.041618] (-) TimerEvent: {}
+[48.142401] (-) TimerEvent: {}
+[48.243129] (-) TimerEvent: {}
+[48.343848] (-) TimerEvent: {}
+[48.444551] (-) TimerEvent: {}
+[48.545270] (-) TimerEvent: {}
+[48.645974] (-) TimerEvent: {}
+[48.746695] (-) TimerEvent: {}
+[48.847431] (-) TimerEvent: {}
+[48.948145] (-) TimerEvent: {}
+[49.048856] (-) TimerEvent: {}
+[49.149558] (-) TimerEvent: {}
+[49.250276] (-) TimerEvent: {}
+[49.351013] (-) TimerEvent: {}
+[49.451731] (-) TimerEvent: {}
+[49.552460] (-) TimerEvent: {}
+[49.653168] (-) TimerEvent: {}
+[49.753856] (-) TimerEvent: {}
+[49.854548] (-) TimerEvent: {}
+[49.955272] (-) TimerEvent: {}
+[50.055960] (-) TimerEvent: {}
+[50.156664] (-) TimerEvent: {}
+[50.257370] (-) TimerEvent: {}
+[50.358090] (-) TimerEvent: {}
+[50.458822] (-) TimerEvent: {}
+[50.559640] (-) TimerEvent: {}
+[50.660586] (-) TimerEvent: {}
+[50.761369] (-) TimerEvent: {}
+[50.862078] (-) TimerEvent: {}
+[50.962839] (-) TimerEvent: {}
+[51.064013] (-) TimerEvent: {}
+[51.164734] (-) TimerEvent: {}
+[51.265462] (-) TimerEvent: {}
+[51.366178] (-) TimerEvent: {}
+[51.466904] (-) TimerEvent: {}
+[51.567760] (-) TimerEvent: {}
+[51.668527] (-) TimerEvent: {}
+[51.769254] (-) TimerEvent: {}
+[51.869930] (-) TimerEvent: {}
+[51.970611] (-) TimerEvent: {}
+[52.071351] (-) TimerEvent: {}
+[52.172037] (-) TimerEvent: {}
+[52.272713] (-) TimerEvent: {}
+[52.373414] (-) TimerEvent: {}
+[52.474108] (-) TimerEvent: {}
+[52.574868] (-) TimerEvent: {}
+[52.676228] (-) TimerEvent: {}
+[52.777280] (-) TimerEvent: {}
+[52.878015] (-) TimerEvent: {}
+[52.978728] (-) TimerEvent: {}
+[53.079441] (-) TimerEvent: {}
+[53.180367] (-) TimerEvent: {}
+[53.281083] (-) TimerEvent: {}
+[53.382026] (-) TimerEvent: {}
+[53.482773] (-) TimerEvent: {}
+[53.583566] (-) TimerEvent: {}
+[53.684321] (-) TimerEvent: {}
+[53.785057] (-) TimerEvent: {}
+[53.885804] (-) TimerEvent: {}
+[53.986551] (-) TimerEvent: {}
+[54.087446] (-) TimerEvent: {}
+[54.188239] (-) TimerEvent: {}
+[54.288949] (-) TimerEvent: {}
+[54.389983] (-) TimerEvent: {}
+[54.490831] (-) TimerEvent: {}
+[54.591620] (-) TimerEvent: {}
+[54.692645] (-) TimerEvent: {}
+[54.793569] (-) TimerEvent: {}
+[54.894287] (-) TimerEvent: {}
+[54.995029] (-) TimerEvent: {}
+[55.095725] (-) TimerEvent: {}
+[55.196410] (-) TimerEvent: {}
+[55.297245] (-) TimerEvent: {}
+[55.398043] (-) TimerEvent: {}
+[55.498743] (-) TimerEvent: {}
+[55.599983] (-) TimerEvent: {}
+[55.700683] (-) TimerEvent: {}
+[55.801368] (-) TimerEvent: {}
+[55.902073] (-) TimerEvent: {}
+[56.002763] (-) TimerEvent: {}
+[56.103481] (-) TimerEvent: {}
+[56.204268] (-) TimerEvent: {}
+[56.305800] (-) TimerEvent: {}
+[56.406580] (-) TimerEvent: {}
+[56.507302] (-) TimerEvent: {}
+[56.608031] (-) TimerEvent: {}
+[56.709200] (-) TimerEvent: {}
+[56.810227] (-) TimerEvent: {}
+[56.911079] (-) TimerEvent: {}
+[57.011850] (-) TimerEvent: {}
+[57.112636] (-) TimerEvent: {}
+[57.213553] (-) TimerEvent: {}
+[57.314468] (-) TimerEvent: {}
+[57.415183] (-) TimerEvent: {}
+[57.515896] (-) TimerEvent: {}
+[57.616613] (-) TimerEvent: {}
+[57.717333] (-) TimerEvent: {}
+[57.818194] (-) TimerEvent: {}
+[57.919084] (-) TimerEvent: {}
+[58.019798] (-) TimerEvent: {}
+[58.120494] (-) TimerEvent: {}
+[58.221216] (-) TimerEvent: {}
+[58.321920] (-) TimerEvent: {}
+[58.422649] (-) TimerEvent: {}
+[58.523457] (-) TimerEvent: {}
+[58.624193] (-) TimerEvent: {}
+[58.724945] (-) TimerEvent: {}
+[58.825626] (-) TimerEvent: {}
+[58.926320] (-) TimerEvent: {}
+[59.027039] (-) TimerEvent: {}
+[59.127742] (-) TimerEvent: {}
+[59.228436] (-) TimerEvent: {}
+[59.329134] (-) TimerEvent: {}
+[59.429839] (-) TimerEvent: {}
+[59.530548] (-) TimerEvent: {}
+[59.631253] (-) TimerEvent: {}
+[59.731967] (-) TimerEvent: {}
+[59.832693] (-) TimerEvent: {}
+[59.933429] (-) TimerEvent: {}
+[60.034167] (-) TimerEvent: {}
+[60.134876] (-) TimerEvent: {}
+[60.235613] (-) TimerEvent: {}
+[60.336332] (-) TimerEvent: {}
+[60.437050] (-) TimerEvent: {}
+[60.537780] (-) TimerEvent: {}
+[60.638511] (-) TimerEvent: {}
+[60.739260] (-) TimerEvent: {}
+[60.839992] (-) TimerEvent: {}
+[60.940716] (-) TimerEvent: {}
+[61.041436] (-) TimerEvent: {}
+[61.142129] (-) TimerEvent: {}
+[61.242838] (-) TimerEvent: {}
+[61.343570] (-) TimerEvent: {}
+[61.444282] (-) TimerEvent: {}
+[61.544999] (-) TimerEvent: {}
+[61.645707] (-) TimerEvent: {}
+[61.746417] (-) TimerEvent: {}
+[61.847120] (-) TimerEvent: {}
+[61.947802] (-) TimerEvent: {}
+[62.048467] (-) TimerEvent: {}
+[62.149155] (-) TimerEvent: {}
+[62.249856] (-) TimerEvent: {}
+[62.350535] (-) TimerEvent: {}
+[62.451247] (-) TimerEvent: {}
+[62.551934] (-) TimerEvent: {}
+[62.652624] (-) TimerEvent: {}
+[62.753320] (-) TimerEvent: {}
+[62.854009] (-) TimerEvent: {}
+[62.954693] (-) TimerEvent: {}
+[63.055407] (-) TimerEvent: {}
+[63.156083] (-) TimerEvent: {}
+[63.256773] (-) TimerEvent: {}
+[63.357475] (-) TimerEvent: {}
+[63.458812] (-) TimerEvent: {}
+[63.559544] (-) TimerEvent: {}
+[63.660240] (-) TimerEvent: {}
+[63.760918] (-) TimerEvent: {}
+[63.861630] (-) TimerEvent: {}
+[63.962318] (-) TimerEvent: {}
+[64.063006] (-) TimerEvent: {}
+[64.163680] (-) TimerEvent: {}
+[64.264346] (-) TimerEvent: {}
+[64.365010] (-) TimerEvent: {}
+[64.465685] (-) TimerEvent: {}
+[64.566397] (-) TimerEvent: {}
+[64.667116] (-) TimerEvent: {}
+[64.767798] (-) TimerEvent: {}
+[64.868490] (-) TimerEvent: {}
+[64.969195] (-) TimerEvent: {}
+[65.069883] (-) TimerEvent: {}
+[65.170579] (-) TimerEvent: {}
+[65.271274] (-) TimerEvent: {}
+[65.371954] (-) TimerEvent: {}
+[65.472647] (-) TimerEvent: {}
+[65.573486] (-) TimerEvent: {}
+[65.674462] (-) TimerEvent: {}
+[65.775588] (-) TimerEvent: {}
+[65.876321] (-) TimerEvent: {}
+[65.977055] (-) TimerEvent: {}
+[66.077903] (-) TimerEvent: {}
+[66.178580] (-) TimerEvent: {}
+[66.279287] (-) TimerEvent: {}
+[66.379969] (-) TimerEvent: {}
+[66.480663] (-) TimerEvent: {}
+[66.581359] (-) TimerEvent: {}
+[66.682039] (-) TimerEvent: {}
+[66.782725] (-) TimerEvent: {}
+[66.883440] (-) TimerEvent: {}
+[66.984119] (-) TimerEvent: {}
+[67.084820] (-) TimerEvent: {}
+[67.185522] (-) TimerEvent: {}
+[67.286213] (-) TimerEvent: {}
+[67.386915] (-) TimerEvent: {}
+[67.487601] (-) TimerEvent: {}
+[67.588281] (-) TimerEvent: {}
+[67.688957] (-) TimerEvent: {}
+[67.789658] (-) TimerEvent: {}
+[67.890334] (-) TimerEvent: {}
+[67.991034] (-) TimerEvent: {}
+[68.091710] (-) TimerEvent: {}
+[68.192430] (-) TimerEvent: {}
+[68.293383] (-) TimerEvent: {}
+[68.394344] (-) TimerEvent: {}
+[68.495019] (-) TimerEvent: {}
+[68.595802] (-) TimerEvent: {}
+[68.696500] (-) TimerEvent: {}
+[68.797199] (-) TimerEvent: {}
+[68.897970] (-) TimerEvent: {}
+[68.998523] (-) TimerEvent: {}
+[69.099152] (-) TimerEvent: {}
+[69.199895] (-) TimerEvent: {}
+[69.300635] (-) TimerEvent: {}
+[69.401434] (-) TimerEvent: {}
+[69.502145] (-) TimerEvent: {}
+[69.602827] (-) TimerEvent: {}
+[69.703618] (-) TimerEvent: {}
+[69.804367] (-) TimerEvent: {}
+[69.905116] (-) TimerEvent: {}
+[70.006117] (-) TimerEvent: {}
+[70.107086] (-) TimerEvent: {}
+[70.208179] (-) TimerEvent: {}
+[70.308816] (-) TimerEvent: {}
+[70.409567] (-) TimerEvent: {}
+[70.510516] (-) TimerEvent: {}
+[70.611169] (-) TimerEvent: {}
+[70.711898] (-) TimerEvent: {}
+[70.812709] (-) TimerEvent: {}
+[70.913712] (-) TimerEvent: {}
+[71.014433] (-) TimerEvent: {}
+[71.115185] (-) TimerEvent: {}
+[71.215872] (-) TimerEvent: {}
+[71.316544] (-) TimerEvent: {}
+[71.417254] (-) TimerEvent: {}
+[71.517952] (-) TimerEvent: {}
+[71.618676] (-) TimerEvent: {}
+[71.719404] (-) TimerEvent: {}
+[71.820174] (-) TimerEvent: {}
+[71.920873] (-) TimerEvent: {}
+[72.021568] (-) TimerEvent: {}
+[72.122241] (-) TimerEvent: {}
+[72.222964] (-) TimerEvent: {}
+[72.323651] (-) TimerEvent: {}
+[72.424341] (-) TimerEvent: {}
+[72.525051] (-) TimerEvent: {}
+[72.625749] (-) TimerEvent: {}
+[72.726460] (-) TimerEvent: {}
+[72.827183] (-) TimerEvent: {}
+[72.927902] (-) TimerEvent: {}
+[73.028583] (-) TimerEvent: {}
+[73.129268] (-) TimerEvent: {}
+[73.229962] (-) TimerEvent: {}
+[73.330653] (-) TimerEvent: {}
+[73.431373] (-) TimerEvent: {}
+[73.532063] (-) TimerEvent: {}
+[73.632765] (-) TimerEvent: {}
+[73.733463] (-) TimerEvent: {}
+[73.834191] (-) TimerEvent: {}
+[73.934897] (-) TimerEvent: {}
+[74.035652] (-) TimerEvent: {}
+[74.136365] (-) TimerEvent: {}
+[74.237061] (-) TimerEvent: {}
+[74.337741] (-) TimerEvent: {}
+[74.438458] (-) TimerEvent: {}
+[74.539201] (-) TimerEvent: {}
+[74.639909] (-) TimerEvent: {}
+[74.740619] (-) TimerEvent: {}
+[74.841457] (-) TimerEvent: {}
+[74.942370] (-) TimerEvent: {}
+[75.043174] (-) TimerEvent: {}
+[75.143918] (-) TimerEvent: {}
+[75.244590] (-) TimerEvent: {}
+[75.345377] (-) TimerEvent: {}
+[75.446090] (-) TimerEvent: {}
+[75.546804] (-) TimerEvent: {}
+[75.647617] (-) TimerEvent: {}
+[75.748418] (-) TimerEvent: {}
+[75.849008] (-) TimerEvent: {}
+[75.949797] (-) TimerEvent: {}
+[76.050584] (-) TimerEvent: {}
+[76.151430] (-) TimerEvent: {}
+[76.252026] (-) TimerEvent: {}
+[76.352606] (-) TimerEvent: {}
+[76.453188] (-) TimerEvent: {}
+[76.554008] (-) TimerEvent: {}
+[76.654761] (-) TimerEvent: {}
+[76.755472] (-) TimerEvent: {}
+[76.856165] (-) TimerEvent: {}
+[76.956897] (-) TimerEvent: {}
+[77.057596] (-) TimerEvent: {}
+[77.158306] (-) TimerEvent: {}
+[77.259022] (-) TimerEvent: {}
+[77.359748] (-) TimerEvent: {}
+[77.460445] (-) TimerEvent: {}
+[77.561180] (-) TimerEvent: {}
+[77.661992] (-) TimerEvent: {}
+[77.763064] (-) TimerEvent: {}
+[77.863812] (-) TimerEvent: {}
+[77.964551] (-) TimerEvent: {}
+[78.065443] (-) TimerEvent: {}
+[78.166274] (-) TimerEvent: {}
+[78.266989] (-) TimerEvent: {}
+[78.367791] (-) TimerEvent: {}
+[78.468529] (-) TimerEvent: {}
+[78.569429] (-) TimerEvent: {}
+[78.670223] (-) TimerEvent: {}
+[78.770928] (-) TimerEvent: {}
+[78.871643] (-) TimerEvent: {}
+[78.972348] (-) TimerEvent: {}
+[79.073044] (-) TimerEvent: {}
+[79.173745] (-) TimerEvent: {}
+[79.274438] (-) TimerEvent: {}
+[79.375114] (-) TimerEvent: {}
+[79.475805] (-) TimerEvent: {}
+[79.576513] (-) TimerEvent: {}
+[79.677200] (-) TimerEvent: {}
+[79.777882] (-) TimerEvent: {}
+[79.878562] (-) TimerEvent: {}
+[79.979299] (-) TimerEvent: {}
+[80.080003] (-) TimerEvent: {}
+[80.180687] (-) TimerEvent: {}
+[80.281373] (-) TimerEvent: {}
+[80.382080] (-) TimerEvent: {}
+[80.482765] (-) TimerEvent: {}
+[80.583471] (-) TimerEvent: {}
+[80.684174] (-) TimerEvent: {}
+[80.784871] (-) TimerEvent: {}
+[80.885574] (-) TimerEvent: {}
+[80.986294] (-) TimerEvent: {}
+[81.087006] (-) TimerEvent: {}
+[81.187697] (-) TimerEvent: {}
+[81.288400] (-) TimerEvent: {}
+[81.389098] (-) TimerEvent: {}
+[81.489798] (-) TimerEvent: {}
+[81.590483] (-) TimerEvent: {}
+[81.691271] (-) TimerEvent: {}
+[81.792206] (-) TimerEvent: {}
+[81.892895] (-) TimerEvent: {}
+[81.993661] (-) TimerEvent: {}
+[82.094442] (-) TimerEvent: {}
+[82.195120] (-) TimerEvent: {}
+[82.295816] (-) TimerEvent: {}
+[82.396510] (-) TimerEvent: {}
+[82.497215] (-) TimerEvent: {}
+[82.597942] (-) TimerEvent: {}
+[82.698644] (-) TimerEvent: {}
+[82.799343] (-) TimerEvent: {}
+[82.900034] (-) TimerEvent: {}
+[83.000763] (-) TimerEvent: {}
+[83.101465] (-) TimerEvent: {}
+[83.202162] (-) TimerEvent: {}
+[83.302852] (-) TimerEvent: {}
+[83.403548] (-) TimerEvent: {}
+[83.504220] (-) TimerEvent: {}
+[83.604917] (-) TimerEvent: {}
+[83.705583] (-) TimerEvent: {}
+[83.806230] (-) TimerEvent: {}
+[83.906901] (-) TimerEvent: {}
+[84.007598] (-) TimerEvent: {}
+[84.108259] (-) TimerEvent: {}
+[84.208923] (-) TimerEvent: {}
+[84.309598] (-) TimerEvent: {}
+[84.410350] (-) TimerEvent: {}
+[84.511055] (-) TimerEvent: {}
+[84.611726] (-) TimerEvent: {}
+[84.712405] (-) TimerEvent: {}
+[84.813078] (-) TimerEvent: {}
+[84.913765] (-) TimerEvent: {}
+[85.014420] (-) TimerEvent: {}
+[85.115092] (-) TimerEvent: {}
+[85.215741] (-) TimerEvent: {}
+[85.316402] (-) TimerEvent: {}
+[85.417095] (-) TimerEvent: {}
+[85.517803] (-) TimerEvent: {}
+[85.618511] (-) TimerEvent: {}
+[85.719221] (-) TimerEvent: {}
+[85.819895] (-) TimerEvent: {}
+[85.920574] (-) TimerEvent: {}
+[86.021286] (-) TimerEvent: {}
+[86.122244] (-) TimerEvent: {}
+[86.223075] (-) TimerEvent: {}
+[86.323829] (-) TimerEvent: {}
+[86.424526] (-) TimerEvent: {}
+[86.525264] (-) TimerEvent: {}
+[86.625934] (-) TimerEvent: {}
+[86.726528] (-) TimerEvent: {}
+[86.827243] (-) TimerEvent: {}
+[86.927937] (-) TimerEvent: {}
+[87.028624] (-) TimerEvent: {}
+[87.129319] (-) TimerEvent: {}
+[87.230005] (-) TimerEvent: {}
+[87.330721] (-) TimerEvent: {}
+[87.431447] (-) TimerEvent: {}
+[87.532150] (-) TimerEvent: {}
+[87.632835] (-) TimerEvent: {}
+[87.733554] (-) TimerEvent: {}
+[87.834269] (-) TimerEvent: {}
+[87.934998] (-) TimerEvent: {}
+[88.035678] (-) TimerEvent: {}
+[88.136367] (-) TimerEvent: {}
+[88.237075] (-) TimerEvent: {}
+[88.337772] (-) TimerEvent: {}
+[88.438459] (-) TimerEvent: {}
+[88.539189] (-) TimerEvent: {}
+[88.639913] (-) TimerEvent: {}
+[88.740604] (-) TimerEvent: {}
+[88.841295] (-) TimerEvent: {}
+[88.942005] (-) TimerEvent: {}
+[89.042721] (-) TimerEvent: {}
+[89.143423] (-) TimerEvent: {}
+[89.244093] (-) TimerEvent: {}
+[89.344761] (-) TimerEvent: {}
+[89.445436] (-) TimerEvent: {}
+[89.546132] (-) TimerEvent: {}
+[89.646806] (-) TimerEvent: {}
+[89.747498] (-) TimerEvent: {}
+[89.848189] (-) TimerEvent: {}
+[89.948883] (-) TimerEvent: {}
+[90.049560] (-) TimerEvent: {}
+[90.150256] (-) TimerEvent: {}
+[90.250983] (-) TimerEvent: {}
+[90.351660] (-) TimerEvent: {}
+[90.452319] (-) TimerEvent: {}
+[90.553131] (-) TimerEvent: {}
+[90.654078] (-) TimerEvent: {}
+[90.754725] (-) TimerEvent: {}
+[90.855409] (-) TimerEvent: {}
+[90.956192] (-) TimerEvent: {}
+[91.056967] (-) TimerEvent: {}
+[91.158064] (-) TimerEvent: {}
+[91.258810] (-) TimerEvent: {}
+[91.359757] (-) TimerEvent: {}
+[91.460444] (-) TimerEvent: {}
+[91.561121] (-) TimerEvent: {}
+[91.661788] (-) TimerEvent: {}
+[91.762459] (-) TimerEvent: {}
+[91.863108] (-) TimerEvent: {}
+[91.963784] (-) TimerEvent: {}
+[92.064446] (-) TimerEvent: {}
+[92.165134] (-) TimerEvent: {}
+[92.265849] (-) TimerEvent: {}
+[92.366546] (-) TimerEvent: {}
+[92.467250] (-) TimerEvent: {}
+[92.567928] (-) TimerEvent: {}
+[92.668644] (-) TimerEvent: {}
+[92.769347] (-) TimerEvent: {}
+[92.870044] (-) TimerEvent: {}
+[92.970745] (-) TimerEvent: {}
+[93.071512] (-) TimerEvent: {}
+[93.172195] (-) TimerEvent: {}
+[93.272887] (-) TimerEvent: {}
+[93.373587] (-) TimerEvent: {}
+[93.474307] (-) TimerEvent: {}
+[93.575025] (-) TimerEvent: {}
+[93.675719] (-) TimerEvent: {}
+[93.776439] (-) TimerEvent: {}
+[93.877158] (-) TimerEvent: {}
+[93.977859] (-) TimerEvent: {}
+[94.078565] (-) TimerEvent: {}
+[94.179297] (-) TimerEvent: {}
+[94.280012] (-) TimerEvent: {}
+[94.380715] (-) TimerEvent: {}
+[94.481416] (-) TimerEvent: {}
+[94.582135] (-) TimerEvent: {}
+[94.682849] (-) TimerEvent: {}
+[94.783573] (-) TimerEvent: {}
+[94.884266] (-) TimerEvent: {}
+[94.984973] (-) TimerEvent: {}
+[95.085685] (-) TimerEvent: {}
+[95.186390] (-) TimerEvent: {}
+[95.287139] (-) TimerEvent: {}
+[95.388121] (-) TimerEvent: {}
+[95.488930] (-) TimerEvent: {}
+[95.589717] (-) TimerEvent: {}
+[95.690589] (-) TimerEvent: {}
+[95.791608] (-) TimerEvent: {}
+[95.892416] (-) TimerEvent: {}
+[95.993131] (-) TimerEvent: {}
+[96.093929] (-) TimerEvent: {}
+[96.194610] (-) TimerEvent: {}
+[96.295317] (-) TimerEvent: {}
+[96.396015] (-) TimerEvent: {}
+[96.496719] (-) TimerEvent: {}
+[96.597413] (-) TimerEvent: {}
+[96.698098] (-) TimerEvent: {}
+[96.798795] (-) TimerEvent: {}
+[96.899533] (-) TimerEvent: {}
+[97.000225] (-) TimerEvent: {}
+[97.100927] (-) TimerEvent: {}
+[97.201619] (-) TimerEvent: {}
+[97.302315] (-) TimerEvent: {}
+[97.403028] (-) TimerEvent: {}
+[97.503697] (-) TimerEvent: {}
+[97.604369] (-) TimerEvent: {}
+[97.705049] (-) TimerEvent: {}
+[97.805791] (-) TimerEvent: {}
+[97.906454] (-) TimerEvent: {}
+[98.007169] (-) TimerEvent: {}
+[98.108032] (-) TimerEvent: {}
+[98.208839] (-) TimerEvent: {}
+[98.309686] (-) TimerEvent: {}
+[98.410392] (-) TimerEvent: {}
+[98.511098] (-) TimerEvent: {}
+[98.611785] (-) TimerEvent: {}
+[98.712449] (-) TimerEvent: {}
+[98.813117] (-) TimerEvent: {}
+[98.914020] (-) TimerEvent: {}
+[99.014764] (-) TimerEvent: {}
+[99.115571] (-) TimerEvent: {}
+[99.216316] (-) TimerEvent: {}
+[99.317187] (-) TimerEvent: {}
+[99.417983] (-) TimerEvent: {}
+[99.518743] (-) TimerEvent: {}
+[99.619682] (-) TimerEvent: {}
+[99.720359] (-) TimerEvent: {}
+[99.821086] (-) TimerEvent: {}
+[99.921857] (-) TimerEvent: {}
+[100.022710] (-) TimerEvent: {}
+[100.123512] (-) TimerEvent: {}
+[100.224391] (-) TimerEvent: {}
+[100.325090] (-) TimerEvent: {}
+[100.425813] (-) TimerEvent: {}
+[100.526494] (-) TimerEvent: {}
+[100.627213] (-) TimerEvent: {}
+[100.727947] (-) TimerEvent: {}
+[100.828733] (-) TimerEvent: {}
+[100.929479] (-) TimerEvent: {}
+[101.030238] (-) TimerEvent: {}
+[101.130921] (-) TimerEvent: {}
+[101.231640] (-) TimerEvent: {}
+[101.332346] (-) TimerEvent: {}
+[101.433130] (-) TimerEvent: {}
+[101.534241] (-) TimerEvent: {}
+[101.634941] (-) TimerEvent: {}
+[101.735716] (-) TimerEvent: {}
+[101.836448] (-) TimerEvent: {}
+[101.937086] (-) TimerEvent: {}
+[102.037768] (-) TimerEvent: {}
+[102.138459] (-) TimerEvent: {}
+[102.239117] (-) TimerEvent: {}
+[102.340032] (-) TimerEvent: {}
+[102.440683] (-) TimerEvent: {}
+[102.541579] (-) TimerEvent: {}
+[102.642283] (-) TimerEvent: {}
+[102.742993] (-) TimerEvent: {}
+[102.843697] (-) TimerEvent: {}
+[102.944375] (-) TimerEvent: {}
+[103.045061] (-) TimerEvent: {}
+[103.145767] (-) TimerEvent: {}
+[103.246460] (-) TimerEvent: {}
+[103.347123] (-) TimerEvent: {}
+[103.447878] (-) TimerEvent: {}
+[103.548608] (-) TimerEvent: {}
+[103.649585] (-) TimerEvent: {}
+[103.750373] (-) TimerEvent: {}
+[103.851036] (-) TimerEvent: {}
+[103.951719] (-) TimerEvent: {}
+[104.052399] (-) TimerEvent: {}
+[104.153074] (-) TimerEvent: {}
+[104.253759] (-) TimerEvent: {}
+[104.354424] (-) TimerEvent: {}
+[104.455115] (-) TimerEvent: {}
+[104.555811] (-) TimerEvent: {}
+[104.656521] (-) TimerEvent: {}
+[104.757278] (-) TimerEvent: {}
+[104.858005] (-) TimerEvent: {}
+[104.958706] (-) TimerEvent: {}
+[105.059477] (-) TimerEvent: {}
+[105.160291] (-) TimerEvent: {}
+[105.261140] (-) TimerEvent: {}
+[105.361900] (-) TimerEvent: {}
+[105.462609] (-) TimerEvent: {}
+[105.563350] (-) TimerEvent: {}
+[105.664064] (-) TimerEvent: {}
+[105.764757] (-) TimerEvent: {}
+[105.865503] (-) TimerEvent: {}
+[105.966302] (-) TimerEvent: {}
+[106.067117] (-) TimerEvent: {}
+[106.167894] (-) TimerEvent: {}
+[106.268634] (-) TimerEvent: {}
+[106.369321] (-) TimerEvent: {}
+[106.469985] (-) TimerEvent: {}
+[106.570656] (-) TimerEvent: {}
+[106.671727] (-) TimerEvent: {}
+[106.772523] (-) TimerEvent: {}
+[106.873286] (-) TimerEvent: {}
+[106.974004] (-) TimerEvent: {}
+[107.074828] (-) TimerEvent: {}
+[107.175717] (-) TimerEvent: {}
+[107.276501] (-) TimerEvent: {}
+[107.377395] (-) TimerEvent: {}
+[107.478240] (-) TimerEvent: {}
+[107.578932] (-) TimerEvent: {}
+[107.679631] (-) TimerEvent: {}
+[107.780342] (-) TimerEvent: {}
+[107.881381] (-) TimerEvent: {}
+[107.982063] (-) TimerEvent: {}
+[108.082744] (-) TimerEvent: {}
+[108.183453] (-) TimerEvent: {}
+[108.284148] (-) TimerEvent: {}
+[108.384818] (-) TimerEvent: {}
+[108.485641] (-) TimerEvent: {}
+[108.586433] (-) TimerEvent: {}
+[108.687112] (-) TimerEvent: {}
+[108.787891] (-) TimerEvent: {}
+[108.888609] (-) TimerEvent: {}
+[108.989285] (-) TimerEvent: {}
+[109.089965] (-) TimerEvent: {}
+[109.190649] (-) TimerEvent: {}
+[109.291391] (-) TimerEvent: {}
+[109.392086] (-) TimerEvent: {}
+[109.492774] (-) TimerEvent: {}
+[109.593549] (-) TimerEvent: {}
+[109.694285] (-) TimerEvent: {}
+[109.794986] (-) TimerEvent: {}
+[109.895712] (-) TimerEvent: {}
+[109.996464] (-) TimerEvent: {}
+[110.097154] (-) TimerEvent: {}
+[110.197858] (-) TimerEvent: {}
+[110.298554] (-) TimerEvent: {}
+[110.399379] (-) TimerEvent: {}
+[110.500155] (-) TimerEvent: {}
+[110.600818] (-) TimerEvent: {}
+[110.701660] (-) TimerEvent: {}
+[110.802563] (-) TimerEvent: {}
+[110.903841] (-) TimerEvent: {}
+[111.004669] (-) TimerEvent: {}
+[111.105432] (-) TimerEvent: {}
+[111.206229] (-) TimerEvent: {}
+[111.307001] (-) TimerEvent: {}
+[111.407674] (-) TimerEvent: {}
+[111.508343] (-) TimerEvent: {}
+[111.609001] (-) TimerEvent: {}
+[111.709666] (-) TimerEvent: {}
+[111.810323] (-) TimerEvent: {}
+[111.911006] (-) TimerEvent: {}
+[112.011671] (-) TimerEvent: {}
+[112.112346] (-) TimerEvent: {}
+[112.213048] (-) TimerEvent: {}
+[112.313745] (-) TimerEvent: {}
+[112.414435] (-) TimerEvent: {}
+[112.515124] (-) TimerEvent: {}
+[112.615826] (-) TimerEvent: {}
+[112.716496] (-) TimerEvent: {}
+[112.817190] (-) TimerEvent: {}
+[112.917859] (-) TimerEvent: {}
+[113.018529] (-) TimerEvent: {}
+[113.119249] (-) TimerEvent: {}
+[113.220031] (-) TimerEvent: {}
+[113.320790] (-) TimerEvent: {}
+[113.421460] (-) TimerEvent: {}
+[113.522144] (-) TimerEvent: {}
+[113.622814] (-) TimerEvent: {}
+[113.723493] (-) TimerEvent: {}
+[113.824161] (-) TimerEvent: {}
+[113.924858] (-) TimerEvent: {}
+[114.025567] (-) TimerEvent: {}
+[114.126303] (-) TimerEvent: {}
+[114.227163] (-) TimerEvent: {}
+[114.327912] (-) TimerEvent: {}
+[114.428651] (-) TimerEvent: {}
+[114.529331] (-) TimerEvent: {}
+[114.630024] (-) TimerEvent: {}
+[114.730762] (-) TimerEvent: {}
+[114.831557] (-) TimerEvent: {}
+[114.932239] (-) TimerEvent: {}
+[115.032925] (-) TimerEvent: {}
+[115.133628] (-) TimerEvent: {}
+[115.234341] (-) TimerEvent: {}
+[115.335036] (-) TimerEvent: {}
+[115.435717] (-) TimerEvent: {}
+[115.536421] (-) TimerEvent: {}
+[115.637112] (-) TimerEvent: {}
+[115.737801] (-) TimerEvent: {}
+[115.838484] (-) TimerEvent: {}
+[115.939201] (-) TimerEvent: {}
+[116.039903] (-) TimerEvent: {}
+[116.140574] (-) TimerEvent: {}
+[116.241253] (-) TimerEvent: {}
+[116.341957] (-) TimerEvent: {}
+[116.442642] (-) TimerEvent: {}
+[116.543370] (-) TimerEvent: {}
+[116.644049] (-) TimerEvent: {}
+[116.744752] (-) TimerEvent: {}
+[116.845478] (-) TimerEvent: {}
+[116.946210] (-) TimerEvent: {}
+[117.046884] (-) TimerEvent: {}
+[117.147701] (-) TimerEvent: {}
+[117.248378] (-) TimerEvent: {}
+[117.349035] (-) TimerEvent: {}
+[117.449825] (-) TimerEvent: {}
+[117.550533] (-) TimerEvent: {}
+[117.651239] (-) TimerEvent: {}
+[117.751896] (-) TimerEvent: {}
+[117.852581] (-) TimerEvent: {}
+[117.953352] (-) TimerEvent: {}
+[118.054048] (-) TimerEvent: {}
+[118.154775] (-) TimerEvent: {}
+[118.255581] (-) TimerEvent: {}
+[118.356331] (-) TimerEvent: {}
+[118.457011] (-) TimerEvent: {}
+[118.557694] (-) TimerEvent: {}
+[118.658385] (-) TimerEvent: {}
+[118.759128] (-) TimerEvent: {}
+[118.859953] (-) TimerEvent: {}
+[118.960627] (-) TimerEvent: {}
+[119.061307] (-) TimerEvent: {}
+[119.161997] (-) TimerEvent: {}
+[119.262684] (-) TimerEvent: {}
+[119.363392] (-) TimerEvent: {}
+[119.464082] (-) TimerEvent: {}
+[119.564775] (-) TimerEvent: {}
+[119.665472] (-) TimerEvent: {}
+[119.766174] (-) TimerEvent: {}
+[119.866855] (-) TimerEvent: {}
+[119.967528] (-) TimerEvent: {}
+[120.068219] (-) TimerEvent: {}
+[120.168900] (-) TimerEvent: {}
+[120.269594] (-) TimerEvent: {}
+[120.370281] (-) TimerEvent: {}
+[120.470998] (-) TimerEvent: {}
+[120.571814] (-) TimerEvent: {}
+[120.672602] (-) TimerEvent: {}
+[120.773350] (-) TimerEvent: {}
+[120.874111] (-) TimerEvent: {}
+[120.974879] (-) TimerEvent: {}
+[121.075861] (-) TimerEvent: {}
+[121.176554] (-) TimerEvent: {}
+[121.277210] (-) TimerEvent: {}
+[121.377909] (-) TimerEvent: {}
+[121.478696] (-) TimerEvent: {}
+[121.579443] (-) TimerEvent: {}
+[121.680236] (-) TimerEvent: {}
+[121.780923] (-) TimerEvent: {}
+[121.881627] (-) TimerEvent: {}
+[121.982311] (-) TimerEvent: {}
+[122.083045] (-) TimerEvent: {}
+[122.183810] (-) TimerEvent: {}
+[122.284734] (-) TimerEvent: {}
+[122.385505] (-) TimerEvent: {}
+[122.486242] (-) TimerEvent: {}
+[122.587047] (-) TimerEvent: {}
+[122.687732] (-) TimerEvent: {}
+[122.788416] (-) TimerEvent: {}
+[122.889162] (-) TimerEvent: {}
+[122.990047] (-) TimerEvent: {}
+[123.090711] (-) TimerEvent: {}
+[123.191597] (-) TimerEvent: {}
+[123.292221] (-) TimerEvent: {}
+[123.392793] (-) TimerEvent: {}
+[123.493491] (-) TimerEvent: {}
+[123.594264] (-) TimerEvent: {}
+[123.695100] (-) TimerEvent: {}
+[123.795991] (-) TimerEvent: {}
+[123.896890] (-) TimerEvent: {}
+[123.997647] (-) TimerEvent: {}
+[124.098404] (-) TimerEvent: {}
+[124.199129] (-) TimerEvent: {}
+[124.299960] (-) TimerEvent: {}
+[124.400670] (-) TimerEvent: {}
+[124.502032] (-) TimerEvent: {}
+[124.602722] (-) TimerEvent: {}
+[124.703427] (-) TimerEvent: {}
+[124.804097] (-) TimerEvent: {}
+[124.904780] (-) TimerEvent: {}
+[125.005470] (-) TimerEvent: {}
+[125.106164] (-) TimerEvent: {}
+[125.206852] (-) TimerEvent: {}
+[125.307606] (-) TimerEvent: {}
+[125.408486] (-) TimerEvent: {}
+[125.509179] (-) TimerEvent: {}
+[125.609849] (-) TimerEvent: {}
+[125.710505] (-) TimerEvent: {}
+[125.811188] (-) TimerEvent: {}
+[125.911852] (-) TimerEvent: {}
+[126.012514] (-) TimerEvent: {}
+[126.113201] (-) TimerEvent: {}
+[126.213907] (-) TimerEvent: {}
+[126.314616] (-) TimerEvent: {}
+[126.415329] (-) TimerEvent: {}
+[126.516015] (-) TimerEvent: {}
+[126.616692] (-) TimerEvent: {}
+[126.717396] (-) TimerEvent: {}
+[126.818100] (-) TimerEvent: {}
+[126.918834] (-) TimerEvent: {}
+[127.019732] (-) TimerEvent: {}
+[127.120452] (-) TimerEvent: {}
+[127.221160] (-) TimerEvent: {}
+[127.321913] (-) TimerEvent: {}
+[127.422603] (-) TimerEvent: {}
+[127.523317] (-) TimerEvent: {}
+[127.624030] (-) TimerEvent: {}
+[127.724722] (-) TimerEvent: {}
+[127.825410] (-) TimerEvent: {}
+[127.926101] (-) TimerEvent: {}
+[128.026805] (-) TimerEvent: {}
+[128.127582] (-) TimerEvent: {}
+[128.228419] (-) TimerEvent: {}
+[128.329149] (-) TimerEvent: {}
+[128.429866] (-) TimerEvent: {}
+[128.530560] (-) TimerEvent: {}
+[128.631279] (-) TimerEvent: {}
+[128.731965] (-) TimerEvent: {}
+[128.832662] (-) TimerEvent: {}
+[128.933370] (-) TimerEvent: {}
+[129.034054] (-) TimerEvent: {}
+[129.134755] (-) TimerEvent: {}
+[129.235468] (-) TimerEvent: {}
+[129.336165] (-) TimerEvent: {}
+[129.437057] (-) TimerEvent: {}
+[129.537769] (-) TimerEvent: {}
+[129.638549] (-) TimerEvent: {}
+[129.739413] (-) TimerEvent: {}
+[129.840486] (-) TimerEvent: {}
+[129.941201] (-) TimerEvent: {}
+[130.042097] (-) TimerEvent: {}
+[130.142765] (-) TimerEvent: {}
+[130.243491] (-) TimerEvent: {}
+[130.344180] (-) TimerEvent: {}
+[130.444885] (-) TimerEvent: {}
+[130.545748] (-) TimerEvent: {}
+[130.646772] (-) TimerEvent: {}
+[130.747626] (-) TimerEvent: {}
+[130.848391] (-) TimerEvent: {}
+[130.949049] (-) TimerEvent: {}
+[131.049746] (-) TimerEvent: {}
+[131.150433] (-) TimerEvent: {}
+[131.251119] (-) TimerEvent: {}
+[131.351795] (-) TimerEvent: {}
+[131.452488] (-) TimerEvent: {}
+[131.553180] (-) TimerEvent: {}
+[131.653883] (-) TimerEvent: {}
+[131.754579] (-) TimerEvent: {}
+[131.855285] (-) TimerEvent: {}
+[131.955965] (-) TimerEvent: {}
+[132.056673] (-) TimerEvent: {}
+[132.157376] (-) TimerEvent: {}
+[132.258058] (-) TimerEvent: {}
+[132.358749] (-) TimerEvent: {}
+[132.459464] (-) TimerEvent: {}
+[132.560154] (-) TimerEvent: {}
+[132.660848] (-) TimerEvent: {}
+[132.761542] (-) TimerEvent: {}
+[132.862232] (-) TimerEvent: {}
+[132.962930] (-) TimerEvent: {}
+[133.063633] (-) TimerEvent: {}
+[133.164321] (-) TimerEvent: {}
+[133.265025] (-) TimerEvent: {}
+[133.365720] (-) TimerEvent: {}
+[133.466404] (-) TimerEvent: {}
+[133.567106] (-) TimerEvent: {}
+[133.667801] (-) TimerEvent: {}
+[133.768510] (-) TimerEvent: {}
+[133.869244] (-) TimerEvent: {}
+[133.969948] (-) TimerEvent: {}
+[134.070643] (-) TimerEvent: {}
+[134.171395] (-) TimerEvent: {}
+[134.272096] (-) TimerEvent: {}
+[134.372811] (-) TimerEvent: {}
+[134.473516] (-) TimerEvent: {}
+[134.574199] (-) TimerEvent: {}
+[134.674883] (-) TimerEvent: {}
+[134.775595] (-) TimerEvent: {}
+[134.876328] (-) TimerEvent: {}
+[134.977034] (-) TimerEvent: {}
+[135.077745] (-) TimerEvent: {}
+[135.178443] (-) TimerEvent: {}
+[135.279139] (-) TimerEvent: {}
+[135.379827] (-) TimerEvent: {}
+[135.480522] (-) TimerEvent: {}
+[135.581220] (-) TimerEvent: {}
+[135.682154] (-) TimerEvent: {}
+[135.783017] (-) TimerEvent: {}
+[135.883809] (-) TimerEvent: {}
+[135.984609] (-) TimerEvent: {}
+[136.085265] (-) TimerEvent: {}
+[136.185941] (-) TimerEvent: {}
+[136.286615] (-) TimerEvent: {}
+[136.387321] (-) TimerEvent: {}
+[136.488016] (-) TimerEvent: {}
+[136.588674] (-) TimerEvent: {}
+[136.689403] (-) TimerEvent: {}
+[136.790094] (-) TimerEvent: {}
+[136.890705] (-) TimerEvent: {}
+[136.991423] (-) TimerEvent: {}
+[137.092094] (-) TimerEvent: {}
+[137.192764] (-) TimerEvent: {}
+[137.293433] (-) TimerEvent: {}
+[137.394101] (-) TimerEvent: {}
+[137.494776] (-) TimerEvent: {}
+[137.595485] (-) TimerEvent: {}
+[137.696159] (-) TimerEvent: {}
+[137.796842] (-) TimerEvent: {}
+[137.897519] (-) TimerEvent: {}
+[137.998217] (-) TimerEvent: {}
+[138.098919] (-) TimerEvent: {}
+[138.199610] (-) TimerEvent: {}
+[138.300269] (-) TimerEvent: {}
+[138.400924] (-) TimerEvent: {}
+[138.501581] (-) TimerEvent: {}
+[138.602239] (-) TimerEvent: {}
+[138.702851] (-) TimerEvent: {}
+[138.803566] (-) TimerEvent: {}
+[138.904197] (-) TimerEvent: {}
+[139.004849] (-) TimerEvent: {}
+[139.105522] (-) TimerEvent: {}
+[139.206199] (-) TimerEvent: {}
+[139.306866] (-) TimerEvent: {}
+[139.407549] (-) TimerEvent: {}
+[139.508227] (-) TimerEvent: {}
+[139.608900] (-) TimerEvent: {}
+[139.709584] (-) TimerEvent: {}
+[139.810256] (-) TimerEvent: {}
+[139.910967] (-) TimerEvent: {}
+[140.011641] (-) TimerEvent: {}
+[140.112300] (-) TimerEvent: {}
+[140.212957] (-) TimerEvent: {}
+[140.313629] (-) TimerEvent: {}
+[140.414296] (-) TimerEvent: {}
+[140.515003] (-) TimerEvent: {}
+[140.615671] (-) TimerEvent: {}
+[140.716339] (-) TimerEvent: {}
+[140.816996] (-) TimerEvent: {}
+[140.917646] (-) TimerEvent: {}
+[141.018294] (-) TimerEvent: {}
+[141.119319] (-) TimerEvent: {}
+[141.219915] (-) TimerEvent: {}
+[141.320509] (-) TimerEvent: {}
+[141.421117] (-) TimerEvent: {}
+[141.521739] (-) TimerEvent: {}
+[141.622404] (-) TimerEvent: {}
+[141.723081] (-) TimerEvent: {}
+[141.823723] (-) TimerEvent: {}
+[141.924328] (-) TimerEvent: {}
+[142.025007] (-) TimerEvent: {}
+[142.125683] (-) TimerEvent: {}
+[142.226352] (-) TimerEvent: {}
+[142.327080] (-) TimerEvent: {}
+[142.427764] (-) TimerEvent: {}
+[142.528428] (-) TimerEvent: {}
+[142.629119] (-) TimerEvent: {}
+[142.729800] (-) TimerEvent: {}
+[142.830484] (-) TimerEvent: {}
+[142.931209] (-) TimerEvent: {}
+[143.031903] (-) TimerEvent: {}
+[143.132579] (-) TimerEvent: {}
+[143.233267] (-) TimerEvent: {}
+[143.333962] (-) TimerEvent: {}
+[143.434649] (-) TimerEvent: {}
+[143.535366] (-) TimerEvent: {}
+[143.636026] (-) TimerEvent: {}
+[143.736687] (-) TimerEvent: {}
+[143.837350] (-) TimerEvent: {}
+[143.938029] (-) TimerEvent: {}
+[144.038719] (-) TimerEvent: {}
+[144.139500] (-) TimerEvent: {}
+[144.240448] (-) TimerEvent: {}
+[144.341024] (-) TimerEvent: {}
+[144.441688] (-) TimerEvent: {}
+[144.542310] (-) TimerEvent: {}
+[144.643665] (-) TimerEvent: {}
+[144.744307] (-) TimerEvent: {}
+[144.844918] (-) TimerEvent: {}
+[144.945588] (-) TimerEvent: {}
+[145.046122] (-) TimerEvent: {}
+[145.146700] (-) TimerEvent: {}
+[145.247438] (-) TimerEvent: {}
+[145.348303] (-) TimerEvent: {}
+[145.448885] (-) TimerEvent: {}
+[145.549514] (-) TimerEvent: {}
+[145.650120] (-) TimerEvent: {}
+[145.750838] (-) TimerEvent: {}
+[145.851515] (-) TimerEvent: {}
+[145.952143] (-) TimerEvent: {}
+[146.052737] (-) TimerEvent: {}
+[146.153348] (-) TimerEvent: {}
+[146.253934] (-) TimerEvent: {}
+[146.354531] (-) TimerEvent: {}
+[146.455231] (-) TimerEvent: {}
+[146.555904] (-) TimerEvent: {}
+[146.656582] (-) TimerEvent: {}
+[146.757257] (-) TimerEvent: {}
+[146.857903] (-) TimerEvent: {}
+[146.958617] (-) TimerEvent: {}
+[147.059328] (-) TimerEvent: {}
+[147.159985] (-) TimerEvent: {}
+[147.260628] (-) TimerEvent: {}
+[147.361286] (-) TimerEvent: {}
+[147.461929] (-) TimerEvent: {}
+[147.562560] (-) TimerEvent: {}
+[147.663177] (-) TimerEvent: {}
+[147.763746] (-) TimerEvent: {}
+[147.864313] (-) TimerEvent: {}
+[147.964899] (-) TimerEvent: {}
+[148.065587] (-) TimerEvent: {}
+[148.166227] (-) TimerEvent: {}
+[148.266903] (-) TimerEvent: {}
+[148.367673] (-) TimerEvent: {}
+[148.468404] (-) TimerEvent: {}
+[148.569062] (-) TimerEvent: {}
+[148.669886] (-) TimerEvent: {}
+[148.770573] (-) TimerEvent: {}
+[148.871568] (-) TimerEvent: {}
+[148.972206] (-) TimerEvent: {}
+[149.072847] (-) TimerEvent: {}
+[149.173416] (-) TimerEvent: {}
+[149.274035] (-) TimerEvent: {}
+[149.374700] (-) TimerEvent: {}
+[149.475366] (-) TimerEvent: {}
+[149.575981] (-) TimerEvent: {}
+[149.676614] (-) TimerEvent: {}
+[149.777267] (-) TimerEvent: {}
+[149.877911] (-) TimerEvent: {}
+[149.978703] (-) TimerEvent: {}
+[150.079363] (-) TimerEvent: {}
+[150.179948] (-) TimerEvent: {}
+[150.280603] (-) TimerEvent: {}
+[150.381389] (-) TimerEvent: {}
+[150.482278] (-) TimerEvent: {}
+[150.582868] (-) TimerEvent: {}
+[150.683678] (-) TimerEvent: {}
+[150.784260] (-) TimerEvent: {}
+[150.884874] (-) TimerEvent: {}
+[150.985491] (-) TimerEvent: {}
+[151.086181] (-) TimerEvent: {}
+[151.186851] (-) TimerEvent: {}
+[151.287538] (-) TimerEvent: {}
+[151.388243] (-) TimerEvent: {}
+[151.488917] (-) TimerEvent: {}
+[151.589586] (-) TimerEvent: {}
+[151.690241] (-) TimerEvent: {}
+[151.790936] (-) TimerEvent: {}
+[151.891633] (-) TimerEvent: {}
+[151.992286] (-) TimerEvent: {}
+[152.092962] (-) TimerEvent: {}
+[152.193658] (-) TimerEvent: {}
+[152.294549] (-) TimerEvent: {}
+[152.395137] (-) TimerEvent: {}
+[152.495751] (-) TimerEvent: {}
+[152.596421] (-) TimerEvent: {}
+[152.697036] (-) TimerEvent: {}
+[152.797645] (-) TimerEvent: {}
+[152.898297] (-) TimerEvent: {}
+[152.998940] (-) TimerEvent: {}
+[153.099645] (-) TimerEvent: {}
+[153.200316] (-) TimerEvent: {}
+[153.300960] (-) TimerEvent: {}
+[153.401678] (-) TimerEvent: {}
+[153.502363] (-) TimerEvent: {}
+[153.603063] (-) TimerEvent: {}
+[153.703722] (-) TimerEvent: {}
+[153.804392] (-) TimerEvent: {}
+[153.905266] (-) TimerEvent: {}
+[154.005866] (-) TimerEvent: {}
+[154.106521] (-) TimerEvent: {}
+[154.207248] (-) TimerEvent: {}
+[154.307907] (-) TimerEvent: {}
+[154.408603] (-) TimerEvent: {}
+[154.509353] (-) TimerEvent: {}
+[154.610318] (-) TimerEvent: {}
+[154.710908] (-) TimerEvent: {}
+[154.811631] (-) TimerEvent: {}
+[154.912378] (-) TimerEvent: {}
+[155.013147] (-) TimerEvent: {}
+[155.113787] (-) TimerEvent: {}
+[155.214473] (-) TimerEvent: {}
+[155.315220] (-) TimerEvent: {}
+[155.415885] (-) TimerEvent: {}
+[155.516538] (-) TimerEvent: {}
+[155.617219] (-) TimerEvent: {}
+[155.718035] (-) TimerEvent: {}
+[155.818662] (-) TimerEvent: {}
+[155.919410] (-) TimerEvent: {}
+[156.020132] (-) TimerEvent: {}
+[156.120823] (-) TimerEvent: {}
+[156.221495] (-) TimerEvent: {}
+[156.322174] (-) TimerEvent: {}
+[156.422844] (-) TimerEvent: {}
+[156.523567] (-) TimerEvent: {}
+[156.624235] (-) TimerEvent: {}
+[156.724912] (-) TimerEvent: {}
+[156.825585] (-) TimerEvent: {}
+[156.926260] (-) TimerEvent: {}
+[157.026974] (-) TimerEvent: {}
+[157.127645] (-) TimerEvent: {}
+[157.228340] (-) TimerEvent: {}
+[157.329036] (-) TimerEvent: {}
+[157.429732] (-) TimerEvent: {}
+[157.530518] (-) TimerEvent: {}
+[157.631186] (-) TimerEvent: {}
+[157.731820] (-) TimerEvent: {}
+[157.832486] (-) TimerEvent: {}
+[157.933186] (-) TimerEvent: {}
+[158.034126] (-) TimerEvent: {}
+[158.134763] (-) TimerEvent: {}
+[158.235458] (-) TimerEvent: {}
+[158.336089] (-) TimerEvent: {}
+[158.436743] (-) TimerEvent: {}
+[158.537406] (-) TimerEvent: {}
+[158.638091] (-) TimerEvent: {}
+[158.738802] (-) TimerEvent: {}
+[158.839524] (-) TimerEvent: {}
+[158.940185] (-) TimerEvent: {}
+[159.040866] (-) TimerEvent: {}
+[159.141566] (-) TimerEvent: {}
+[159.242262] (-) TimerEvent: {}
+[159.342980] (-) TimerEvent: {}
+[159.443953] (-) TimerEvent: {}
+[159.544746] (-) TimerEvent: {}
+[159.645373] (-) TimerEvent: {}
+[159.745935] (-) TimerEvent: {}
+[159.846604] (-) TimerEvent: {}
+[159.947256] (-) TimerEvent: {}
+[160.047937] (-) TimerEvent: {}
+[160.148613] (-) TimerEvent: {}
+[160.249304] (-) TimerEvent: {}
+[160.350001] (-) TimerEvent: {}
+[160.450699] (-) TimerEvent: {}
+[160.551432] (-) TimerEvent: {}
+[160.652115] (-) TimerEvent: {}
+[160.752791] (-) TimerEvent: {}
+[160.853465] (-) TimerEvent: {}
+[160.954188] (-) TimerEvent: {}
+[161.055056] (-) TimerEvent: {}
+[161.155652] (-) TimerEvent: {}
+[161.256306] (-) TimerEvent: {}
+[161.356971] (-) TimerEvent: {}
+[161.457751] (-) TimerEvent: {}
+[161.558394] (-) TimerEvent: {}
+[161.659086] (-) TimerEvent: {}
+[161.759740] (-) TimerEvent: {}
+[161.860377] (-) TimerEvent: {}
+[161.961048] (-) TimerEvent: {}
+[162.061726] (-) TimerEvent: {}
+[162.162384] (-) TimerEvent: {}
+[162.263088] (-) TimerEvent: {}
+[162.363769] (-) TimerEvent: {}
+[162.464398] (-) TimerEvent: {}
+[162.565143] (-) TimerEvent: {}
+[162.665804] (-) TimerEvent: {}
+[162.766526] (-) TimerEvent: {}
+[162.867315] (-) TimerEvent: {}
+[162.968089] (-) TimerEvent: {}
+[163.068666] (-) TimerEvent: {}
+[163.169348] (-) TimerEvent: {}
+[163.270076] (-) TimerEvent: {}
+[163.370788] (-) TimerEvent: {}
+[163.471503] (-) TimerEvent: {}
+[163.572228] (-) TimerEvent: {}
+[163.672922] (-) TimerEvent: {}
+[163.773796] (-) TimerEvent: {}
+[163.874411] (-) TimerEvent: {}
+[163.975067] (-) TimerEvent: {}
+[164.075766] (-) TimerEvent: {}
+[164.176560] (-) TimerEvent: {}
+[164.277347] (-) TimerEvent: {}
+[164.377914] (-) TimerEvent: {}
+[164.478582] (-) TimerEvent: {}
+[164.579289] (-) TimerEvent: {}
+[164.680098] (-) TimerEvent: {}
+[164.780737] (-) TimerEvent: {}
+[164.881413] (-) TimerEvent: {}
+[164.982286] (-) TimerEvent: {}
+[165.082879] (-) TimerEvent: {}
+[165.183550] (-) TimerEvent: {}
+[165.284249] (-) TimerEvent: {}
+[165.384927] (-) TimerEvent: {}
+[165.485629] (-) TimerEvent: {}
+[165.586326] (-) TimerEvent: {}
+[165.687047] (-) TimerEvent: {}
+[165.787795] (-) TimerEvent: {}
+[165.888572] (-) TimerEvent: {}
+[165.989268] (-) TimerEvent: {}
+[166.089969] (-) TimerEvent: {}
+[166.190678] (-) TimerEvent: {}
+[166.291447] (-) TimerEvent: {}
+[166.392109] (-) TimerEvent: {}
+[166.492901] (-) TimerEvent: {}
+[166.593682] (-) TimerEvent: {}
+[166.694350] (-) TimerEvent: {}
+[166.795075] (-) TimerEvent: {}
+[166.895778] (-) TimerEvent: {}
+[166.996462] (-) TimerEvent: {}
+[167.097173] (-) TimerEvent: {}
+[167.197853] (-) TimerEvent: {}
+[167.298518] (-) TimerEvent: {}
+[167.399232] (-) TimerEvent: {}
+[167.499945] (-) TimerEvent: {}
+[167.600609] (-) TimerEvent: {}
+[167.701319] (-) TimerEvent: {}
+[167.802049] (-) TimerEvent: {}
+[167.902732] (-) TimerEvent: {}
+[168.003452] (-) TimerEvent: {}
+[168.104148] (-) TimerEvent: {}
+[168.204878] (-) TimerEvent: {}
+[168.305576] (-) TimerEvent: {}
+[168.406290] (-) TimerEvent: {}
+[168.507015] (-) TimerEvent: {}
+[168.607888] (-) TimerEvent: {}
+[168.708638] (-) TimerEvent: {}
+[168.809637] (-) TimerEvent: {}
+[168.910386] (-) TimerEvent: {}
+[169.011165] (-) TimerEvent: {}
+[169.111904] (-) TimerEvent: {}
+[169.212614] (-) TimerEvent: {}
+[169.313427] (-) TimerEvent: {}
+[169.414321] (-) TimerEvent: {}
+[169.514926] (-) TimerEvent: {}
+[169.615659] (-) TimerEvent: {}
+[169.716396] (-) TimerEvent: {}
+[169.817152] (-) TimerEvent: {}
+[169.917824] (-) TimerEvent: {}
+[170.018531] (-) TimerEvent: {}
+[170.119270] (-) TimerEvent: {}
+[170.220205] (-) TimerEvent: {}
+[170.320802] (-) TimerEvent: {}
+[170.421461] (-) TimerEvent: {}
+[170.522169] (-) TimerEvent: {}
+[170.622837] (-) TimerEvent: {}
+[170.723525] (-) TimerEvent: {}
+[170.824155] (-) TimerEvent: {}
+[170.924809] (-) TimerEvent: {}
+[171.025526] (-) TimerEvent: {}
+[171.126304] (-) TimerEvent: {}
+[171.227048] (-) TimerEvent: {}
+[171.327637] (-) TimerEvent: {}
+[171.428280] (-) TimerEvent: {}
+[171.528975] (-) TimerEvent: {}
+[171.629637] (-) TimerEvent: {}
+[171.730281] (-) TimerEvent: {}
+[171.831047] (-) TimerEvent: {}
+[171.931728] (-) TimerEvent: {}
+[172.032401] (-) TimerEvent: {}
+[172.133091] (-) TimerEvent: {}
+[172.233808] (-) TimerEvent: {}
+[172.334512] (-) TimerEvent: {}
+[172.435261] (-) TimerEvent: {}
+[172.535955] (-) TimerEvent: {}
+[172.636627] (-) TimerEvent: {}
+[172.737323] (-) TimerEvent: {}
+[172.837998] (-) TimerEvent: {}
+[172.938658] (-) TimerEvent: {}
+[173.039362] (-) TimerEvent: {}
+[173.140035] (-) TimerEvent: {}
+[173.240721] (-) TimerEvent: {}
+[173.341409] (-) TimerEvent: {}
+[173.442095] (-) TimerEvent: {}
+[173.542791] (-) TimerEvent: {}
+[173.643471] (-) TimerEvent: {}
+[173.744139] (-) TimerEvent: {}
+[173.844835] (-) TimerEvent: {}
+[173.945506] (-) TimerEvent: {}
+[174.046183] (-) TimerEvent: {}
+[174.146862] (-) TimerEvent: {}
+[174.247592] (-) TimerEvent: {}
+[174.348265] (-) TimerEvent: {}
+[174.448950] (-) TimerEvent: {}
+[174.549655] (-) TimerEvent: {}
+[174.650343] (-) TimerEvent: {}
+[174.751045] (-) TimerEvent: {}
+[174.851717] (-) TimerEvent: {}
+[174.952402] (-) TimerEvent: {}
+[175.053091] (-) TimerEvent: {}
+[175.153773] (-) TimerEvent: {}
+[175.254433] (-) TimerEvent: {}
+[175.355139] (-) TimerEvent: {}
+[175.455804] (-) TimerEvent: {}
+[175.556494] (-) TimerEvent: {}
+[175.657170] (-) TimerEvent: {}
+[175.757869] (-) TimerEvent: {}
+[175.858576] (-) TimerEvent: {}
+[175.959282] (-) TimerEvent: {}
+[176.059976] (-) TimerEvent: {}
+[176.160660] (-) TimerEvent: {}
+[176.261351] (-) TimerEvent: {}
+[176.362033] (-) TimerEvent: {}
+[176.462812] (-) TimerEvent: {}
+[176.563867] (-) TimerEvent: {}
+[176.664516] (-) TimerEvent: {}
+[176.765161] (-) TimerEvent: {}
+[176.865894] (-) TimerEvent: {}
+[176.966605] (-) TimerEvent: {}
+[177.067258] (-) TimerEvent: {}
+[177.167946] (-) TimerEvent: {}
+[177.268532] (-) TimerEvent: {}
+[177.369176] (-) TimerEvent: {}
+[177.469857] (-) TimerEvent: {}
+[177.570573] (-) TimerEvent: {}
+[177.671323] (-) TimerEvent: {}
+[177.772029] (-) TimerEvent: {}
+[177.872746] (-) TimerEvent: {}
+[177.973447] (-) TimerEvent: {}
+[178.074179] (-) TimerEvent: {}
+[178.174879] (-) TimerEvent: {}
+[178.275587] (-) TimerEvent: {}
+[178.376257] (-) TimerEvent: {}
+[178.476901] (-) TimerEvent: {}
+[178.577556] (-) TimerEvent: {}
+[178.678242] (-) TimerEvent: {}
+[178.778976] (-) TimerEvent: {}
+[178.879674] (-) TimerEvent: {}
+[178.980360] (-) TimerEvent: {}
+[179.081017] (-) TimerEvent: {}
+[179.181669] (-) TimerEvent: {}
+[179.282362] (-) TimerEvent: {}
+[179.383114] (-) TimerEvent: {}
+[179.483836] (-) TimerEvent: {}
+[179.584538] (-) TimerEvent: {}
+[179.685184] (-) TimerEvent: {}
+[179.785907] (-) TimerEvent: {}
+[179.886627] (-) TimerEvent: {}
+[179.987396] (-) TimerEvent: {}
+[180.088117] (-) TimerEvent: {}
+[180.188841] (-) TimerEvent: {}
+[180.289829] (-) TimerEvent: {}
+[180.390525] (-) TimerEvent: {}
+[180.491165] (-) TimerEvent: {}
+[180.591873] (-) TimerEvent: {}
+[180.692846] (-) TimerEvent: {}
+[180.793869] (-) TimerEvent: {}
+[180.894701] (-) TimerEvent: {}
+[180.995414] (-) TimerEvent: {}
+[181.096343] (-) TimerEvent: {}
+[181.196991] (-) TimerEvent: {}
+[181.297579] (-) TimerEvent: {}
+[181.398180] (-) TimerEvent: {}
+[181.498809] (-) TimerEvent: {}
+[181.599414] (-) TimerEvent: {}
+[181.700032] (-) TimerEvent: {}
+[181.800677] (-) TimerEvent: {}
+[181.901407] (-) TimerEvent: {}
+[182.002372] (-) TimerEvent: {}
+[182.103525] (-) TimerEvent: {}
+[182.204266] (-) TimerEvent: {}
+[182.304954] (-) TimerEvent: {}
+[182.405758] (-) TimerEvent: {}
+[182.506533] (-) TimerEvent: {}
+[182.607613] (-) TimerEvent: {}
+[182.708460] (-) TimerEvent: {}
+[182.809172] (-) TimerEvent: {}
+[182.909898] (-) TimerEvent: {}
+[183.010648] (-) TimerEvent: {}
+[183.111405] (-) TimerEvent: {}
+[183.212169] (-) TimerEvent: {}
+[183.312866] (-) TimerEvent: {}
+[183.413627] (-) TimerEvent: {}
+[183.514394] (-) TimerEvent: {}
+[183.615274] (-) TimerEvent: {}
+[183.716413] (-) TimerEvent: {}
+[183.817151] (-) TimerEvent: {}
+[183.918024] (-) TimerEvent: {}
+[184.019126] (-) TimerEvent: {}
+[184.119943] (-) TimerEvent: {}
+[184.220571] (-) TimerEvent: {}
+[184.321215] (-) TimerEvent: {}
+[184.421904] (-) TimerEvent: {}
+[184.522583] (-) TimerEvent: {}
+[184.623308] (-) TimerEvent: {}
+[184.723962] (-) TimerEvent: {}
+[184.824634] (-) TimerEvent: {}
+[184.925332] (-) TimerEvent: {}
+[185.025998] (-) TimerEvent: {}
+[185.126639] (-) TimerEvent: {}
+[185.227250] (-) TimerEvent: {}
+[185.327846] (-) TimerEvent: {}
+[185.428455] (-) TimerEvent: {}
+[185.529121] (-) TimerEvent: {}
+[185.629799] (-) TimerEvent: {}
+[185.730674] (-) TimerEvent: {}
+[185.831370] (-) TimerEvent: {}
+[185.932059] (-) TimerEvent: {}
+[186.032715] (-) TimerEvent: {}
+[186.133386] (-) TimerEvent: {}
+[186.234029] (-) TimerEvent: {}
+[186.334680] (-) TimerEvent: {}
+[186.435372] (-) TimerEvent: {}
+[186.535993] (-) TimerEvent: {}
+[186.636660] (-) TimerEvent: {}
+[186.737344] (-) TimerEvent: {}
+[186.838037] (-) TimerEvent: {}
+[186.938667] (-) TimerEvent: {}
+[186.990211] (fast_lio) StdoutLine: {'line': b'\x1b[32m\x1b[1mLinking CXX executable fastlio_mapping\x1b[0m\n'}
+[187.038848] (-) TimerEvent: {}
+[187.139533] (-) TimerEvent: {}
+[187.240210] (-) TimerEvent: {}
+[187.340877] (-) TimerEvent: {}
+[187.441552] (-) TimerEvent: {}
+[187.542223] (-) TimerEvent: {}
+[187.642896] (-) TimerEvent: {}
+[187.743631] (-) TimerEvent: {}
+[187.844304] (-) TimerEvent: {}
+[187.944982] (-) TimerEvent: {}
+[188.045684] (-) TimerEvent: {}
+[188.146363] (-) TimerEvent: {}
+[188.247100] (-) TimerEvent: {}
+[188.347780] (-) TimerEvent: {}
+[188.448477] (-) TimerEvent: {}
+[188.549189] (-) TimerEvent: {}
+[188.649877] (-) TimerEvent: {}
+[188.750550] (-) TimerEvent: {}
+[188.851243] (-) TimerEvent: {}
+[188.951956] (-) TimerEvent: {}
+[189.052699] (-) TimerEvent: {}
+[189.153429] (-) TimerEvent: {}
+[189.254156] (-) TimerEvent: {}
+[189.354843] (-) TimerEvent: {}
+[189.455599] (-) TimerEvent: {}
+[189.556340] (-) TimerEvent: {}
+[189.657093] (-) TimerEvent: {}
+[189.757830] (-) TimerEvent: {}
+[189.858565] (-) TimerEvent: {}
+[189.947510] (fast_lio) StdoutLine: {'line': b'Built target fastlio_mapping\n'}
+[189.958697] (-) TimerEvent: {}
+[189.987354] (fast_lio) CommandEnded: {'returncode': 0}
+[189.998534] (fast_lio) JobProgress: {'identifier': 'fast_lio', 'progress': 'install'}
+[190.002670] (fast_lio) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/atoz/ros2_ws/build/fast_lio'], 'cwd': '/home/atoz/ros2_ws/build/fast_lio', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'atoz'), ('JETSON_MODEL_NAME', 'JETSON_ORIN_NX'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/atoz/ros2_ws/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/atoz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1876'), ('SYSTEMD_EXEC_PID', '2220'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '18902'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'atoz'), ('JOURNAL_STREAM', '8:50475'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'atoz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/atoz-desktop:@/tmp/.ICE-unix/2031,unix/atoz-desktop:/tmp/.ICE-unix/2031'), ('INVOCATION_ID', '55ef6c06ffbd44159a0ac6d00dbc7c92'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/atoz/ros2_ws/install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4ac9629c-0a33-4288-a8f7-3e71231457ca'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/atoz/ros2_ws/build/fast_lio'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/atoz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/atoz/ros2_ws/install/livox_ros_driver2:/opt/ros/humble')]), 'shell': False}
+[190.024029] (fast_lio) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[190.024820] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/ament_index/resource_index/rosidl_interfaces/fast_lio\n'}
+[190.025035] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio\n'}
+[190.025176] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg\n'}
+[190.025338] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_c__visibility_control.h\n'}
+[190.025493] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail\n'}
+[190.025691] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__functions.h\n'}
+[190.025845] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__functions.c\n'}
+[190.025990] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.h\n'}
+[190.026116] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.h\n'}
+[190.026273] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.h\n'}
+[190.026487] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/library_path.sh\n'}
+[190.026675] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/library_path.dsv\n'}
+[190.026883] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_generator_c.so\n'}
+[190.027071] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio\n'}
+[190.027193] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg\n'}
+[190.027344] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[190.027463] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail\n'}
+[190.027630] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_c.h\n'}
+[190.027830] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_c.so\n'}
+[190.027951] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio\n'}
+[190.028098] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg\n'}
+[190.028215] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail\n'}
+[190.028329] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.hpp\n'}
+[190.028467] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__builder.hpp\n'}
+[190.028591] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__traits.hpp\n'}
+[190.028753] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.hpp\n'}
+[190.028942] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[190.029062] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.hpp\n'}
+[190.029213] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio\n'}
+[190.029332] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg\n'}
+[190.029461] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[190.029609] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail\n'}
+[190.029724] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/dds_fastrtps\n'}
+[190.029887] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[190.030033] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_cpp.so\n'}
+[190.030227] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio\n'}
+[190.030396] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg\n'}
+[190.030604] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[190.030827] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail\n'}
+[190.030965] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.c\n'}
+[190.031093] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_c.h\n'}
+[190.031207] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_c.so\n'}
+[190.031320] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_c.so\n'}
+[190.031431] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio\n'}
+[190.031540] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg\n'}
+[190.031675] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail\n'}
+[190.031804] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.cpp\n'}
+[190.031921] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[190.032034] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_cpp.so\n'}
+[190.032145] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_cpp.so\n'}
+[190.032254] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/pythonpath.sh\n'}
+[190.032363] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/pythonpath.dsv\n'}
+[190.032473] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info\n'}
+[190.032581] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[190.032693] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[190.032803] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[190.032912] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[190.033022] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio\n'}
+[190.033130] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[190.033242] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg\n'}
+[190.033351] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/__init__.py\n'}
+[190.033461] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d.py\n'}
+[190.033570] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d_s.c\n'}
+[190.033680] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/__init__.py\n'}
+[190.033788] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[190.033900] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[190.034028] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[190.034157] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[190.034270] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/libfast_lio__rosidl_generator_py.so\n'}
+[190.034396] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_c.c\n'}
+[190.058776] (-) TimerEvent: {}
+[190.106827] (fast_lio) StdoutLine: {'line': b"Listing '/home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio'...\n"}
+[190.107429] (fast_lio) StdoutLine: {'line': b"Listing '/home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg'...\n"}
+[190.119912] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[190.120530] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[190.121040] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[190.121819] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/lib/libfast_lio__rosidl_generator_py.so\n'}
+[190.122326] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/msg/Pose6D.idl\n'}
+[190.122474] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/msg/Pose6D.msg\n'}
+[190.123028] (fast_lio) StdoutLine: {'line': b'-- Installing: /home/atoz/ros2_ws/install/fast_lio/lib/fast_lio/fastlio_mapping\n'}
+[190.130876] (fast_lio) StdoutLine: {'line': b'-- Set runtime path of "/home/atoz/ros2_ws/install/fast_lio/lib/fast_lio/fastlio_mapping" to ""\n'}
+[190.131481] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/config\n'}
+[190.131812] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/config/velodyne.yaml\n'}
+[190.131955] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/config/horizon.yaml\n'}
+[190.132077] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/config/ouster64.yaml\n'}
+[190.132431] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/config/mid360.yaml\n'}
+[190.132553] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/config/avia.yaml\n'}
+[190.132669] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/launch\n'}
+[190.132782] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/launch/mapping.launch.py\n'}
+[190.133030] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/launch/gdb_debug_example.launch\n'}
+[190.133149] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/rviz\n'}
+[190.133265] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/rviz/fastlio.rviz\n'}
+[190.133513] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/ament_index/resource_index/package_run_dependencies/fast_lio\n'}
+[190.133638] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/ament_index/resource_index/parent_prefix_path/fast_lio\n'}
+[190.133749] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.sh\n'}
+[190.133860] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.dsv\n'}
+[190.134131] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/path.sh\n'}
+[190.134257] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/environment/path.dsv\n'}
+[190.134372] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/local_setup.bash\n'}
+[190.134614] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/local_setup.sh\n'}
+[190.134739] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/local_setup.zsh\n'}
+[190.134850] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/local_setup.dsv\n'}
+[190.134976] (fast_lio) StdoutLine: {'line': b'-- Installing: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.dsv\n'}
+[190.135257] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/ament_index/resource_index/packages/fast_lio\n'}
+[190.135434] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport.cmake\n'}
+[190.135613] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport-release.cmake\n'}
+[190.135797] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[190.136002] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport-release.cmake\n'}
+[190.136170] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cppExport.cmake\n'}
+[190.136287] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[190.136399] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport-release.cmake\n'}
+[190.136510] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport.cmake\n'}
+[190.136619] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport-release.cmake\n'}
+[190.136729] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport.cmake\n'}
+[190.136853] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport-release.cmake\n'}
+[190.136966] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[190.137077] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport-release.cmake\n'}
+[190.137184] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport.cmake\n'}
+[190.137289] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport-release.cmake\n'}
+[190.137396] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport.cmake\n'}
+[190.137502] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport-release.cmake\n'}
+[190.137630] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake-extras.cmake\n'}
+[190.137739] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[190.137846] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[190.137954] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[190.138060] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[190.138165] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[190.138272] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[190.138377] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig.cmake\n'}
+[190.138483] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig-version.cmake\n'}
+[190.138589] (fast_lio) StdoutLine: {'line': b'-- Up-to-date: /home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.xml\n'}
+[190.142357] (fast_lio) CommandEnded: {'returncode': 0}
+[190.159222] (-) TimerEvent: {}
+[190.196388] (fast_lio) JobEnded: {'identifier': 'fast_lio', 'rc': 0}
+[190.200712] (-) EventReactorShutdown: {}
