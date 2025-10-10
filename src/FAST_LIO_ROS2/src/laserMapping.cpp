@@ -860,6 +860,8 @@ public:
         this->declare_parameter<vector<double>>("mapping.extrinsic_T", vector<double>());
         this->declare_parameter<vector<double>>("mapping.extrinsic_R", vector<double>());
 
+        this->declare_parameter<double>("tf_publish_rate", 50.0); // map -> odom 변환 hz 
+
         this->get_parameter_or<bool>("publish.path_en", path_en, true);
         this->get_parameter_or<bool>("publish.effect_map_en", effect_pub_en, false);
         this->get_parameter_or<bool>("publish.map_en", map_pub_en, false);
@@ -970,6 +972,12 @@ public:
 
         map_save_srv_ = this->create_service<std_srvs::srv::Trigger>("map_save", std::bind(&LaserMappingNode::map_save_callback, this, std::placeholders::_1, std::placeholders::_2));
 
+        double tf_rate = this->get_parameter("tf_publish_rate").as_double();
+        auto tf_period_ms = std::chrono::milliseconds(static_cast<int64_t>(1000.0 / std::max(1.0, tf_rate)));
+        tf_timer_ = rclcpp::create_timer(
+            this, this->get_clock(), tf_period_ms,
+            std::bind(&LaserMappingNode::publish_map_to_odom, this));   // ★ 핵심: 항상 고주파로 호출
+
         RCLCPP_INFO(this->get_logger(), "Node init finished.");
     }
 
@@ -997,6 +1005,8 @@ private:
 
         // rclcpp::Time used_time = this->get_clock()->now(); // 실제 사용 시각(기본: msg_time)
         // bool used_latest = false;
+
+        if (!flg_EKF_inited && !last_T_map_odom_) return;
 
         geometry_msgs::msg::TransformStamped T_odom_base;
         rclcpp::Time used_t;
@@ -1039,8 +1049,9 @@ private:
 
         tf_broadcaster_->sendTransform(T_map_odom);
         last_T_map_odom_ = T_map_odom;         // 캐시
+        last_tf_time_ = used_t;
     }
-    
+
     void timer_callback()
     {
         if (sync_packages(Measures))
@@ -1147,7 +1158,7 @@ private:
 
             /******* Publish odometry *******/
             publish_odometry(pubOdomAftMapped_, tf_broadcaster_);
-            publish_map_to_odom();
+            // publish_map_to_odom();
 
             /*** add the feature points to map kdtree ***/
             t3 = omp_get_wtime();
@@ -1235,8 +1246,10 @@ private:
     std::unique_ptr<tf2_ros::TransformListener> tf_listener_;
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::TimerBase::SharedPtr map_pub_timer_;
+    rclcpp::TimerBase::SharedPtr tf_timer_; // map -> odom 전용 타이머 
     rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr map_save_srv_;
     std::optional<geometry_msgs::msg::TransformStamped> last_T_map_odom_;
+    std::optional<rclcpp::Time> last_tf_time_; 
 
     bool effect_pub_en = false, map_pub_en = false;
     int effect_feat_num = 0, frame_num = 0;
