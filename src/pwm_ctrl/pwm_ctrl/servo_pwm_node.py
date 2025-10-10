@@ -396,7 +396,7 @@ class ThrottleSteerNode(Node):
             # 큰 점프는 버퍼/슬립 등으로 발생할 수 있음 → 상태만 갱신
             self.last_time = now
             return
-         # 적분 (평면)
+        # 적분 (평면)
         self.x   += self.cmd_v * cos(self.yaw) * dt
         self.y   += self.cmd_v * sin(self.yaw) * dt
         self.yaw += self.cmd_w * dt
