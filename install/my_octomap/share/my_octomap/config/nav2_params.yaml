@@ -110,7 +110,7 @@ local_costmap:
       use_sim_time: false
       global_frame: odom
       robot_base_frame: base_link
-      transform_tolerance: 0.12
+      transform_tolerance: 0.25
       robot_radius: 0.20
       footprint_clearing_enabled: true
       footprint_padding: 0.02
@@ -130,7 +130,7 @@ local_costmap:
         publish_voxel_map: false
         observation_sources: pointcloud
         pointcloud:
-          topic: /cloud_registered
+          topic: /cloud_in_odom
           max_obstacle_height: 0.35
           min_obstacle_height: 0.05
           expected_update_rate: 0.0
@@ -140,7 +140,6 @@ local_costmap:
           clearing: true
           marking: true
           data_type: "PointCloud2"
-          sensor_frame: base_link
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         inflation_radius: 0.25
