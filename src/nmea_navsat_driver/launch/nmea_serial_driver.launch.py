@@ -40,7 +40,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    return LaunchDescription([driver_node])
+    return LaunchDescription([driver_node, static_tf])
 
 
 def main(argv):
