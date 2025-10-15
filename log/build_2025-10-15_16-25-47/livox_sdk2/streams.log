@@ -1,0 +1,18 @@
+[0.641s] Invoking command in '/home/atoz/ros2_ws/build/livox_sdk2': /usr/bin/cmake --build /home/atoz/ros2_ws/build/livox_sdk2 -- -j8 -l8
+[2.348s] [ 84%] Built target livox_lidar_sdk_static
+[2.349s] [ 84%] Built target livox_lidar_sdk_shared
+[2.349s] [ 86%] Built target debug_point_cloud
+[2.349s] [ 89%] Built target logger
+[2.349s] [ 95%] Built target lidar_cmd_observer
+[2.349s] [ 95%] Built target livox_lidar_rmc_time_sync
+[2.349s] [100%] Built target multi_lidars_upgrade
+[2.349s] [100%] Built target livox_lidar_quick_start
+[2.377s] Invoked command in '/home/atoz/ros2_ws/build/livox_sdk2' returned '0': /usr/bin/cmake --build /home/atoz/ros2_ws/build/livox_sdk2 -- -j8 -l8
+[2.381s] Invoking command in '/home/atoz/ros2_ws/build/livox_sdk2': /usr/bin/cmake --install /home/atoz/ros2_ws/build/livox_sdk2
+[2.396s] -- Install configuration: ""
+[2.396s] -- Up-to-date: /home/atoz/ros2_ws/install/livox_sdk2/lib/liblivox_lidar_sdk_static.a
+[2.398s] -- Up-to-date: /home/atoz/ros2_ws/install/livox_sdk2/include/livox_lidar_def.h
+[2.399s] -- Up-to-date: /home/atoz/ros2_ws/install/livox_sdk2/include/livox_lidar_api.h
+[2.400s] -- Up-to-date: /home/atoz/ros2_ws/install/livox_sdk2/include/livox_lidar_cfg.h
+[2.400s] -- Up-to-date: /home/atoz/ros2_ws/install/livox_sdk2/lib/liblivox_lidar_sdk_shared.so
+[2.442s] Invoked command in '/home/atoz/ros2_ws/build/livox_sdk2' returned '0': /usr/bin/cmake --install /home/atoz/ros2_ws/build/livox_sdk2

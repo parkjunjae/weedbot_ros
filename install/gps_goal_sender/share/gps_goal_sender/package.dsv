@@ -1,0 +1,12 @@
+source;share/gps_goal_sender/hook/path.ps1
+source;share/gps_goal_sender/hook/path.dsv
+source;share/gps_goal_sender/hook/path.sh
+source;share/gps_goal_sender/hook/pythonpath.ps1
+source;share/gps_goal_sender/hook/pythonpath.dsv
+source;share/gps_goal_sender/hook/pythonpath.sh
+source;share/gps_goal_sender/hook/pythonscriptspath.ps1
+source;share/gps_goal_sender/hook/pythonscriptspath.dsv
+source;share/gps_goal_sender/hook/pythonscriptspath.sh
+source;share/gps_goal_sender/hook/ament_prefix_path.ps1
+source;share/gps_goal_sender/hook/ament_prefix_path.dsv
+source;share/gps_goal_sender/hook/ament_prefix_path.sh

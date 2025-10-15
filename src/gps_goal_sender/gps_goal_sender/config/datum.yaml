@@ -1,0 +1,9 @@
+datum:
+  lat: 37.000000
+  lon: 127.000000
+  alt: 0.0
+enu_to_map:
+  yaw_deg: 0.0     # ENU→map 회전(야외 정합 시 조정)
+  x_offset: 0.0    # map 원점 오프셋(m)
+  y_offset: 0.0
+

@@ -1,0 +1,63 @@
+[0.000000] (-) TimerEvent: {}
+[0.000961] (-) JobUnselected: {'identifier': 'fast_lio'}
+[0.001277] (-) JobUnselected: {'identifier': 'livox_ros_driver2'}
+[0.001540] (-) JobUnselected: {'identifier': 'livox_sdk2'}
+[0.001641] (-) JobUnselected: {'identifier': 'my_octomap'}
+[0.001811] (-) JobUnselected: {'identifier': 'nmea_navsat_driver'}
+[0.001899] (-) JobUnselected: {'identifier': 'octomap_mapping'}
+[0.001951] (-) JobUnselected: {'identifier': 'octomap_server'}
+[0.002034] (-) JobUnselected: {'identifier': 'pwm_ctrl'}
+[0.002090] (gps_goal_sender) JobQueued: {'identifier': 'gps_goal_sender', 'dependencies': OrderedDict()}
+[0.002168] (gps_goal_sender) JobStarted: {'identifier': 'gps_goal_sender'}
+[0.099083] (-) TimerEvent: {}
+[0.199585] (-) TimerEvent: {}
+[0.300145] (-) TimerEvent: {}
+[0.400726] (-) TimerEvent: {}
+[0.501491] (-) TimerEvent: {}
+[0.602185] (-) TimerEvent: {}
+[0.702696] (-) TimerEvent: {}
+[0.803246] (-) TimerEvent: {}
+[0.903773] (-) TimerEvent: {}
+[1.004337] (-) TimerEvent: {}
+[1.104915] (-) TimerEvent: {}
+[1.205658] (-) TimerEvent: {}
+[1.241512] (gps_goal_sender) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/atoz/ros2_ws/build/gps_goal_sender/build', '--no-deps', 'symlink_data'], 'cwd': '/home/atoz/ros2_ws/build/gps_goal_sender', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'atoz', 'JETSON_MODEL_NAME': 'JETSON_ORIN_NX', 'XAUTHLOCALHOSTNAME': '', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/atoz/ros2_ws/install/octomap_server/lib:/home/atoz/ros2_ws/install/livox_sdk2/lib:/home/atoz/ros2_ws/install/fast_lio/lib:/home/atoz/ros2_ws/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/atoz', 'OLDPWD': '/home/atoz/ros2_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1827', 'SYSTEMD_EXEC_PID': '2564', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator2343a10e6c2480e111dd3e9e564eb7966', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3702', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/atoz/ros2_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'atoz', 'JOURNAL_STREAM': '8:50437', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'atoz', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/home/atoz/ros2_ws/install/gps_goal_sender/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/atoz-desktop:@/tmp/.ICE-unix/2099,unix/atoz-desktop:/tmp/.ICE-unix/2099', 'INVOCATION_ID': 'f08f5a8658d74e02be9673eef28f9d59', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':2', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'ko_KR.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/livox_ros_driver2:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:801bc6f4-3517-445f-8abd-f5f35f29b5a3', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/atoz/ros2_ws/build/gps_goal_sender', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/atoz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/atoz/ros2_ws/build/gps_goal_sender/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/gps_goal_sender/lib/python3.10/site-packages:/home/atoz/ros2_ws/build/gps_goal_sender:/home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages:/home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages:/home/atoz/ros2_ws/install/my_octomap/lib/python3.10/site-packages:/home/atoz/ros2_ws/install/fast_lio/local/lib/python3.10/dist-packages:/home/atoz/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/home/atoz/ros2_ws/install/gps_goal_sender/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/livox_ros_driver2'}, 'shell': False}
+[1.305771] (-) TimerEvent: {}
+[1.406441] (-) TimerEvent: {}
+[1.507172] (-) TimerEvent: {}
+[1.607937] (-) TimerEvent: {}
+[1.708677] (-) TimerEvent: {}
+[1.770618] (gps_goal_sender) StdoutLine: {'line': b'running develop\n'}
+[1.808776] (-) TimerEvent: {}
+[1.909396] (-) TimerEvent: {}
+[2.010082] (-) TimerEvent: {}
+[2.104592] (gps_goal_sender) StdoutLine: {'line': b'running egg_info\n'}
+[2.105312] (gps_goal_sender) StdoutLine: {'line': b'creating gps_goal_sender.egg-info\n'}
+[2.105718] (gps_goal_sender) StdoutLine: {'line': b'writing gps_goal_sender.egg-info/PKG-INFO\n'}
+[2.106045] (gps_goal_sender) StdoutLine: {'line': b'writing dependency_links to gps_goal_sender.egg-info/dependency_links.txt\n'}
+[2.106407] (gps_goal_sender) StdoutLine: {'line': b'writing entry points to gps_goal_sender.egg-info/entry_points.txt\n'}
+[2.106648] (gps_goal_sender) StdoutLine: {'line': b'writing requirements to gps_goal_sender.egg-info/requires.txt\n'}
+[2.106979] (gps_goal_sender) StdoutLine: {'line': b'writing top-level names to gps_goal_sender.egg-info/top_level.txt\n'}
+[2.107203] (gps_goal_sender) StdoutLine: {'line': b"writing manifest file 'gps_goal_sender.egg-info/SOURCES.txt'\n"}
+[2.109989] (gps_goal_sender) StdoutLine: {'line': b"reading manifest file 'gps_goal_sender.egg-info/SOURCES.txt'\n"}
+[2.110302] (-) TimerEvent: {}
+[2.111188] (gps_goal_sender) StdoutLine: {'line': b"writing manifest file 'gps_goal_sender.egg-info/SOURCES.txt'\n"}
+[2.114010] (gps_goal_sender) StdoutLine: {'line': b'running build_ext\n'}
+[2.114426] (gps_goal_sender) StdoutLine: {'line': b'Creating /home/atoz/ros2_ws/install/gps_goal_sender/lib/python3.10/site-packages/gps-goal-sender.egg-link (link to .)\n'}
+[2.116062] (gps_goal_sender) StdoutLine: {'line': b'Installing send_nav_goal script to /home/atoz/ros2_ws/install/gps_goal_sender/bin\n'}
+[2.116585] (gps_goal_sender) StdoutLine: {'line': b'\n'}
+[2.116884] (gps_goal_sender) StdoutLine: {'line': b'Installed /home/atoz/ros2_ws/build/gps_goal_sender\n'}
+[2.117214] (gps_goal_sender) StdoutLine: {'line': b'running symlink_data\n'}
+[2.117519] (gps_goal_sender) StdoutLine: {'line': b'creating /home/atoz/ros2_ws/install/gps_goal_sender/share/ament_index\n'}
+[2.117833] (gps_goal_sender) StdoutLine: {'line': b'creating /home/atoz/ros2_ws/install/gps_goal_sender/share/ament_index/resource_index\n'}
+[2.118152] (gps_goal_sender) StdoutLine: {'line': b'creating /home/atoz/ros2_ws/install/gps_goal_sender/share/ament_index/resource_index/packages\n'}
+[2.118380] (gps_goal_sender) StdoutLine: {'line': b'symbolically linking /home/atoz/ros2_ws/build/gps_goal_sender/resource/gps_goal_sender -> /home/atoz/ros2_ws/install/gps_goal_sender/share/ament_index/resource_index/packages\n'}
+[2.118605] (gps_goal_sender) StdoutLine: {'line': b'symbolically linking /home/atoz/ros2_ws/build/gps_goal_sender/package.xml -> /home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender\n'}
+[2.118824] (gps_goal_sender) StdoutLine: {'line': b'creating /home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/config\n'}
+[2.119038] (gps_goal_sender) StdoutLine: {'line': b'symbolically linking /home/atoz/ros2_ws/build/gps_goal_sender/gps_goal_sender/config/datum.yaml -> /home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/config\n'}
+[2.119252] (gps_goal_sender) StdoutLine: {'line': b'creating /home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/launch\n'}
+[2.119461] (gps_goal_sender) StdoutLine: {'line': b'symbolically linking /home/atoz/ros2_ws/build/gps_goal_sender/launch/gps_goal_sender.launch.py -> /home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/launch\n'}
+[2.193947] (gps_goal_sender) CommandEnded: {'returncode': 0}
+[2.210520] (-) TimerEvent: {}
+[2.246555] (gps_goal_sender) JobEnded: {'identifier': 'gps_goal_sender', 'rc': 0}
+[2.249373] (-) EventReactorShutdown: {}

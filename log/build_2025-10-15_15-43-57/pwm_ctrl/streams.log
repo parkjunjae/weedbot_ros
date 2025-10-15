@@ -1,0 +1,39 @@
+[3.664s] Invoking command in '/home/atoz/ros2_ws/src/pwm_ctrl': PYTHONPATH=/home/atoz/ros2_ws/build/pwm_ctrl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pwm_ctrl build --build-base /home/atoz/ros2_ws/build/pwm_ctrl/build install --record /home/atoz/ros2_ws/build/pwm_ctrl/install.log --single-version-externally-managed install_data
+[4.887s] running egg_info
+[4.890s] creating ../../build/pwm_ctrl/pwm_ctrl.egg-info
+[4.891s] writing ../../build/pwm_ctrl/pwm_ctrl.egg-info/PKG-INFO
+[4.892s] writing dependency_links to ../../build/pwm_ctrl/pwm_ctrl.egg-info/dependency_links.txt
+[4.893s] writing entry points to ../../build/pwm_ctrl/pwm_ctrl.egg-info/entry_points.txt
+[4.894s] writing requirements to ../../build/pwm_ctrl/pwm_ctrl.egg-info/requires.txt
+[4.895s] writing top-level names to ../../build/pwm_ctrl/pwm_ctrl.egg-info/top_level.txt
+[4.896s] writing manifest file '../../build/pwm_ctrl/pwm_ctrl.egg-info/SOURCES.txt'
+[4.902s] reading manifest file '../../build/pwm_ctrl/pwm_ctrl.egg-info/SOURCES.txt'
+[4.917s] writing manifest file '../../build/pwm_ctrl/pwm_ctrl.egg-info/SOURCES.txt'
+[4.918s] running build
+[4.918s] running build_py
+[4.919s] creating /home/atoz/ros2_ws/build/pwm_ctrl/build
+[4.920s] creating /home/atoz/ros2_ws/build/pwm_ctrl/build/lib
+[4.920s] creating /home/atoz/ros2_ws/build/pwm_ctrl/build/lib/pwm_ctrl
+[4.921s] copying pwm_ctrl/__init__.py -> /home/atoz/ros2_ws/build/pwm_ctrl/build/lib/pwm_ctrl
+[4.922s] copying pwm_ctrl/servo_pwm_node.py -> /home/atoz/ros2_ws/build/pwm_ctrl/build/lib/pwm_ctrl
+[4.923s] running install
+[4.924s] running install_lib
+[4.927s] creating /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl
+[4.931s] copying /home/atoz/ros2_ws/build/pwm_ctrl/build/lib/pwm_ctrl/__init__.py -> /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl
+[4.932s] copying /home/atoz/ros2_ws/build/pwm_ctrl/build/lib/pwm_ctrl/servo_pwm_node.py -> /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl
+[4.935s] byte-compiling /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl/__init__.py to __init__.cpython-310.pyc
+[4.948s] byte-compiling /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl/servo_pwm_node.py to servo_pwm_node.cpython-310.pyc
+[4.955s] running install_data
+[4.956s] creating /home/atoz/ros2_ws/install/pwm_ctrl/share/ament_index
+[4.957s] creating /home/atoz/ros2_ws/install/pwm_ctrl/share/ament_index/resource_index
+[4.957s] creating /home/atoz/ros2_ws/install/pwm_ctrl/share/ament_index/resource_index/packages
+[4.958s] copying resource/pwm_ctrl -> /home/atoz/ros2_ws/install/pwm_ctrl/share/ament_index/resource_index/packages
+[4.958s] copying package.xml -> /home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl
+[4.959s] creating /home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/launch
+[4.960s] copying launch/servo_pwm.launch.py -> /home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/launch
+[4.960s] running install_egg_info
+[4.966s] Copying ../../build/pwm_ctrl/pwm_ctrl.egg-info to /home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages/pwm_ctrl-0.0.1-py3.10.egg-info
+[4.973s] running install_scripts
+[5.078s] Installing servo_pwm_node script to /home/atoz/ros2_ws/install/pwm_ctrl/lib/pwm_ctrl
+[5.096s] writing list of installed files to '/home/atoz/ros2_ws/build/pwm_ctrl/install.log'
+[5.226s] Invoked command in '/home/atoz/ros2_ws/src/pwm_ctrl' returned '0': PYTHONPATH=/home/atoz/ros2_ws/build/pwm_ctrl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pwm_ctrl build --build-base /home/atoz/ros2_ws/build/pwm_ctrl/build install --record /home/atoz/ros2_ws/build/pwm_ctrl/install.log --single-version-externally-managed install_data

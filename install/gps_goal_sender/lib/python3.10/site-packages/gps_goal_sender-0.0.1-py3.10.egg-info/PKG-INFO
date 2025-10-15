@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: gps-goal-sender
+Version: 0.0.1
+Summary: Send Nav2 NavigateToPose goals from latitude/longitude
+Home-page: UNKNOWN
+Maintainer: you
+Maintainer-email: you@example.com
+License: MIT
+Platform: UNKNOWN
+
+UNKNOWN
+

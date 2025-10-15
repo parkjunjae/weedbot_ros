@@ -1,0 +1,3 @@
+[console_scripts]
+send_nav_goal = gps_goal_sender.send_nav_goal:main
+

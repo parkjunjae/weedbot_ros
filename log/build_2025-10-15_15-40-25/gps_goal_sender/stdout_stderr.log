@@ -1,0 +1,26 @@
+running develop
+running egg_info
+creating gps_goal_sender.egg-info
+writing gps_goal_sender.egg-info/PKG-INFO
+writing dependency_links to gps_goal_sender.egg-info/dependency_links.txt
+writing entry points to gps_goal_sender.egg-info/entry_points.txt
+writing requirements to gps_goal_sender.egg-info/requires.txt
+writing top-level names to gps_goal_sender.egg-info/top_level.txt
+writing manifest file 'gps_goal_sender.egg-info/SOURCES.txt'
+reading manifest file 'gps_goal_sender.egg-info/SOURCES.txt'
+writing manifest file 'gps_goal_sender.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/atoz/ros2_ws/install/gps_goal_sender/lib/python3.10/site-packages/gps-goal-sender.egg-link (link to .)
+Installing send_nav_goal script to /home/atoz/ros2_ws/install/gps_goal_sender/bin
+
+Installed /home/atoz/ros2_ws/build/gps_goal_sender
+running symlink_data
+creating /home/atoz/ros2_ws/install/gps_goal_sender/share/ament_index
+creating /home/atoz/ros2_ws/install/gps_goal_sender/share/ament_index/resource_index
+creating /home/atoz/ros2_ws/install/gps_goal_sender/share/ament_index/resource_index/packages
+symbolically linking /home/atoz/ros2_ws/build/gps_goal_sender/resource/gps_goal_sender -> /home/atoz/ros2_ws/install/gps_goal_sender/share/ament_index/resource_index/packages
+symbolically linking /home/atoz/ros2_ws/build/gps_goal_sender/package.xml -> /home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender
+creating /home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/config
+symbolically linking /home/atoz/ros2_ws/build/gps_goal_sender/gps_goal_sender/config/datum.yaml -> /home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/config
+creating /home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/launch
+symbolically linking /home/atoz/ros2_ws/build/gps_goal_sender/launch/gps_goal_sender.launch.py -> /home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/launch

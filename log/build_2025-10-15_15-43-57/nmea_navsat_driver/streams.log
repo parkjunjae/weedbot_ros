@@ -1,0 +1,75 @@
+[4.361s] Invoking command in '/home/atoz/ros2_ws/src/nmea_navsat_driver': PYTHONPATH=/home/atoz/ros2_ws/build/nmea_navsat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nmea_navsat_driver build --build-base /home/atoz/ros2_ws/build/nmea_navsat_driver/build install --record /home/atoz/ros2_ws/build/nmea_navsat_driver/install.log --single-version-externally-managed install_data
+[5.463s] running egg_info
+[5.464s] creating ../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info
+[5.465s] writing ../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/PKG-INFO
+[5.465s] writing dependency_links to ../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/dependency_links.txt
+[5.466s] writing entry points to ../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/entry_points.txt
+[5.466s] writing requirements to ../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/requires.txt
+[5.466s] writing top-level names to ../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/top_level.txt
+[5.471s] writing manifest file '../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/SOURCES.txt'
+[5.477s] reading manifest file '../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/SOURCES.txt'
+[5.478s] writing manifest file '../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/SOURCES.txt'
+[5.479s] running build
+[5.479s] running build_py
+[5.479s] creating /home/atoz/ros2_ws/build/nmea_navsat_driver/build
+[5.479s] creating /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib
+[5.480s] creating /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver
+[5.480s] copying src/libnmea_navsat_driver/parser.py -> /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver
+[5.480s] copying src/libnmea_navsat_driver/__init__.py -> /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver
+[5.480s] copying src/libnmea_navsat_driver/driver.py -> /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver
+[5.480s] copying src/libnmea_navsat_driver/checksum_utils.py -> /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver
+[5.481s] creating /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/nodes
+[5.481s] copying src/libnmea_navsat_driver/nodes/nmea_tcpclient_driver.py -> /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/nodes
+[5.481s] copying src/libnmea_navsat_driver/nodes/__init__.py -> /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/nodes
+[5.482s] copying src/libnmea_navsat_driver/nodes/nmea_topic_driver.py -> /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/nodes
+[5.482s] copying src/libnmea_navsat_driver/nodes/nmea_serial_driver.py -> /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/nodes
+[5.482s] copying src/libnmea_navsat_driver/nodes/nmea_socket_driver.py -> /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/nodes
+[5.482s] copying src/libnmea_navsat_driver/nodes/nmea_topic_serial_reader.py -> /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/nodes
+[5.483s] running install
+[5.484s] running install_lib
+[5.489s] creating /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver
+[5.490s] copying /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/parser.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver
+[5.490s] copying /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/__init__.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver
+[5.490s] copying /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/driver.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver
+[5.490s] creating /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/nodes
+[5.491s] copying /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/nodes/nmea_tcpclient_driver.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/nodes
+[5.491s] copying /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/nodes/__init__.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/nodes
+[5.491s] copying /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/nodes/nmea_topic_driver.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/nodes
+[5.491s] copying /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/nodes/nmea_serial_driver.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/nodes
+[5.491s] copying /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/nodes/nmea_socket_driver.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/nodes
+[5.492s] copying /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/nodes/nmea_topic_serial_reader.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/nodes
+[5.492s] copying /home/atoz/ros2_ws/build/nmea_navsat_driver/build/lib/libnmea_navsat_driver/checksum_utils.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver
+[5.494s] byte-compiling /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/parser.py to parser.cpython-310.pyc
+[5.497s] byte-compiling /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/__init__.py to __init__.cpython-310.pyc
+[5.497s] byte-compiling /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/driver.py to driver.cpython-310.pyc
+[5.501s] byte-compiling /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/nodes/nmea_tcpclient_driver.py to nmea_tcpclient_driver.cpython-310.pyc
+[5.502s] byte-compiling /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/nodes/__init__.py to __init__.cpython-310.pyc
+[5.502s] byte-compiling /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/nodes/nmea_topic_driver.py to nmea_topic_driver.cpython-310.pyc
+[5.503s] byte-compiling /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/nodes/nmea_serial_driver.py to nmea_serial_driver.cpython-310.pyc
+[5.504s] byte-compiling /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/nodes/nmea_socket_driver.py to nmea_socket_driver.cpython-310.pyc
+[5.506s] byte-compiling /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/nodes/nmea_topic_serial_reader.py to nmea_topic_serial_reader.cpython-310.pyc
+[5.508s] byte-compiling /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/libnmea_navsat_driver/checksum_utils.py to checksum_utils.cpython-310.pyc
+[5.509s] running install_data
+[5.510s] creating /home/atoz/ros2_ws/install/nmea_navsat_driver/share/ament_index
+[5.511s] creating /home/atoz/ros2_ws/install/nmea_navsat_driver/share/ament_index/resource_index
+[5.511s] creating /home/atoz/ros2_ws/install/nmea_navsat_driver/share/ament_index/resource_index/packages
+[5.512s] copying resource/nmea_navsat_driver -> /home/atoz/ros2_ws/install/nmea_navsat_driver/share/ament_index/resource_index/packages
+[5.513s] copying package.xml -> /home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver
+[5.513s] creating /home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/launch
+[5.514s] copying launch/nmea_serial_driver.launch.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/launch
+[5.515s] copying launch/nmea_socket_driver.launch.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/launch
+[5.515s] copying launch/nmea_tcpclient_driver.launch.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/launch
+[5.516s] creating /home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/config
+[5.517s] copying config/nmea_tcpclient_driver.yaml -> /home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/config
+[5.517s] copying config/nmea_socket_driver.yaml -> /home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/config
+[5.518s] copying config/nmea_serial_driver.yaml -> /home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/config
+[5.519s] running install_egg_info
+[5.524s] Copying ../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info to /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/nmea_navsat_driver-2.0.1-py3.10.egg-info
+[5.528s] running install_scripts
+[5.579s] Installing nmea_serial_driver script to /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[5.580s] Installing nmea_socket_driver script to /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[5.581s] Installing nmea_tcpclient_driver script to /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[5.581s] Installing nmea_topic_driver script to /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[5.582s] Installing nmea_topic_serial_reader script to /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[5.584s] writing list of installed files to '/home/atoz/ros2_ws/build/nmea_navsat_driver/install.log'
+[5.690s] Invoked command in '/home/atoz/ros2_ws/src/nmea_navsat_driver' returned '0': PYTHONPATH=/home/atoz/ros2_ws/build/nmea_navsat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nmea_navsat_driver build --build-base /home/atoz/ros2_ws/build/nmea_navsat_driver/build install --record /home/atoz/ros2_ws/build/nmea_navsat_driver/install.log --single-version-externally-managed install_data

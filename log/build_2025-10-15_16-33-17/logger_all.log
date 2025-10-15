@@ -1,0 +1,625 @@
+[0.247s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.247s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff8cb35bd0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff8ccdf040>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff8ccdf040>>)
+[0.628s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.629s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/atoz/ros2_ws'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST_LIO_ROS2) by extensions ['ignore', 'ignore_ament_install']
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST_LIO_ROS2) by extension 'ignore'
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST_LIO_ROS2) by extension 'ignore_ament_install'
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST_LIO_ROS2) by extensions ['colcon_pkg']
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST_LIO_ROS2) by extension 'colcon_pkg'
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST_LIO_ROS2) by extensions ['colcon_meta']
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST_LIO_ROS2) by extension 'colcon_meta'
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST_LIO_ROS2) by extensions ['ros']
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST_LIO_ROS2) by extension 'ros'
+[0.669s] DEBUG:colcon.colcon_core.package_identification:Package 'src/FAST_LIO_ROS2' with type 'ros.ament_cmake' and name 'fast_lio'
+[0.670s] Level 1:colcon.colcon_core.package_identification:_identify(src/Livox-SDK2) by extensions ['ignore', 'ignore_ament_install']
+[0.670s] Level 1:colcon.colcon_core.package_identification:_identify(src/Livox-SDK2) by extension 'ignore'
+[0.670s] Level 1:colcon.colcon_core.package_identification:_identify(src/Livox-SDK2) by extension 'ignore_ament_install'
+[0.670s] Level 1:colcon.colcon_core.package_identification:_identify(src/Livox-SDK2) by extensions ['colcon_pkg']
+[0.670s] Level 1:colcon.colcon_core.package_identification:_identify(src/Livox-SDK2) by extension 'colcon_pkg'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/Livox-SDK2) by extensions ['colcon_meta']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/Livox-SDK2) by extension 'colcon_meta'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/Livox-SDK2) by extensions ['ros']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/Livox-SDK2) by extension 'ros'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/Livox-SDK2) by extensions ['cmake', 'python']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/Livox-SDK2) by extension 'cmake'
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(src/Livox-SDK2) by extension 'python'
+[0.694s] DEBUG:colcon.colcon_core.package_identification:Package 'src/Livox-SDK2' with type 'cmake' and name 'livox_sdk2'
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_goal_sender) by extensions ['ignore', 'ignore_ament_install']
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_goal_sender) by extension 'ignore'
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_goal_sender) by extension 'ignore_ament_install'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_goal_sender) by extensions ['colcon_pkg']
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_goal_sender) by extension 'colcon_pkg'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_goal_sender) by extensions ['colcon_meta']
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_goal_sender) by extension 'colcon_meta'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_goal_sender) by extensions ['ros']
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_goal_sender) by extension 'ros'
+[0.697s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gps_goal_sender' with type 'ros.ament_python' and name 'gps_goal_sender'
+[0.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['ignore', 'ignore_ament_install']
+[0.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ignore'
+[0.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ignore_ament_install'
+[0.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['colcon_pkg']
+[0.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'colcon_pkg'
+[0.698s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['colcon_meta']
+[0.698s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'colcon_meta'
+[0.698s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['ros']
+[0.698s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ros'
+[0.700s] DEBUG:colcon.colcon_core.package_identification:Package 'src/livox_ros_driver2' with type 'ros.ament_cmake' and name 'livox_ros_driver2'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_octomap) by extensions ['ignore', 'ignore_ament_install']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_octomap) by extension 'ignore'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_octomap) by extension 'ignore_ament_install'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_octomap) by extensions ['colcon_pkg']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_octomap) by extension 'colcon_pkg'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_octomap) by extensions ['colcon_meta']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_octomap) by extension 'colcon_meta'
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_octomap) by extensions ['ros']
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_octomap) by extension 'ros'
+[0.703s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_octomap' with type 'ros.ament_python' and name 'my_octomap'
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/nmea_navsat_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/nmea_navsat_driver) by extension 'ignore'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/nmea_navsat_driver) by extension 'ignore_ament_install'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/nmea_navsat_driver) by extensions ['colcon_pkg']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/nmea_navsat_driver) by extension 'colcon_pkg'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/nmea_navsat_driver) by extensions ['colcon_meta']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/nmea_navsat_driver) by extension 'colcon_meta'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/nmea_navsat_driver) by extensions ['ros']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/nmea_navsat_driver) by extension 'ros'
+[0.705s] DEBUG:colcon.colcon_core.package_identification:Package 'src/nmea_navsat_driver' with type 'ros.ament_python' and name 'nmea_navsat_driver'
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extensions ['ignore', 'ignore_ament_install']
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extension 'ignore'
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extension 'ignore_ament_install'
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extensions ['colcon_pkg']
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extension 'colcon_pkg'
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extensions ['colcon_meta']
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extension 'colcon_meta'
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extensions ['ros']
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extension 'ros'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extensions ['cmake', 'python']
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extension 'cmake'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extension 'python'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extensions ['python_setup_py']
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping) by extension 'python_setup_py'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_mapping) by extensions ['ignore', 'ignore_ament_install']
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_mapping) by extension 'ignore'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_mapping) by extension 'ignore_ament_install'
+[0.708s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_mapping) by extensions ['colcon_pkg']
+[0.708s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_mapping) by extension 'colcon_pkg'
+[0.708s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_mapping) by extensions ['colcon_meta']
+[0.708s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_mapping) by extension 'colcon_meta'
+[0.708s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_mapping) by extensions ['ros']
+[0.708s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_mapping) by extension 'ros'
+[0.709s] DEBUG:colcon.colcon_core.package_identification:Package 'src/octomap_mapping/octomap_mapping' with type 'ros.ament_cmake' and name 'octomap_mapping'
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_server) by extensions ['ignore', 'ignore_ament_install']
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_server) by extension 'ignore'
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_server) by extension 'ignore_ament_install'
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_server) by extensions ['colcon_pkg']
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_server) by extension 'colcon_pkg'
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_server) by extensions ['colcon_meta']
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_server) by extension 'colcon_meta'
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_server) by extensions ['ros']
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(src/octomap_mapping/octomap_server) by extension 'ros'
+[0.714s] DEBUG:colcon.colcon_core.package_identification:Package 'src/octomap_mapping/octomap_server' with type 'ros.ament_cmake' and name 'octomap_server'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_ctrl) by extensions ['ignore', 'ignore_ament_install']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_ctrl) by extension 'ignore'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_ctrl) by extension 'ignore_ament_install'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_ctrl) by extensions ['colcon_pkg']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_ctrl) by extension 'colcon_pkg'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_ctrl) by extensions ['colcon_meta']
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_ctrl) by extension 'colcon_meta'
+[0.715s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_ctrl) by extensions ['ros']
+[0.716s] Level 1:colcon.colcon_core.package_identification:_identify(src/pwm_ctrl) by extension 'ros'
+[0.717s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pwm_ctrl' with type 'ros.ament_python' and name 'pwm_ctrl'
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.800s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.801s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.806s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 9 installed packages in /home/atoz/ros2_ws/install
+[0.809s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 325 installed packages in /opt/ros/humble
+[0.812s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.905s] Level 5:colcon.colcon_core.verb:set package 'gps_goal_sender' build argument 'cmake_args' from command line to 'None'
+[0.906s] Level 5:colcon.colcon_core.verb:set package 'gps_goal_sender' build argument 'cmake_target' from command line to 'None'
+[0.906s] Level 5:colcon.colcon_core.verb:set package 'gps_goal_sender' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.906s] Level 5:colcon.colcon_core.verb:set package 'gps_goal_sender' build argument 'cmake_clean_cache' from command line to 'False'
+[0.906s] Level 5:colcon.colcon_core.verb:set package 'gps_goal_sender' build argument 'cmake_clean_first' from command line to 'False'
+[0.906s] Level 5:colcon.colcon_core.verb:set package 'gps_goal_sender' build argument 'cmake_force_configure' from command line to 'False'
+[0.906s] Level 5:colcon.colcon_core.verb:set package 'gps_goal_sender' build argument 'ament_cmake_args' from command line to 'None'
+[0.906s] Level 5:colcon.colcon_core.verb:set package 'gps_goal_sender' build argument 'catkin_cmake_args' from command line to 'None'
+[0.906s] Level 5:colcon.colcon_core.verb:set package 'gps_goal_sender' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.906s] DEBUG:colcon.colcon_core.verb:Building package 'gps_goal_sender' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/atoz/ros2_ws/build/gps_goal_sender', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/atoz/ros2_ws/install/gps_goal_sender', 'merge_install': False, 'path': '/home/atoz/ros2_ws/src/gps_goal_sender', 'symlink_install': False, 'test_result_base': None}
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_args' from command line to 'None'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_target' from command line to 'None'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_clean_first' from command line to 'False'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_force_configure' from command line to 'False'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'ament_cmake_args' from command line to 'None'
+[0.907s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.908s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.908s] DEBUG:colcon.colcon_core.verb:Building package 'livox_ros_driver2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/atoz/ros2_ws/build/livox_ros_driver2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/atoz/ros2_ws/install/livox_ros_driver2', 'merge_install': False, 'path': '/home/atoz/ros2_ws/src/livox_ros_driver2', 'symlink_install': False, 'test_result_base': None}
+[0.908s] Level 5:colcon.colcon_core.verb:set package 'livox_sdk2' build argument 'cmake_args' from command line to 'None'
+[0.908s] Level 5:colcon.colcon_core.verb:set package 'livox_sdk2' build argument 'cmake_target' from command line to 'None'
+[0.908s] Level 5:colcon.colcon_core.verb:set package 'livox_sdk2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.909s] Level 5:colcon.colcon_core.verb:set package 'livox_sdk2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.909s] Level 5:colcon.colcon_core.verb:set package 'livox_sdk2' build argument 'cmake_clean_first' from command line to 'False'
+[0.909s] Level 5:colcon.colcon_core.verb:set package 'livox_sdk2' build argument 'cmake_force_configure' from command line to 'False'
+[0.909s] Level 5:colcon.colcon_core.verb:set package 'livox_sdk2' build argument 'ament_cmake_args' from command line to 'None'
+[0.909s] Level 5:colcon.colcon_core.verb:set package 'livox_sdk2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.909s] Level 5:colcon.colcon_core.verb:set package 'livox_sdk2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.909s] DEBUG:colcon.colcon_core.verb:Building package 'livox_sdk2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/atoz/ros2_ws/build/livox_sdk2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/atoz/ros2_ws/install/livox_sdk2', 'merge_install': False, 'path': '/home/atoz/ros2_ws/src/Livox-SDK2', 'symlink_install': False, 'test_result_base': None}
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'my_octomap' build argument 'cmake_args' from command line to 'None'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'my_octomap' build argument 'cmake_target' from command line to 'None'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'my_octomap' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'my_octomap' build argument 'cmake_clean_cache' from command line to 'False'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'my_octomap' build argument 'cmake_clean_first' from command line to 'False'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'my_octomap' build argument 'cmake_force_configure' from command line to 'False'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'my_octomap' build argument 'ament_cmake_args' from command line to 'None'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'my_octomap' build argument 'catkin_cmake_args' from command line to 'None'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'my_octomap' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.910s] DEBUG:colcon.colcon_core.verb:Building package 'my_octomap' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/atoz/ros2_ws/build/my_octomap', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/atoz/ros2_ws/install/my_octomap', 'merge_install': False, 'path': '/home/atoz/ros2_ws/src/my_octomap', 'symlink_install': False, 'test_result_base': None}
+[0.911s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'cmake_args' from command line to 'None'
+[0.911s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'cmake_target' from command line to 'None'
+[0.911s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.911s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.911s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.911s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.911s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.911s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.911s] Level 5:colcon.colcon_core.verb:set package 'nmea_navsat_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.911s] DEBUG:colcon.colcon_core.verb:Building package 'nmea_navsat_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/atoz/ros2_ws/build/nmea_navsat_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/atoz/ros2_ws/install/nmea_navsat_driver', 'merge_install': False, 'path': '/home/atoz/ros2_ws/src/nmea_navsat_driver', 'symlink_install': False, 'test_result_base': None}
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'octomap_server' build argument 'cmake_args' from command line to 'None'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'octomap_server' build argument 'cmake_target' from command line to 'None'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'octomap_server' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'octomap_server' build argument 'cmake_clean_cache' from command line to 'False'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'octomap_server' build argument 'cmake_clean_first' from command line to 'False'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'octomap_server' build argument 'cmake_force_configure' from command line to 'False'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'octomap_server' build argument 'ament_cmake_args' from command line to 'None'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'octomap_server' build argument 'catkin_cmake_args' from command line to 'None'
+[0.912s] Level 5:colcon.colcon_core.verb:set package 'octomap_server' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.912s] DEBUG:colcon.colcon_core.verb:Building package 'octomap_server' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/atoz/ros2_ws/build/octomap_server', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/atoz/ros2_ws/install/octomap_server', 'merge_install': False, 'path': '/home/atoz/ros2_ws/src/octomap_mapping/octomap_server', 'symlink_install': False, 'test_result_base': None}
+[0.913s] Level 5:colcon.colcon_core.verb:set package 'pwm_ctrl' build argument 'cmake_args' from command line to 'None'
+[0.913s] Level 5:colcon.colcon_core.verb:set package 'pwm_ctrl' build argument 'cmake_target' from command line to 'None'
+[0.913s] Level 5:colcon.colcon_core.verb:set package 'pwm_ctrl' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.913s] Level 5:colcon.colcon_core.verb:set package 'pwm_ctrl' build argument 'cmake_clean_cache' from command line to 'False'
+[0.913s] Level 5:colcon.colcon_core.verb:set package 'pwm_ctrl' build argument 'cmake_clean_first' from command line to 'False'
+[0.913s] Level 5:colcon.colcon_core.verb:set package 'pwm_ctrl' build argument 'cmake_force_configure' from command line to 'False'
+[0.913s] Level 5:colcon.colcon_core.verb:set package 'pwm_ctrl' build argument 'ament_cmake_args' from command line to 'None'
+[0.913s] Level 5:colcon.colcon_core.verb:set package 'pwm_ctrl' build argument 'catkin_cmake_args' from command line to 'None'
+[0.913s] Level 5:colcon.colcon_core.verb:set package 'pwm_ctrl' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.913s] DEBUG:colcon.colcon_core.verb:Building package 'pwm_ctrl' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/atoz/ros2_ws/build/pwm_ctrl', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/atoz/ros2_ws/install/pwm_ctrl', 'merge_install': False, 'path': '/home/atoz/ros2_ws/src/pwm_ctrl', 'symlink_install': False, 'test_result_base': None}
+[0.914s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'cmake_args' from command line to 'None'
+[0.914s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'cmake_target' from command line to 'None'
+[0.914s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.914s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'cmake_clean_cache' from command line to 'False'
+[0.914s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'cmake_clean_first' from command line to 'False'
+[0.915s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'cmake_force_configure' from command line to 'False'
+[0.915s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'ament_cmake_args' from command line to 'None'
+[0.915s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'catkin_cmake_args' from command line to 'None'
+[0.915s] Level 5:colcon.colcon_core.verb:set package 'fast_lio' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.915s] DEBUG:colcon.colcon_core.verb:Building package 'fast_lio' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/atoz/ros2_ws/build/fast_lio', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/atoz/ros2_ws/install/fast_lio', 'merge_install': False, 'path': '/home/atoz/ros2_ws/src/FAST_LIO_ROS2', 'symlink_install': False, 'test_result_base': None}
+[0.915s] Level 5:colcon.colcon_core.verb:set package 'octomap_mapping' build argument 'cmake_args' from command line to 'None'
+[0.916s] Level 5:colcon.colcon_core.verb:set package 'octomap_mapping' build argument 'cmake_target' from command line to 'None'
+[0.916s] Level 5:colcon.colcon_core.verb:set package 'octomap_mapping' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.916s] Level 5:colcon.colcon_core.verb:set package 'octomap_mapping' build argument 'cmake_clean_cache' from command line to 'False'
+[0.916s] Level 5:colcon.colcon_core.verb:set package 'octomap_mapping' build argument 'cmake_clean_first' from command line to 'False'
+[0.916s] Level 5:colcon.colcon_core.verb:set package 'octomap_mapping' build argument 'cmake_force_configure' from command line to 'False'
+[0.916s] Level 5:colcon.colcon_core.verb:set package 'octomap_mapping' build argument 'ament_cmake_args' from command line to 'None'
+[0.916s] Level 5:colcon.colcon_core.verb:set package 'octomap_mapping' build argument 'catkin_cmake_args' from command line to 'None'
+[0.916s] Level 5:colcon.colcon_core.verb:set package 'octomap_mapping' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.916s] DEBUG:colcon.colcon_core.verb:Building package 'octomap_mapping' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/atoz/ros2_ws/build/octomap_mapping', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/atoz/ros2_ws/install/octomap_mapping', 'merge_install': False, 'path': '/home/atoz/ros2_ws/src/octomap_mapping/octomap_mapping', 'symlink_install': False, 'test_result_base': None}
+[0.916s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.919s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.921s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/atoz/ros2_ws/src/livox_ros_driver2' with build type 'ament_cmake'
+[0.921s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/atoz/ros2_ws/src/livox_ros_driver2'
+[0.927s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.927s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.927s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.936s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/atoz/ros2_ws/src/octomap_mapping/octomap_server' with build type 'ament_cmake'
+[0.936s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/atoz/ros2_ws/src/octomap_mapping/octomap_server'
+[0.937s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.937s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.945s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/atoz/ros2_ws/src/gps_goal_sender' with build type 'ament_python'
+[0.946s] Level 1:colcon.colcon_core.shell:create_environment_hook('gps_goal_sender', 'ament_prefix_path')
+[0.946s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/hook/ament_prefix_path.ps1'
+[0.948s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/hook/ament_prefix_path.dsv'
+[0.949s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/hook/ament_prefix_path.sh'
+[0.951s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.952s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.959s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/atoz/ros2_ws/src/Livox-SDK2'
+[0.960s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.960s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.968s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/atoz/ros2_ws/src/my_octomap' with build type 'ament_python'
+[0.969s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_octomap', 'ament_prefix_path')
+[0.971s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/my_octomap/share/my_octomap/hook/ament_prefix_path.ps1'
+[0.974s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/my_octomap/share/my_octomap/hook/ament_prefix_path.dsv'
+[0.975s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/my_octomap/share/my_octomap/hook/ament_prefix_path.sh'
+[0.976s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.976s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.985s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/atoz/ros2_ws/src/nmea_navsat_driver' with build type 'ament_python'
+[0.986s] Level 1:colcon.colcon_core.shell:create_environment_hook('nmea_navsat_driver', 'ament_prefix_path')
+[0.987s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/hook/ament_prefix_path.ps1'
+[0.988s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/hook/ament_prefix_path.dsv'
+[0.989s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/hook/ament_prefix_path.sh'
+[0.991s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.991s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.998s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/atoz/ros2_ws/src/pwm_ctrl' with build type 'ament_python'
+[0.998s] Level 1:colcon.colcon_core.shell:create_environment_hook('pwm_ctrl', 'ament_prefix_path')
+[0.999s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/hook/ament_prefix_path.ps1'
+[1.000s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/hook/ament_prefix_path.dsv'
+[1.001s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/hook/ament_prefix_path.sh'
+[1.003s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.003s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.025s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble /usr/bin/cmake --build /home/atoz/ros2_ws/build/livox_ros_driver2 -- -j8 -l8
+[1.036s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/build/octomap_server': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble /usr/bin/cmake --build /home/atoz/ros2_ws/build/octomap_server -- -j8 -l8
+[1.760s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/atoz/ros2_ws/src/gps_goal_sender'
+[1.761s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.761s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.782s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/build/livox_sdk2': /usr/bin/cmake --build /home/atoz/ros2_ws/build/livox_sdk2 -- -j8 -l8
+[2.385s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/atoz/ros2_ws/src/my_octomap'
+[2.385s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.386s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.978s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/atoz/ros2_ws/src/nmea_navsat_driver'
+[2.979s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.979s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.620s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/atoz/ros2_ws/src/pwm_ctrl'
+[3.621s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.621s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.650s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/build/octomap_server' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble /usr/bin/cmake --build /home/atoz/ros2_ws/build/octomap_server -- -j8 -l8
+[3.666s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/build/octomap_server': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble /usr/bin/cmake --install /home/atoz/ros2_ws/build/octomap_server
+[3.671s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/build/livox_sdk2' returned '0': /usr/bin/cmake --build /home/atoz/ros2_ws/build/livox_sdk2 -- -j8 -l8
+[3.672s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/build/livox_sdk2': /usr/bin/cmake --install /home/atoz/ros2_ws/build/livox_sdk2
+[3.675s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble /usr/bin/cmake --build /home/atoz/ros2_ws/build/livox_ros_driver2 -- -j8 -l8
+[3.678s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble /usr/bin/cmake --install /home/atoz/ros2_ws/build/livox_ros_driver2
+[3.735s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(octomap_server)
+[3.739s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/build/octomap_server' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble /usr/bin/cmake --install /home/atoz/ros2_ws/build/octomap_server
+[3.743s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server' for CMake module files
+[3.744s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server' for CMake config files
+[3.745s] Level 1:colcon.colcon_core.shell:create_environment_hook('octomap_server', 'cmake_prefix_path')
+[3.745s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/hook/cmake_prefix_path.ps1'
+[3.747s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/hook/cmake_prefix_path.dsv'
+[3.748s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/hook/cmake_prefix_path.sh'
+[3.750s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server/lib'
+[3.750s] Level 1:colcon.colcon_core.shell:create_environment_hook('octomap_server', 'ld_library_path_lib')
+[3.751s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/hook/ld_library_path_lib.ps1'
+[3.753s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/hook/ld_library_path_lib.dsv'
+[3.754s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/hook/ld_library_path_lib.sh'
+[3.755s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server/bin'
+[3.755s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server/lib/pkgconfig/octomap_server.pc'
+[3.755s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server/lib/python3.10/site-packages'
+[3.756s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server/bin'
+[3.757s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.ps1'
+[3.759s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.dsv'
+[3.760s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.sh'
+[3.762s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.bash'
+[3.764s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.zsh'
+[3.765s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/atoz/ros2_ws/install/octomap_server/share/colcon-core/packages/octomap_server)
+[3.767s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(octomap_server)
+[3.767s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server' for CMake module files
+[3.769s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server' for CMake config files
+[3.769s] Level 1:colcon.colcon_core.shell:create_environment_hook('octomap_server', 'cmake_prefix_path')
+[3.770s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/hook/cmake_prefix_path.ps1'
+[3.771s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/hook/cmake_prefix_path.dsv'
+[3.772s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/hook/cmake_prefix_path.sh'
+[3.773s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server/lib'
+[3.774s] Level 1:colcon.colcon_core.shell:create_environment_hook('octomap_server', 'ld_library_path_lib')
+[3.774s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/hook/ld_library_path_lib.ps1'
+[3.775s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/hook/ld_library_path_lib.dsv'
+[3.776s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/hook/ld_library_path_lib.sh'
+[3.777s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server/bin'
+[3.777s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server/lib/pkgconfig/octomap_server.pc'
+[3.777s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server/lib/python3.10/site-packages'
+[3.778s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_server/bin'
+[3.779s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.ps1'
+[3.780s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.dsv'
+[3.783s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.sh'
+[3.784s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.bash'
+[3.785s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_server/share/octomap_server/package.zsh'
+[3.786s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/atoz/ros2_ws/install/octomap_server/share/colcon-core/packages/octomap_server)
+[3.789s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_sdk2)
+[3.790s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/build/livox_sdk2' returned '0': /usr/bin/cmake --install /home/atoz/ros2_ws/build/livox_sdk2
+[3.791s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_sdk2' for CMake module files
+[3.791s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_sdk2' for CMake config files
+[3.793s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_sdk2/lib'
+[3.793s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_sdk2', 'ld_library_path_lib')
+[3.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/livox_sdk2/share/livox_sdk2/hook/ld_library_path_lib.ps1'
+[3.795s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/livox_sdk2/share/livox_sdk2/hook/ld_library_path_lib.dsv'
+[3.796s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/livox_sdk2/share/livox_sdk2/hook/ld_library_path_lib.sh'
+[3.797s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_sdk2/bin'
+[3.797s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_sdk2/lib/pkgconfig/livox_sdk2.pc'
+[3.798s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_sdk2/lib/python3.10/site-packages'
+[3.798s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_sdk2/bin'
+[3.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/livox_sdk2/share/livox_sdk2/package.ps1'
+[3.812s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/atoz/ros2_ws/install/livox_sdk2/share/livox_sdk2/package.dsv'
+[3.813s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/livox_sdk2/share/livox_sdk2/package.sh'
+[3.815s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/livox_sdk2/share/livox_sdk2/package.bash'
+[3.816s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/livox_sdk2/share/livox_sdk2/package.zsh'
+[3.817s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/atoz/ros2_ws/install/livox_sdk2/share/colcon-core/packages/livox_sdk2)
+[3.818s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/atoz/ros2_ws/src/octomap_mapping/octomap_mapping' with build type 'ament_cmake'
+[3.822s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/atoz/ros2_ws/src/octomap_mapping/octomap_mapping'
+[3.823s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.823s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.845s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_ros_driver2)
+[3.846s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble /usr/bin/cmake --install /home/atoz/ros2_ws/build/livox_ros_driver2
+[3.849s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2' for CMake module files
+[3.851s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2' for CMake config files
+[3.853s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'cmake_prefix_path')
+[3.854s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.ps1'
+[3.855s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.dsv'
+[3.859s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.sh'
+[3.861s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2/lib'
+[3.861s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'ld_library_path_lib')
+[3.862s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.ps1'
+[3.863s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.dsv'
+[3.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.sh'
+[3.865s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2/bin'
+[3.865s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2/lib/pkgconfig/livox_ros_driver2.pc'
+[3.868s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2/lib/python3.10/site-packages'
+[3.869s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2/bin'
+[3.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.ps1'
+[3.872s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv'
+[3.873s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.sh'
+[3.874s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.bash'
+[3.875s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.zsh'
+[3.876s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/atoz/ros2_ws/install/livox_ros_driver2/share/colcon-core/packages/livox_ros_driver2)
+[3.878s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_ros_driver2)
+[3.878s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2' for CMake module files
+[3.880s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2' for CMake config files
+[3.881s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'cmake_prefix_path')
+[3.883s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.ps1'
+[3.885s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.dsv'
+[3.886s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.sh'
+[3.889s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2/lib'
+[3.890s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'ld_library_path_lib')
+[3.891s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.ps1'
+[3.892s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.dsv'
+[3.893s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.sh'
+[3.894s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2/bin'
+[3.895s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2/lib/pkgconfig/livox_ros_driver2.pc'
+[3.895s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2/lib/python3.10/site-packages'
+[3.896s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/livox_ros_driver2/bin'
+[3.896s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.ps1'
+[3.898s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv'
+[3.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.sh'
+[3.901s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.bash'
+[3.902s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.zsh'
+[3.903s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/atoz/ros2_ws/install/livox_ros_driver2/share/colcon-core/packages/livox_ros_driver2)
+[3.907s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/atoz/ros2_ws/src/FAST_LIO_ROS2' with build type 'ament_cmake'
+[3.909s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/atoz/ros2_ws/src/FAST_LIO_ROS2'
+[3.910s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.910s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.935s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/build/octomap_mapping': CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/livox_ros_driver2:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble /usr/bin/cmake --build /home/atoz/ros2_ws/build/octomap_mapping -- -j8 -l8
+[3.966s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/build/fast_lio': CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2:/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble LD_LIBRARY_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2/lib:/home/atoz/ros2_ws/install/octomap_server/lib:/home/atoz/ros2_ws/install/livox_sdk2/lib:/home/atoz/ros2_ws/install/fast_lio/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/atoz/ros2_ws/build/fast_lio -- -j8 -l8
+[4.050s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/build/octomap_mapping' returned '0': CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/livox_ros_driver2:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble /usr/bin/cmake --build /home/atoz/ros2_ws/build/octomap_mapping -- -j8 -l8
+[4.056s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/build/octomap_mapping': CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/livox_ros_driver2:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble /usr/bin/cmake --install /home/atoz/ros2_ws/build/octomap_mapping
+[4.103s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(octomap_mapping)
+[4.104s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_mapping' for CMake module files
+[4.105s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_mapping' for CMake config files
+[4.106s] Level 1:colcon.colcon_core.shell:create_environment_hook('octomap_mapping', 'cmake_prefix_path')
+[4.106s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/hook/cmake_prefix_path.ps1'
+[4.108s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/hook/cmake_prefix_path.dsv'
+[4.109s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/hook/cmake_prefix_path.sh'
+[4.111s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/build/octomap_mapping' returned '0': CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/livox_ros_driver2:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble /usr/bin/cmake --install /home/atoz/ros2_ws/build/octomap_mapping
+[4.111s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_mapping/bin'
+[4.111s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_mapping/lib/pkgconfig/octomap_mapping.pc'
+[4.112s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_mapping/lib/python3.10/site-packages'
+[4.112s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_mapping/bin'
+[4.113s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.ps1'
+[4.114s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.dsv'
+[4.115s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.sh'
+[4.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.bash'
+[4.117s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.zsh'
+[4.118s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/atoz/ros2_ws/install/octomap_mapping/share/colcon-core/packages/octomap_mapping)
+[4.119s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(octomap_mapping)
+[4.120s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_mapping' for CMake module files
+[4.121s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_mapping' for CMake config files
+[4.121s] Level 1:colcon.colcon_core.shell:create_environment_hook('octomap_mapping', 'cmake_prefix_path')
+[4.122s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/hook/cmake_prefix_path.ps1'
+[4.123s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/hook/cmake_prefix_path.dsv'
+[4.124s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/hook/cmake_prefix_path.sh'
+[4.144s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_mapping/bin'
+[4.144s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_mapping/lib/pkgconfig/octomap_mapping.pc'
+[4.145s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_mapping/lib/python3.10/site-packages'
+[4.145s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/octomap_mapping/bin'
+[4.146s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.ps1'
+[4.148s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.dsv'
+[4.151s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.sh'
+[4.152s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.bash'
+[4.156s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/octomap_mapping/share/octomap_mapping/package.zsh'
+[4.163s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/atoz/ros2_ws/install/octomap_mapping/share/colcon-core/packages/octomap_mapping)
+[4.805s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/src/pwm_ctrl': PYTHONPATH=/home/atoz/ros2_ws/build/pwm_ctrl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pwm_ctrl build --build-base /home/atoz/ros2_ws/build/pwm_ctrl/build install --record /home/atoz/ros2_ws/build/pwm_ctrl/install.log --single-version-externally-managed install_data
+[4.821s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/src/nmea_navsat_driver': PYTHONPATH=/home/atoz/ros2_ws/build/nmea_navsat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nmea_navsat_driver build --build-base /home/atoz/ros2_ws/build/nmea_navsat_driver/build install --record /home/atoz/ros2_ws/build/nmea_navsat_driver/install.log --single-version-externally-managed install_data
+[4.890s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/src/my_octomap': PYTHONPATH=/home/atoz/ros2_ws/build/my_octomap/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/my_octomap/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_octomap build --build-base /home/atoz/ros2_ws/build/my_octomap/build install --record /home/atoz/ros2_ws/build/my_octomap/install.log --single-version-externally-managed install_data
+[4.997s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/src/gps_goal_sender': PYTHONPATH=/home/atoz/ros2_ws/build/gps_goal_sender/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/gps_goal_sender/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gps_goal_sender build --build-base /home/atoz/ros2_ws/build/gps_goal_sender/build install --record /home/atoz/ros2_ws/build/gps_goal_sender/install.log --single-version-externally-managed install_data
+[5.039s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/build/fast_lio' returned '0': CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2:/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble LD_LIBRARY_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2/lib:/home/atoz/ros2_ws/install/octomap_server/lib:/home/atoz/ros2_ws/install/livox_sdk2/lib:/home/atoz/ros2_ws/install/fast_lio/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/atoz/ros2_ws/build/fast_lio -- -j8 -l8
+[5.045s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/atoz/ros2_ws/build/fast_lio': CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2:/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble LD_LIBRARY_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2/lib:/home/atoz/ros2_ws/install/octomap_server/lib:/home/atoz/ros2_ws/install/livox_sdk2/lib:/home/atoz/ros2_ws/install/fast_lio/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/atoz/ros2_ws/build/fast_lio
+[5.219s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fast_lio)
+[5.220s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio' for CMake module files
+[5.222s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio' for CMake config files
+[5.222s] Level 1:colcon.colcon_core.shell:create_environment_hook('fast_lio', 'cmake_prefix_path')
+[5.223s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/hook/cmake_prefix_path.ps1'
+[5.224s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/hook/cmake_prefix_path.dsv'
+[5.225s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/hook/cmake_prefix_path.sh'
+[5.228s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio/lib'
+[5.228s] Level 1:colcon.colcon_core.shell:create_environment_hook('fast_lio', 'ld_library_path_lib')
+[5.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/hook/ld_library_path_lib.ps1'
+[5.231s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/hook/ld_library_path_lib.dsv'
+[5.231s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/hook/ld_library_path_lib.sh'
+[5.233s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio/bin'
+[5.233s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio/lib/pkgconfig/fast_lio.pc'
+[5.237s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio/lib/python3.10/site-packages'
+[5.237s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio/bin'
+[5.236s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/build/fast_lio' returned '0': CMAKE_PREFIX_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2:/home/atoz/ros2_ws/install/octomap_mapping:/home/atoz/ros2_ws/install/octomap_server:/home/atoz/ros2_ws/install/fast_lio:/home/atoz/ros2_ws/install/pwm_ctrl:/home/atoz/ros2_ws/install/nmea_navsat_driver:/home/atoz/ros2_ws/install/my_octomap:/home/atoz/ros2_ws/install/gps_goal_sender:/opt/ros/humble LD_LIBRARY_PATH=/home/atoz/ros2_ws/install/livox_ros_driver2/lib:/home/atoz/ros2_ws/install/octomap_server/lib:/home/atoz/ros2_ws/install/livox_sdk2/lib:/home/atoz/ros2_ws/install/fast_lio/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/atoz/ros2_ws/build/fast_lio
+[5.239s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.ps1'
+[5.242s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.dsv'
+[5.243s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.sh'
+[5.244s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.bash'
+[5.245s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.zsh'
+[5.246s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/atoz/ros2_ws/install/fast_lio/share/colcon-core/packages/fast_lio)
+[5.249s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fast_lio)
+[5.251s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio' for CMake module files
+[5.254s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio' for CMake config files
+[5.255s] Level 1:colcon.colcon_core.shell:create_environment_hook('fast_lio', 'cmake_prefix_path')
+[5.255s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/hook/cmake_prefix_path.ps1'
+[5.259s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/hook/cmake_prefix_path.dsv'
+[5.261s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/hook/cmake_prefix_path.sh'
+[5.263s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio/lib'
+[5.263s] Level 1:colcon.colcon_core.shell:create_environment_hook('fast_lio', 'ld_library_path_lib')
+[5.266s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/hook/ld_library_path_lib.ps1'
+[5.269s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/hook/ld_library_path_lib.dsv'
+[5.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/hook/ld_library_path_lib.sh'
+[5.271s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio/bin'
+[5.271s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio/lib/pkgconfig/fast_lio.pc'
+[5.271s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio/lib/python3.10/site-packages'
+[5.272s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/fast_lio/bin'
+[5.273s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.ps1'
+[5.274s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.dsv'
+[5.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.sh'
+[5.277s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.bash'
+[5.278s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/fast_lio/share/fast_lio/package.zsh'
+[5.279s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/atoz/ros2_ws/install/fast_lio/share/colcon-core/packages/fast_lio)
+[5.577s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/nmea_navsat_driver' for CMake module files
+[5.579s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/src/nmea_navsat_driver' returned '0': PYTHONPATH=/home/atoz/ros2_ws/build/nmea_navsat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nmea_navsat_driver build --build-base /home/atoz/ros2_ws/build/nmea_navsat_driver/build install --record /home/atoz/ros2_ws/build/nmea_navsat_driver/install.log --single-version-externally-managed install_data
+[5.582s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/nmea_navsat_driver' for CMake config files
+[5.584s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/nmea_navsat_driver/lib'
+[5.584s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/nmea_navsat_driver/bin'
+[5.584s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/nmea_navsat_driver/lib/pkgconfig/nmea_navsat_driver.pc'
+[5.585s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages'
+[5.585s] Level 1:colcon.colcon_core.shell:create_environment_hook('nmea_navsat_driver', 'pythonpath')
+[5.585s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/hook/pythonpath.ps1'
+[5.587s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/hook/pythonpath.dsv'
+[5.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/hook/pythonpath.sh'
+[5.589s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/nmea_navsat_driver/bin'
+[5.590s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nmea_navsat_driver)
+[5.591s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/package.ps1'
+[5.592s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/package.dsv'
+[5.593s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/package.sh'
+[5.596s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/package.bash'
+[5.597s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/package.zsh'
+[5.598s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/atoz/ros2_ws/install/nmea_navsat_driver/share/colcon-core/packages/nmea_navsat_driver)
+[5.666s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/pwm_ctrl' for CMake module files
+[5.668s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/src/pwm_ctrl' returned '0': PYTHONPATH=/home/atoz/ros2_ws/build/pwm_ctrl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pwm_ctrl build --build-base /home/atoz/ros2_ws/build/pwm_ctrl/build install --record /home/atoz/ros2_ws/build/pwm_ctrl/install.log --single-version-externally-managed install_data
+[5.669s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/pwm_ctrl' for CMake config files
+[5.671s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/pwm_ctrl/lib'
+[5.671s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/pwm_ctrl/bin'
+[5.671s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/pwm_ctrl/lib/pkgconfig/pwm_ctrl.pc'
+[5.672s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/pwm_ctrl/lib/python3.10/site-packages'
+[5.672s] Level 1:colcon.colcon_core.shell:create_environment_hook('pwm_ctrl', 'pythonpath')
+[5.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/hook/pythonpath.ps1'
+[5.674s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/hook/pythonpath.dsv'
+[5.675s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/hook/pythonpath.sh'
+[5.676s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/pwm_ctrl/bin'
+[5.676s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pwm_ctrl)
+[5.677s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/package.ps1'
+[5.678s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/package.dsv'
+[5.679s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/package.sh'
+[5.680s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/package.bash'
+[5.682s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/pwm_ctrl/share/pwm_ctrl/package.zsh'
+[5.683s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/atoz/ros2_ws/install/pwm_ctrl/share/colcon-core/packages/pwm_ctrl)
+[5.685s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/my_octomap' for CMake module files
+[5.687s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/src/my_octomap' returned '0': PYTHONPATH=/home/atoz/ros2_ws/build/my_octomap/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/my_octomap/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_octomap build --build-base /home/atoz/ros2_ws/build/my_octomap/build install --record /home/atoz/ros2_ws/build/my_octomap/install.log --single-version-externally-managed install_data
+[5.688s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/my_octomap' for CMake config files
+[5.690s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/my_octomap/lib'
+[5.690s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/my_octomap/bin'
+[5.690s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/my_octomap/lib/pkgconfig/my_octomap.pc'
+[5.691s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/my_octomap/lib/python3.10/site-packages'
+[5.691s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_octomap', 'pythonpath')
+[5.692s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/my_octomap/share/my_octomap/hook/pythonpath.ps1'
+[5.693s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/my_octomap/share/my_octomap/hook/pythonpath.dsv'
+[5.694s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/my_octomap/share/my_octomap/hook/pythonpath.sh'
+[5.695s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/my_octomap/bin'
+[5.695s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_octomap)
+[5.696s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/my_octomap/share/my_octomap/package.ps1'
+[5.697s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/atoz/ros2_ws/install/my_octomap/share/my_octomap/package.dsv'
+[5.698s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/my_octomap/share/my_octomap/package.sh'
+[5.699s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/my_octomap/share/my_octomap/package.bash'
+[5.701s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/my_octomap/share/my_octomap/package.zsh'
+[5.702s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/atoz/ros2_ws/install/my_octomap/share/colcon-core/packages/my_octomap)
+[5.929s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/gps_goal_sender' for CMake module files
+[5.930s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/atoz/ros2_ws/src/gps_goal_sender' returned '0': PYTHONPATH=/home/atoz/ros2_ws/build/gps_goal_sender/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/gps_goal_sender/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gps_goal_sender build --build-base /home/atoz/ros2_ws/build/gps_goal_sender/build install --record /home/atoz/ros2_ws/build/gps_goal_sender/install.log --single-version-externally-managed install_data
+[5.932s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/gps_goal_sender' for CMake config files
+[5.935s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/gps_goal_sender/lib'
+[5.935s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/gps_goal_sender/bin'
+[5.936s] Level 1:colcon.colcon_core.shell:create_environment_hook('gps_goal_sender', 'path')
+[5.937s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/hook/path.ps1'
+[5.939s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/hook/path.dsv'
+[5.941s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/hook/path.sh'
+[5.943s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/gps_goal_sender/lib/pkgconfig/gps_goal_sender.pc'
+[5.944s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/gps_goal_sender/lib/python3.10/site-packages'
+[5.944s] Level 1:colcon.colcon_core.shell:create_environment_hook('gps_goal_sender', 'pythonpath')
+[5.945s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/hook/pythonpath.ps1'
+[5.947s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/hook/pythonpath.dsv'
+[5.949s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/hook/pythonpath.sh'
+[5.951s] Level 1:colcon.colcon_core.environment:checking '/home/atoz/ros2_ws/install/gps_goal_sender/bin'
+[5.952s] Level 1:colcon.colcon_core.shell:create_environment_hook('gps_goal_sender', 'pythonscriptspath')
+[5.953s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/hook/pythonscriptspath.ps1'
+[5.955s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/hook/pythonscriptspath.dsv'
+[5.957s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/hook/pythonscriptspath.sh'
+[5.958s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gps_goal_sender)
+[5.960s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/package.ps1'
+[5.962s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/package.dsv'
+[5.965s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/package.sh'
+[5.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/package.bash'
+[5.969s] INFO:colcon.colcon_core.shell:Creating package script '/home/atoz/ros2_ws/install/gps_goal_sender/share/gps_goal_sender/package.zsh'
+[5.971s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/atoz/ros2_ws/install/gps_goal_sender/share/colcon-core/packages/gps_goal_sender)
+[5.972s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.973s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.974s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.975s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.993s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.993s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.993s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.043s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.044s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/atoz/ros2_ws/install/local_setup.ps1'
+[6.050s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/atoz/ros2_ws/install/_local_setup_util_ps1.py'
+[6.056s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/atoz/ros2_ws/install/setup.ps1'
+[6.063s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/atoz/ros2_ws/install/local_setup.sh'
+[6.065s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/atoz/ros2_ws/install/_local_setup_util_sh.py'
+[6.068s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/atoz/ros2_ws/install/setup.sh'
+[6.073s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/atoz/ros2_ws/install/local_setup.bash'
+[6.075s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/atoz/ros2_ws/install/setup.bash'
+[6.082s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/atoz/ros2_ws/install/local_setup.zsh'
+[6.084s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/atoz/ros2_ws/install/setup.zsh'

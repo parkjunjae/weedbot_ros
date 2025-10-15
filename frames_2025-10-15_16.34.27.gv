@@ -1,0 +1,10 @@
+digraph G {
+"map" -> "odom"[label=" Broadcaster: default_authority\nAverage rate: 29.283\nBuffer length: 5.02\nMost recent transform: 1760513667.125172\nOldest transform: 1760513662.10522\n"];
+"base_link" -> "atoz_gps"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"odom" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 50.31\nBuffer length: 3.24\nMost recent transform: 1760513667.14515\nOldest transform: 1760513663.905266\n"];
+"base_link" -> "livox_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1760513667.163075"[ shape=plaintext ] ;
+}->"map";
+}

@@ -1,0 +1,26 @@
+[3.835s] Invoking command in '/home/atoz/ros2_ws/src/nmea_navsat_driver': PYTHONPATH=/home/atoz/ros2_ws/build/nmea_navsat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nmea_navsat_driver build --build-base /home/atoz/ros2_ws/build/nmea_navsat_driver/build install --record /home/atoz/ros2_ws/build/nmea_navsat_driver/install.log --single-version-externally-managed install_data
+[4.424s] running egg_info
+[4.426s] writing ../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/PKG-INFO
+[4.427s] writing dependency_links to ../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/dependency_links.txt
+[4.428s] writing entry points to ../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/entry_points.txt
+[4.429s] writing requirements to ../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/requires.txt
+[4.429s] writing top-level names to ../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/top_level.txt
+[4.434s] reading manifest file '../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/SOURCES.txt'
+[4.436s] writing manifest file '../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info/SOURCES.txt'
+[4.437s] running build
+[4.437s] running build_py
+[4.438s] running install
+[4.439s] running install_lib
+[4.446s] running install_data
+[4.446s] copying launch/nmea_serial_driver.launch.py -> /home/atoz/ros2_ws/install/nmea_navsat_driver/share/nmea_navsat_driver/launch
+[4.447s] running install_egg_info
+[4.451s] removing '/home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/nmea_navsat_driver-2.0.1-py3.10.egg-info' (and everything under it)
+[4.452s] Copying ../../build/nmea_navsat_driver/nmea_navsat_driver.egg-info to /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages/nmea_navsat_driver-2.0.1-py3.10.egg-info
+[4.454s] running install_scripts
+[4.502s] Installing nmea_serial_driver script to /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[4.503s] Installing nmea_socket_driver script to /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[4.503s] Installing nmea_tcpclient_driver script to /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[4.503s] Installing nmea_topic_driver script to /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[4.503s] Installing nmea_topic_serial_reader script to /home/atoz/ros2_ws/install/nmea_navsat_driver/lib/nmea_navsat_driver
+[4.505s] writing list of installed files to '/home/atoz/ros2_ws/build/nmea_navsat_driver/install.log'
+[4.593s] Invoked command in '/home/atoz/ros2_ws/src/nmea_navsat_driver' returned '0': PYTHONPATH=/home/atoz/ros2_ws/build/nmea_navsat_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/atoz/ros2_ws/install/nmea_navsat_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nmea_navsat_driver build --build-base /home/atoz/ros2_ws/build/nmea_navsat_driver/build install --record /home/atoz/ros2_ws/build/nmea_navsat_driver/install.log --single-version-externally-managed install_data
